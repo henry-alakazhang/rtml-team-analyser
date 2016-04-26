@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head id='head'>
+  <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+  <script   src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"   integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="   crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  
+  <!-- Bootstrap -->
+  <!-- normal bootstrap
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  --> 
+  <!-- theme -->
+  <link href="https://bootswatch.com/superhero/bootstrap.min.css" rel="stylesheet">
+  <link href="css/builder.css" rel="stylesheet">
+</head>
+<body id='body'>
+  <div id="content" class="container">
+    <h1>.rtml</h1>
+    <h2>A Pokemon Team Building and Analysis Tool</h2><hr>
+    <div class="row">
+      <center><h3>1. Build Team</h3></center>
+    </div>
+    <div class="row team" id="team">
+      <!-- populated programmatically -->
+    </div>
+    <div class="row">
+      <hr>
+      <center><h3>2. Analyse!</h3></center>
+    </div>
+    <div class="row">    
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#defense" aria-controls="home" role="tab" data-toggle="tab">Offense</a></li>
+        <li role="presentation"><a href="#offense" aria-controls="profile" role="tab" data-toggle="tab">Defense</a></li>
+        <li role="presentation"><a href="#utility" aria-controls="messages" role="tab" data-toggle="tab">Utility</a></li>
+      </ul>
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="defense">
+          Insert table here
+        </div>
+        <div role="tabpanel" class="tab-pane" id="offense">
+          Insert table here
+        </div>
+        <div role="tabpanel" class="tab-pane" id="utility">
+          Insert lists and shit here
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- load scripts after -->
+  <script src="data/moves.js"></script>
+  <script src="data/pokedex.js"></script>
+  <script src="js/main.js"></script>
+</body>

@@ -16,7 +16,44 @@
 <body id='body'>
   <div id="content" class="container">
     <h1>.rtml</h1>
+    <div style="float:right">
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#aboutModal">
+        About
+      </button>
+    </div>
     <h2>A Pokemon Team Building and Analysis Tool</h2><hr>
+    
+    <!-- Modal "about" stuff -->
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            This is .rtml, a Pokemon team builder and analysis tool, by NinjaCaterpie. <p>
+            
+            Input your team to get an analysis of defensive typing and bulk, offensive typing and power and much more!
+            (Currently in really really alpha).<br>
+            
+            <a>http://github.com/henry-alakazhang/rtml-team-analyser</a>
+            
+            <h3>Version History</h3>
+            Ver 0.1:
+            <ul>
+              <li> Team input with autocompletion, basic webpage format
+              <li> No actual analysis (sorry!)
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- main body -->
     <div class="row">
       <center><h3>1. Build Team</h3></center>
     </div>

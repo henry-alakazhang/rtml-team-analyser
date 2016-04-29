@@ -19,13 +19,12 @@ for (var i = 0; i < NUM_POKEMON; i ++) {
         'placeholder' : "Pokemon #" + i
     }));
     var monInfo = $('<div>', {
-//        'class' : "collapse",
         'id' : "pokemon" + i + "collapse"
     });
-    monInfo.append($('<input>', {
+    monInfo.append($('<select>', {
         'class' : "form-control",
-        'type' : "text",
-        'placeholder' : "Ability"
+        'id' : "ability-selector-" + i,
+        'disabled' : true
     }));
     monInfo.append($('<br>'));
     moves = $('<div>', {
@@ -53,6 +52,7 @@ $(".pokemon-collapser").autocomplete({
     source : pokemon_autocomplete,
     select : function (a, b) {
         $(this).val(b.item.value);
+        updateAbilityPicker($(this).attr("poke-num"));
         updateTypeMatrix();
         drawTypeTable();
     }
@@ -77,6 +77,17 @@ $('#utility a').click(function (e) {
 
 // generate a type table
 drawTypeTable();
+
+function updateAbilityPicker(n) {
+    var mon = getPokeFromName($("#pokemon-selector-" + n).val());
+    for (var ability in pokedex[mon]["abilities"]) {
+        $("#ability-selector-"+n)
+            .append($('<option>')
+            .append(pokedex[mon]["abilities"][ability]));
+    }
+    $("#ability-selector-"+n).prop('disabled', false);
+    
+}
 
 function drawTypeTable() {
     var firstRow = $('<tr>').append($('<th>'));

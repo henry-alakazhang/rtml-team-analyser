@@ -1,3 +1,8 @@
+/*
+ * Pokedex database
+ * Taken and trimmed from the wonderful blokes at Pokemon Showdown
+ */
+
 pokedex = {
 	bulbasaur: {
 		num: 1,
@@ -5959,7 +5964,20 @@ pokedex = {
 	},
 };
 pokemon_autocomplete = [];
-for (key in pokedex) {
-    pokemon_autocomplete[pokemon_autocomplete.length] = pokedex[key]['species'];
+for (mon in pokedex) {
+    pokemon_autocomplete[pokemon_autocomplete.length] = pokedex[mon]['species'];
 }
 pokemon_autocomplete.sort();
+
+/*
+ * returns the pokemon index name in the pokedex
+ * returns -1 if the pokemon isn't in the dex
+ */
+function getPokeFromName(species) {
+    for (mon in pokedex) {
+        if (pokedex[mon]['species'] == species) {
+            return mon;
+        }
+    }
+    return -1;
+}

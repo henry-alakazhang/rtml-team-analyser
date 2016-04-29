@@ -9,7 +9,8 @@
   <!-- normal bootstrap
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   --> 
-  <!-- theme -->
+  <!-- theme   -->
+
   <link href="https://bootswatch.com/superhero/bootstrap.min.css" rel="stylesheet">
   <link href="css/builder.css" rel="stylesheet">
 </head>
@@ -29,7 +30,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            <h4 class="modal-title" id="myModalLabel">About .rtml</h4>
           </div>
           <div class="modal-body">
             This is .rtml, a Pokemon team builder and analysis tool, by NinjaCaterpie. <p>
@@ -40,6 +41,11 @@
             <a>http://github.com/henry-alakazhang/rtml-team-analyser</a>
             
             <h3>Version History</h3>
+            Ver 0.2:
+            <ul>
+              <li> Basic defensive type analysis with color coding (still looks janky)
+            </ul>
+            <hr>
             Ver 0.1:
             <ul>
               <li> Team input with autocompletion, basic webpage format
@@ -72,7 +78,10 @@
       </ul>
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="defense">
-          Insert table here
+          <table id="typetable-def" class="table table-striped table-bordered">
+            <thead id="typetable-head"></thead>
+            <tbody id="typetable-body"></tbody>
+          </table>
         </div>
         <div role="tabpanel" class="tab-pane" id="offense">
           Insert table here
@@ -83,8 +92,12 @@
       </div>
     </div>
   </div>
-  <!-- load scripts after -->
+  <!-- data --> 
   <script src="data/moves.js"></script>
   <script src="data/pokedex.js"></script>
+  <script src="data/types.js"></script>
+  <script src="data/const.js"></script>
+  <!-- scripts -->
   <script src="js/main.js"></script>
+  <script src="js/type-analytics.js"></script>
 </body>

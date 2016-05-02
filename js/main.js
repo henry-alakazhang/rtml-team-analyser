@@ -26,9 +26,10 @@ for (var i = 0; i < NUM_POKEMON; i ++) {
         'id' : "ability-selector-" + i,
         'disabled' : true
     }));
-    monInfo.append($('<br>'));
+//    monInfo.append($('<br>'));
     moves = $('<div>', {
-        'class' : "move-container"
+        'class' : "move-container",
+        'hidden' : "hidden"
     });
     for (var j = 1; j <=4; j ++) {
         moves.append($('<input>', {
@@ -53,8 +54,7 @@ $(".pokemon-collapser").autocomplete({
     select : function (a, b) {
         $(this).val(b.item.value);
         updateAbilityPicker($(this).attr("poke-num"));
-        updateTypeMatrix();
-        drawTypeTable();
+        recalculateTables();
     }
 });
 
@@ -63,23 +63,38 @@ $(".move").on('change', function(e) {
 });
 
 $('#offense a').click(function (e) {
-  e.preventDefault()
-  $(this).tab('show')
+    e.preventDefault()
+    $(this).tab('show')
 });
 $('#defense a').click(function (e) {
-  e.preventDefault()
-  $(this).tab('show')
+    e.preventDefault()
+    $(this).tab('show')
 });
+$('#advdef-checkbox').click(function() {
+    $('#adv-options').collapse('toggle');
+    recalculateTables();
+});
+$('#adv-options input').click(recalculateTables);
+$('#adv-options label').tooltip();
+
 $('#utility a').click(function (e) {
-  e.preventDefault()
-  $(this).tab('show')
+    e.preventDefault()
+    $(this).tab('show')
 });
+
+
 
 // generate a type table
 drawTypeTable();
 
+function recalculateTables() {
+    updateTypeMatrix();
+    drawTypeTable();
+}
+
 function updateAbilityPicker(n) {
     var mon = getPokeFromName($("#pokemon-selector-" + n).val());
+    $("#abilit-selector-"+n).empty();
     for (var ability in pokedex[mon]["abilities"]) {
         $("#ability-selector-"+n)
             .append($('<option>')
@@ -87,47 +102,4 @@ function updateAbilityPicker(n) {
     }
     $("#ability-selector-"+n).prop('disabled', false);
     
-}
-
-function drawTypeTable() {
-    var firstRow = $('<tr>').append($('<th>'));
-    for (var i = 0; i < NUM_POKEMON; i++) {
-        firstRow.append($('<th>').append($("#pokemon-selector-" + i).val()));
-    }
-    $("#typetable-head").empty().append(firstRow);
-    $("#typetable-body").empty();
-    for (type in typeMatrix) {
-        var row = $('<tr>');
-        var typeHeader = $('<td>').append(type);
-        row.append(typeHeader);
-        // [weak,neutral,strong];
-        var total = [0,0,0];
-        for (mon in typeMatrix[type]) {
-            var col = $('<td>').append(typeMatrix[type][mon]);
-            if ($("#pokemon-selector-" + mon).val()) { // only colour if pokemon team exists
-                switch (typeMatrix[type][mon]) {
-                case 0.25:
-                case 0.5:
-                case 0:
-                    col.addClass('success'); break;
-                case 2:
-                case 4:
-                    col.addClass('danger'); break;
-                default:
-                    col.addClass('warning');
-                }
-                total += typeMatrix[type][mon];
-                if (typeMatrix[type][mon] == 0) total += 5;
-            }
-            row.append(col);
-        }
-        if (total < 6) {
-            typeHeader.addClass('success');
-        } else if (total > 7) {
-            typeHeader.addClass('danger');
-        } else {
-            typeHeader.addClass('warning');
-        }
-        $("#typetable-body").append(row);
-    }
 }

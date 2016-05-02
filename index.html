@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>.rtml</title>
 <head id='head'>
   <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
   <script   src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"   integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="   crossorigin="anonymous"></script>
@@ -36,11 +37,19 @@
             This is .rtml, a Pokemon team builder and analysis tool, by NinjaCaterpie. <p>
             
             Input your team to get an analysis of defensive typing and bulk, offensive typing and power and much more!
-            (Currently in really really alpha).<br>
+            (Currently in early alpha).<br>
             
             <a>http://github.com/henry-alakazhang/rtml-team-analyser</a>
             
             <h3>Version History</h3>
+            Ver 0.3:
+            <ul>
+              <li> Recoded the defensive color-coding and added explanations
+              <li> Added advanced analysis for defensive typing - nHKOs from different attacks
+              <li> Temporarily hid moves because they won't be useful until attack analysis
+              <li> Abilities still do nothing
+            </ul>
+            <hr>
             Ver 0.2:
             <ul>
               <li> Basic defensive type analysis with color coding (still looks janky)
@@ -79,16 +88,68 @@
       </ul>
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="defense">
-          <table id="typetable-def" class="table table-striped table-bordered">
+          <div class="checkbox">
+            <label>
+            <input type="checkbox" class="checkbox" id="advdef-checkbox"> 
+            Toggle advanced analysis
+            </label>
+          </div>
+          <div class="collapse" id="adv-options">
+            <div class="row">
+              <div class="col-md-3">
+                Damage type:
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="phys-spec" checked id="phys-radio"> 
+                    Physical
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="phys-spec" id="spec-radio"> 
+                    Special
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-3">
+                Attacker strength:
+                <div class="radio">
+                  <label data-toggle="tootlip" data-placement="right" title="eg. Wailmer using Scald">
+                    <input type="radio" name="adv-power" id="wimpy-radio"> 
+                    Wimpy
+                  </label>
+                </div>
+                <div class="radio">
+                  <label data-toggle="tootlip" data-placement="right" title="eg. Flygon using Earthquake">
+                    <input type="radio" name="adv-power" checked id="strong-radio">
+                    Strong
+                  </label>
+                </div>
+                <div class="radio">
+                  <label data-toggle="tootlip" data-placement="right" title="eg. Heatran using Fire Blast">
+                    <input type="radio" name="adv-power" id="deadly-radio"> 
+                    Deadly
+                  </label>
+                </div>
+                <div class="radio">
+                  <label data-toggle="tootlip" data-placement="right" title="MEGA RAYQUAZA LEVEL DESTRUCTION! Warning: Not safe for Pokemon!">
+                    <input type="radio" name="adv-power" id="extreme-radio"> 
+                    EXTREME
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <table id="typetable-def" class="table table-striped">
             <thead id="typetable-head"></thead>
             <tbody id="typetable-body"></tbody>
           </table>
         </div>
         <div role="tabpanel" class="tab-pane" id="offense">
-          Insert table here
+          Sorry, nothing here yet!
         </div>
         <div role="tabpanel" class="tab-pane" id="utility">
-          Insert lists and shit here
+          Sorry, nothing here yet!
         </div>
       </div>
     </div>
@@ -99,6 +160,6 @@
   <script src="data/types.js"></script>
   <script src="data/const.js"></script>
   <!-- scripts -->
-  <script src="js/main.js"></script>
   <script src="js/type-analytics.js"></script>
+  <script src="js/main.js"></script>
 </body>

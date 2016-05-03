@@ -82,10 +82,8 @@ $('#utility a').click(function (e) {
     $(this).tab('show')
 });
 
-
-
 // generate a type table
-drawTypeTable();
+recalculateTables();
 
 function recalculateTables() {
     updateTypeMatrix();
@@ -94,12 +92,12 @@ function recalculateTables() {
 
 function updateAbilityPicker(n) {
     var mon = getPokeFromName($("#pokemon-selector-" + n).val());
-    $("#abilit-selector-"+n).empty();
+    $("#ability-selector-"+n).empty();
     for (var ability in pokedex[mon]["abilities"]) {
         $("#ability-selector-"+n)
             .append($('<option>')
             .append(pokedex[mon]["abilities"][ability]));
     }
     $("#ability-selector-"+n).prop('disabled', false);
-    
+    $("#ability-selector-"+n).change(recalculateTables);
 }

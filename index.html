@@ -42,6 +42,11 @@
             <a>http://github.com/henry-alakazhang/rtml-team-analyser</a>
             
             <h3>Version History</h3>
+            Ver 0.3.1:
+            <ul>
+              <li> (Most) abilities work defensively now
+              <li> Fur Coat doesn't work
+            </ul>
             Ver 0.3:
             <ul>
               <li> Recoded the defensive color-coding and added explanations
@@ -114,19 +119,19 @@
               <div class="col-md-3">
                 Attacker strength:
                 <div class="radio">
-                  <label data-toggle="tootlip" data-placement="right" title="eg. Wailmer using Scald">
+                  <label data-toggle="tootlip" data-placement="right" title="Weak or unevolved attacker (eg. Wailmer using Scald)">
                     <input type="radio" name="adv-power" id="wimpy-radio"> 
                     Wimpy
                   </label>
                 </div>
                 <div class="radio">
-                  <label data-toggle="tootlip" data-placement="right" title="eg. Flygon using Earthquake">
+                  <label data-toggle="tootlip" data-placement="right" title="Strong trainer or Gym Leader (eg. Flygon using Earthquake)">
                     <input type="radio" name="adv-power" checked id="strong-radio">
                     Strong
                   </label>
                 </div>
                 <div class="radio">
-                  <label data-toggle="tootlip" data-placement="right" title="eg. Heatran using Fire Blast">
+                  <label data-toggle="tootlip" data-placement="right" title="Competitive sweeper (eg. Heatran using Fire Blast)">
                     <input type="radio" name="adv-power" id="deadly-radio"> 
                     Deadly
                   </label>
@@ -155,6 +160,7 @@
     </div>
   </div>
   <!-- data --> 
+  <script src="data/abilities.js"></script>
   <script src="data/moves.js"></script>
   <script src="data/pokedex.js"></script>
   <script src="data/types.js"></script>

@@ -42,6 +42,12 @@
             <a>http://github.com/henry-alakazhang/rtml-team-analyser</a>
             
             <h3>Version History</h3>
+            Ver 0.4:
+            <ul>
+              <li> Added some basic offensive analysis - type combinations (note: nonexistent type combos get counted)
+              <li> Added some utility analysis - entry hazards
+              <li> Will extend utility analysis' with suggestions and options
+            </ul>
             Ver 0.3.1:
             <ul>
               <li> (Most) abilities work defensively now
@@ -78,7 +84,7 @@
     <div class="row">
       <center><h3>1. Build Team</h3></center>
     </div>
-    <div class="row team" id="team">
+    <div class="row team" id="teamBuilder">
       <!-- populated programmatically -->
     </div>
     <div class="row">
@@ -151,10 +157,16 @@
           </table>
         </div>
         <div role="tabpanel" class="tab-pane" id="offense">
-          Sorry, nothing here yet!
+          <table id="typetable-off" class="table table-striped">
+            <thead id="typetable-off-head"></thead>
+            <tbody id="typetable-off-body"></tbody>
+          </table>
         </div>
         <div role="tabpanel" class="tab-pane" id="utility">
-          Sorry, nothing here yet!
+          <h3>Entry Hazards</h3>
+          <div id="hazards">
+          </div>
+          <hr>
         </div>
       </div>
     </div>
@@ -166,6 +178,8 @@
   <script src="data/types.js"></script>
   <script src="data/const.js"></script>
   <!-- scripts -->
-  <script src="js/type-analytics.js"></script>
+  <script src="js/offense.js"></script>
+  <script src="js/defense.js"></script>
+  <script src="js/utility.js"></script>
   <script src="js/main.js"></script>
 </body>

@@ -25,21 +25,21 @@ TYPE_MESSAGES = {
 /* Defensive type analysis
  * Type effectiveness only
  */
-function updateTypeMatrix() {
+function updateDefenseMatrix() {
     if ($('#advdef-checkbox').is(':checked')) {
-        updateTypeMatrixAdv();
+        updateDefenseMatrixAdv();
         return;
     } // else
     for (var type in types) {
         for (var i = 0; i < NUM_POKEMON; i ++) {
-            var poke = getPokeFromName($("#pokemon-selector-" + i).val());
+            var poke = team[i].dex;
             if (poke != -1) {
-                typeMatrix[type][i] = getEffectiveness(type, pokedex[poke].types);
-                if (abilities[$("#ability-selector-" + i).val()].modifyEffectiveness)
-                    typeMatrix[type][i] *= abilities[$("#ability-selector-" + i).val()]
+                defenseMatrix[type][i] = getEffectiveness(type, pokedex[poke].types);
+                if (abilities[team[i].ability].modifyEffectiveness)
+                    defenseMatrix[type][i] *= abilities[team[i].ability]
                                                .modifyEffectiveness(type, pokedex[poke].types);
             } else {
-                typeMatrix[type][i] = 0;
+                defenseMatrix[type][i] = 0;
             }
         }
     }
@@ -48,10 +48,10 @@ function updateTypeMatrix() {
 /* Defensive type analysis
  * Advanced, runs damage calculations
  */
-function updateTypeMatrixAdv() {
+function updateDefenseMatrixAdv() {
     for (var type in types) {
         for (var i = 0; i < NUM_POKEMON; i ++) {
-            var poke = getPokeFromName($("#pokemon-selector-" + i).val());
+            var poke = team[i].dex;
             if (poke != -1) {
                 // actually use the damage formula
                 if ($('#wimpy-radio').is(':checked')) {
@@ -80,12 +80,12 @@ function updateTypeMatrixAdv() {
                 }
                 var hp = ((30 + 2*stats.hp + 20)/2) + 60
                 var damage = (((2 * 50 + 10) / 250) * (att/def) * pow + 2) * getEffectiveness(type, pokedex[poke].types) * 1.5;
-                typeMatrix[type][i] = (damage != 0) ? hp/damage : 0; //typematrix values are nHKO
-                if (abilities[$("#ability-selector-" + i).val()].modifyEffectiveness)
-                    typeMatrix[type][i] *= abilities[$("#ability-selector-" + i).val()]
+                defenseMatrix[type][i] = (damage != 0) ? hp/damage : 0; //defenseMatrix values are nHKO
+                if (abilities[team[i].ability].modifyEffectiveness)
+                    defenseMatrix[type][i] *= abilities[team[i].ability]
                                                .modifyEffectiveness(type, pokedex[poke].types);
             } else {
-                typeMatrix[type][i] = 0;
+                defenseMatrix[type][i] = 0;
             }
         }
     }
@@ -94,14 +94,14 @@ function updateTypeMatrixAdv() {
 /*
  * draw the type table, coloring required blocks
  */
-function drawTypeTable() {
+function drawDefenseTable() {
     var firstRow = $('<tr>').append($('<th>'));
     for (var i = 0; i < NUM_POKEMON; i++) {
         firstRow.append($('<th>').append($("#pokemon-selector-" + i).val()));
     }
     $("#typetable-head").empty().append(firstRow);
     $("#typetable-body").empty();
-    for (type in typeMatrix) {
+    for (type in defenseMatrix) {
         var row = $('<tr>');
         var typeHeader = $('<td>', {
             'data-toggle': "tooltip",
@@ -112,10 +112,10 @@ function drawTypeTable() {
         // [weak,neutral,strong];
         var total = [0,0,0];
         // display and color individual Pokemon type matchups
-        for (mon in typeMatrix[type]) {
-            var col = $('<td>').append(Math.round(typeMatrix[type][mon] * 100) / 100);
+        for (mon in defenseMatrix[type]) {
+            var col = $('<td>').append(Math.round(defenseMatrix[type][mon] * 100) / 100);
             if ($("#pokemon-selector-" + mon).val()) { // only colour if pokemon team exists
-                eff = typeMatrix[type][mon];
+                eff = defenseMatrix[type][mon];
                 /* advanced mode */
                 if ($('#advdef-checkbox').is(':checked')) {
                     if (eff < 0) {

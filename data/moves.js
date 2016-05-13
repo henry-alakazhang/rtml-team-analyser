@@ -2,10 +2,5604 @@
  * moves "database" - lazy, I know
  * data taken from serebii.net - thanks mate
  */
-
-moves={'hone claws': {'Name': 'Hone Claws', 'Hit': '--', 'Type': 'dark', 'Category': 'other', 'PP': '15', 'Description': 'The user sharpens its claws to boost its Attack stat and accuracy."', 'BP': '--'}, 'flame burst': {'Name': 'Flame Burst', 'Hit': '100', 'Type': 'fire', 'Category': 'special', 'PP': '15', 'Description': 'The user attacks the target with a bursting flame. The bursting flame damages Pok&eacute;mon next to the target as well."', 'BP': '70'}, 'sing': {'Name': 'Sing', 'Hit': '55', 'Type': 'normal', 'Category': 'other', 'PP': '15', 'Description': 'A soothing lullaby is sung in a calming voice that puts the target into a deep slumber.', 'BP': '--'}, 'camouflage': {'Name': 'Camouflage', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': "The user's type is changed depending on its environment, such as at water's edge, in grass, or in a cave.", 'BP': '--'}, 'odor sleuth': {'Name': 'Odor Sleuth', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '40', 'Description': 'Enables a Ghost-type target to be hit with Normal- and Fighting-type attacks. It also enables an evasive target to be hit.', 'BP': '--'}, 'hyperspace fury': {'Name': 'Hyperspace Fury', 'Hit': '--', 'Type': 'dark', 'Category': 'physical', 'PP': '5', 'Description': "Using its many arms, the user unleashes a barrage of attacks that ignore the effects of moves like Protect and Detect. This attack lowers the user's Defense.", 'BP': '100'}, 'close combat': {'Name': 'Close Combat', 'Hit': '100', 'Type': 'fighting', 'Category': 'physical', 'PP': '5', 'Description': 'The user fights the target up close without guarding itself. It also cuts the user\'s Defense and Sp. Def."', 'BP': '120'}, 'icicle spear': {'Name': 'Icicle Spear', 'Hit': '100', 'Type': 'ice', 'Category': 'physical', 'PP': '30', 'Description': 'The user launches sharp icicles at the target. It strikes two to five times in a row."', 'BP': '25'}, 'sludge bomb': {'Name': 'Sludge Bomb', 'Hit': '100', 'Type': 'poison', 'Category': 'special', 'PP': '10', 'Description': 'Unsanitary sludge is hurled at the target. It may also poison the target."', 'BP': '90'}, 'x-scissor': {'Name': 'X-Scissor', 'Hit': '100', 'Type': 'bug', 'Category': 'physical', 'PP': '15', 'Description': 'The user slashes at the target by crossing its scythes or claws as if they were a pair of scissors.', 'BP': '80'}, 'mega kick': {'Name': 'Mega Kick', 'Hit': '75', 'Type': 'normal', 'Category': 'physical', 'PP': '5', 'Description': 'The target is attacked by a kick launched with muscle-packed power."', 'BP': '120'}, 'conversion': {'Name': 'Conversion', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '30', 'Description': 'The user changes its type to become the same type as the move at the top of the list of moves it knows.', 'BP': '--'}, 'screech': {'Name': 'Screech', 'Hit': '85', 'Type': 'normal', 'Category': 'other', 'PP': '40', 'Description': "An earsplitting screech harshly reduces the target's Defense stat.", 'BP': '--'}, 'magical leaf': {'Name': 'Magical Leaf', 'Hit': '--', 'Type': 'grass', 'Category': 'special', 'PP': '20', 'Description': 'The user scatters curious leaves that chase the target. This attack will not miss."', 'BP': '60'}, 'low sweep': {'Name': 'Low Sweep', 'Hit': '100', 'Type': 'fighting', 'Category': 'physical', 'PP': '20', 'Description': "The user attacks the target's legs swiftly", 'BP': '65'}, 'rage': {'Name': 'Rage', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '20', 'Description': 'As long as this move is in use, the power of rage raises the Attack stat each time the user is hit in battle.', 'BP': '20'}, 'volt switch': {'Name': 'Volt Switch', 'Hit': '100', 'Type': 'electric', 'Category': 'special', 'PP': '20', 'Description': 'After making its attack', 'BP': '70'}, 'flail': {'Name': 'Flail', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '15', 'Description': 'The user flails about aimlessly to attack. It becomes more powerful the less HP the user has.', 'BP': '--'}, 'aerial ace': {'Name': 'Aerial Ace', 'Hit': '--', 'Type': 'flying', 'Category': 'physical', 'PP': '20', 'Description': 'The user confounds the target with speed, then slashes. The attack lands without fail.', 'BP': '60'}, 'magnitude': {'Name': 'Magnitude', 'Hit': '100', 'Type': 'ground', 'Category': 'physical', 'PP': '30', 'Description': 'The user looses a ground-shaking quake affecting everyone around the user. Its power varies.', 'BP': '--'}, 'thousand waves': {'Name': 'Thousand Waves', 'Hit': '100', 'Type': 'ground', 'Category': 'physical', 'PP': '10', 'Description': "The user attacks with a wave that crawls along the ground. Those hit can't flee from battle.", 'BP': '90'}, 'hyperspace hole': {'Name': 'Hyperspace Hole', 'Hit': '--', 'Type': 'psychic', 'Category': 'special', 'PP': '5', 'Description': 'Using a hyperspace hole', 'BP': '80'}, 'psystrike': {'Name': 'Psystrike', 'Hit': '100', 'Type': 'psychic', 'Category': 'special', 'PP': '10', 'Description': 'The user materializes an odd psychic wave to attack the target. This attack does physical damage.', 'BP': '100'}, 'draco meteor': {'Name': 'Draco Meteor', 'Hit': '90', 'Type': 'dragon', 'Category': 'special', 'PP': '5', 'Description': "Comets are summoned down from the sky onto the target. The attack's recoil harshly reduces the user's Sp. Atk stat.", 'BP': '130'}, 'dizzy punch': {'Name': 'Dizzy Punch', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '10', 'Description': 'The target is hit with rhythmically launched punches that may also leave it confused.', 'BP': '70'}, 'power trick': {'Name': 'Power Trick', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '10', 'Description': 'The user employs its psychic power to switch its Attack with its Defense stat."', 'BP': '--'}, 'pluck': {'Name': 'Pluck', 'Hit': '100', 'Type': 'flying', 'Category': 'physical', 'PP': '20', 'Description': 'The user pecks the target. If the target is holding a Berry, the user eats it and gains its effect.', 'BP': '60'}, 'psycho cut': {'Name': 'Psycho Cut', 'Hit': '100', 'Type': 'psychic', 'Category': 'physical', 'PP': '20', 'Description': 'The user tears at the target with blades formed by psychic power. Critical hits land more easily.', 'BP': '70'}, 'mega drain': {'Name': 'Mega Drain', 'Hit': '100', 'Type': 'grass', 'Category': 'special', 'PP': '15', 'Description': 'A nutrient-draining attack. The user\'s HP is restored by half the damage taken by the target."', 'BP': '40'}, 'gyro ball': {'Name': 'Gyro Ball', 'Hit': '100', 'Type': 'steel', 'Category': 'physical', 'PP': '5', 'Description': 'The user tackles the target with a high-speed spin. The slower the user', 'BP': '--'}, 'tri attack': {'Name': 'Tri Attack', 'Hit': '100', 'Type': 'normal', 'Category': 'special', 'PP': '10', 'Description': 'The user strikes with a simultaneous three-beam attack. May also burn', 'BP': '80'}, 'stone edge': {'Name': 'Stone Edge', 'Hit': '80', 'Type': 'rock', 'Category': 'physical', 'PP': '5', 'Description': 'The user stabs the foe with sharpened stones from below. It has a high critical-hit ratio."', 'BP': '100'}, 'simple beam': {'Name': 'Simple Beam', 'Hit': '100', 'Type': 'normal', 'Category': 'other', 'PP': '15', 'Description': "The user's mysterious psychic wave changes the target's Ability to Simple.", 'BP': '--'}, 'head smash': {'Name': 'Head Smash', 'Hit': '80', 'Type': 'rock', 'Category': 'physical', 'PP': '5', 'Description': 'The user attacks the target with a hazardous, full-power headbutt. The user also takes terrible damage.', 'BP': '150'}, 'leer': {'Name': 'Leer', 'Hit': '100', 'Type': 'normal', 'Category': 'other', 'PP': '30', 'Description': "The opposing team gains an intimidating leer with sharp eyes. The opposing team's Defense stats are reduced.", 'BP': '--'}, 'power gem': {'Name': 'Power Gem', 'Hit': '100', 'Type': 'rock', 'Category': 'special', 'PP': '20', 'Description': 'The user attacks with a ray of light that sparkles as if it were made of gemstones.', 'BP': '80'}, 'disable': {'Name': 'Disable', 'Hit': '100', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': 'For four turns, this move prevents the target from using the move it last used.', 'BP': '--'}, 'phantom force': {'Name': 'Phantom Force', 'Hit': '100', 'Type': 'ghost', 'Category': 'physical', 'PP': '10', 'Description': 'The user vanishes somewhere, then strikes the target on the next turn. This move hits even if the target protects itself.', 'BP': '90'}, 'thunderbolt': {'Name': 'Thunderbolt', 'Hit': '100', 'Type': 'electric', 'Category': 'special', 'PP': '15', 'Description': 'A strong electric blast is loosed at the target. It may also leave the target with paralysis.', 'BP': '90'}, 'rolling kick': {'Name': 'Rolling Kick', 'Hit': '85', 'Type': 'fighting', 'Category': 'physical', 'PP': '15', 'Description': 'The user lashes out with a quick, spinning kick. It may also make the target flinch.', 'BP': '60'}, 'hold back': {'Name': 'Hold Back', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '40', 'Description': 'The user holds back when it attacks and the target is left with at least 1 HP.', 'BP': '40'}, 'toxic spikes': {'Name': 'Toxic Spikes', 'Hit': '--', 'Type': 'poison', 'Category': 'other', 'PP': '20', 'Description': 'The user lays a trap of poison spikes at the opponent\'s feet. They poison opponents that switch into battle."', 'BP': '--'}, 'feint': {'Name': 'Feint', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '10', 'Description': 'An attack that hits a target using Protect or Detect. It also lifts the effects of those moves.', 'BP': '30'}, 'eerie impulse': {'Name': 'Eerie Impulse', 'Hit': '100', 'Type': 'electric', 'Category': 'other', 'PP': '15', 'Description': "The user's body generates an eerie impulse. Exposing the target to it harshly lowers the target's Sp. Atk stat.", 'BP': '--'}, 'drill run': {'Name': 'Drill Run', 'Hit': '95', 'Type': 'ground', 'Category': 'physical', 'PP': '10', 'Description': 'The user crashes into its target while rotating its body like a drill. Critical hits land more easily.', 'BP': '80'}, 'tail whip': {'Name': 'Tail Whip', 'Hit': '100', 'Type': 'normal', 'Category': 'other', 'PP': '30', 'Description': 'The user wags its tail cutely, making opposing Pok&eacute;mon less wary and lowering their Defense stat.', 'BP': '--'}, 'final gambit': {'Name': 'Final Gambit', 'Hit': '100', 'Type': 'fighting', 'Category': 'special', 'PP': '5', 'Description': "The user risks everything to attack its target. The user faints but does damage equal to the user's HP.", 'BP': '--'}, 'mirror move': {'Name': 'Mirror Move', 'Hit': '--', 'Type': 'flying', 'Category': 'other', 'PP': '20', 'Description': 'The user counters the target by mimicking the target\'s last move."', 'BP': '--'}, 'dragon tail': {'Name': 'Dragon Tail', 'Hit': '90', 'Type': 'dragon', 'Category': 'physical', 'PP': '10', 'Description': 'The user knocks away the target and drags out another Pok&eacute;mon in its party. In the wild', 'BP': '60'}, 'guillotine': {'Name': 'Guillotine', 'Hit': '30', 'Type': 'normal', 'Category': 'physical', 'PP': '5', 'Description': 'A vicious, tearing attack with big pincers. The target will faint instantly if this attack hits.', 'BP': '--'}, 'icy wind': {'Name': 'Icy Wind', 'Hit': '95', 'Type': 'ice', 'Category': 'special', 'PP': '15', 'Description': "The user attacks with a gust of chilled air. It also reduces the targets' Speed stat.", 'BP': '55'}, 'ice beam': {'Name': 'Ice Beam', 'Hit': '100', 'Type': 'ice', 'Category': 'special', 'PP': '10', 'Description': 'The target is struck with an icy-cold beam of energy. It may also freeze the target solid.', 'BP': '90'}, 'shadow punch': {'Name': 'Shadow Punch', 'Hit': '--', 'Type': 'ghost', 'Category': 'physical', 'PP': '20', 'Description': 'The user throws a punch from the shadows. The punch lands without fail.', 'BP': '60'}, 'wonder room': {'Name': 'Wonder Room', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '10', 'Description': "The user creates a bizarre area in which Pok&eacute;mon's Defense and Sp. Def stats are swapped for five turns.", 'BP': '--'}, 'iron tail': {'Name': 'Iron Tail', 'Hit': '75', 'Type': 'steel', 'Category': 'physical', 'PP': '15', 'Description': 'The target is slammed with a steel-hard tail. It may also lower the target\'s Defense stat."', 'BP': '100'}, 'double kick': {'Name': 'Double Kick', 'Hit': '100', 'Type': 'fighting', 'Category': 'physical', 'PP': '30', 'Description': 'The target is quickly kicked twice in succession using both feet.', 'BP': '30'}, 'head charge': {'Name': 'Head Charge', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '15', 'Description': 'The user charges its head into its target, using its powerful guard hair. It also damages the user a little.', 'BP': '120'}, 'quiver dance': {'Name': 'Quiver Dance', 'Hit': '--', 'Type': 'bug', 'Category': 'other', 'PP': '20', 'Description': "The user lightly performs a beautiful, mystic dance. It boosts the user's Sp. Atk, Sp. Def, and Speed stats.", 'BP': '--'}, 'light of ruin': {'Name': 'Light of Ruin', 'Hit': '90', 'Type': 'fairy', 'Category': 'special', 'PP': '5', 'Description': 'Drawing power from the Eternal Flower, the user fires a powerful beam of light. This also damages the user quite a lot.', 'BP': '140'}, 'night daze': {'Name': 'Night Daze', 'Hit': '95', 'Type': 'dark', 'Category': 'special', 'PP': '10', 'Description': "The user lets loose a pitch-black shock wave at its target. It may also lower the target's accuracy.", 'BP': '85'}, 'doom desire': {'Name': 'Doom Desire', 'Hit': '100', 'Type': 'steel', 'Category': 'special', 'PP': '5', 'Description': 'Two turns after this move is used', 'BP': '140'}, 'work up': {'Name': 'Work Up', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '30', 'Description': 'The user is roused', 'BP': '--'}, 'techno blast': {'Name': 'Techno Blast', 'Hit': '100', 'Type': 'normal', 'Category': 'special', 'PP': '5', 'Description': 'The user fires a beam of light at its target. The type changes depending on the Drive the user holds.', 'BP': '120'}, 'sandstorm': {'Name': 'Sandstorm', 'Hit': '--', 'Type': 'rock', 'Category': 'other', 'PP': '10', 'Description': 'A five-turn sandstorm is summoned to hurt all combatants except the Rock, Ground, and Steel types.', 'BP': '--'}, 'mud shot': {'Name': 'Mud Shot', 'Hit': '95', 'Type': 'ground', 'Category': 'special', 'PP': '15', 'Description': 'The user attacks by hurling a blob of mud at the target. It also reduces the target\'s Speed."', 'BP': '55'}, 'fiery dance': {'Name': 'Fiery Dance', 'Hit': '100', 'Type': 'fire', 'Category': 'special', 'PP': '10', 'Description': 'Cloaked in flames', 'BP': '80'}, 'fury cutter': {'Name': 'Fury Cutter', 'Hit': '95', 'Type': 'bug', 'Category': 'physical', 'PP': '20', 'Description': 'The target is slashed with scythes or claws. Its power increases if it hits in succession.', 'BP': '40'}, 'foresight': {'Name': 'Foresight', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '40', 'Description': 'Enables a Ghost-type target to be hit by Normal- and Fighting-type attacks. It also enables an evasive target to be hit.', 'BP': '--'}, 'brine': {'Name': 'Brine', 'Hit': '100', 'Type': 'water', 'Category': 'special', 'PP': '10', 'Description': "If the target's HP is down to about half, this attack will hit with double the power.", 'BP': '65'}, 'seismic toss': {'Name': 'Seismic Toss', 'Hit': '100', 'Type': 'fighting', 'Category': 'physical', 'PP': '20', 'Description': "The target is thrown using the power of gravity. It inflicts damage equal to the user's level.", 'BP': '--'}, 'psyshock': {'Name': 'Psyshock', 'Hit': '100', 'Type': 'psychic', 'Category': 'special', 'PP': '10', 'Description': 'The user materializes an odd psychic wave to attack the target. This attack does physical damage.', 'BP': '80'}, 'heal order': {'Name': 'Heal Order', 'Hit': '--', 'Type': 'bug', 'Category': 'other', 'PP': '10', 'Description': 'The user calls out its underlings to heal it. The user regains up to half of its max HP.', 'BP': '--'}, 'yawn': {'Name': 'Yawn', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '10', 'Description': 'The user lets loose a huge yawn that lulls the target into falling asleep on the next turn.', 'BP': '--'}, 'reversal': {'Name': 'Reversal', 'Hit': '100', 'Type': 'fighting', 'Category': 'physical', 'PP': '15', 'Description': 'An all-out attack that becomes more powerful the less HP the user has.', 'BP': '--'}, 'tailwind': {'Name': 'Tailwind', 'Hit': '--', 'Type': 'flying', 'Category': 'other', 'PP': '15', 'Description': 'The user whips up a turbulent whirlwind that ups the Speed of all party Pok&eacute;mon for four turns.', 'BP': '--'}, 'earth power': {'Name': 'Earth Power', 'Hit': '100', 'Type': 'ground', 'Category': 'special', 'PP': '10', 'Description': "The user makes the ground under the target erupt with power. It may also lower the target's Sp. Def.", 'BP': '90'}, 'razor leaf': {'Name': 'Razor Leaf', 'Hit': '95', 'Type': 'grass', 'Category': 'physical', 'PP': '25', 'Description': 'Sharp-edged leaves are launched to slash at the opposing team. Critical hits land more easily.', 'BP': '55'}, 'mean look': {'Name': 'Mean Look', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '5', 'Description': 'The user pins the target with a dark', 'BP': '--'}, 'hyper beam': {'Name': 'Hyper Beam', 'Hit': '90', 'Type': 'normal', 'Category': 'special', 'PP': '5', 'Description': 'The target is attacked with a powerful beam. The user must rest on the next turn to regain its energy."', 'BP': '150'}, 'brick break': {'Name': 'Brick Break', 'Hit': '100', 'Type': 'fighting', 'Category': 'physical', 'PP': '15', 'Description': 'The user attacks with a swift chop. It can also break any barrier such as Light Screen and Reflect."', 'BP': '75'}, 'cosmic power': {'Name': 'Cosmic Power', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '20', 'Description': 'The user absorbs a mystical power from space to raise its Defense and Sp. Def stats."', 'BP': '--'}, 'recycle': {'Name': 'Recycle', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '10', 'Description': 'The user recycles a held item that has been used in battle so it can be used again.', 'BP': '--'}, 'swift': {'Name': 'Swift', 'Hit': '--', 'Type': 'normal', 'Category': 'special', 'PP': '20', 'Description': 'Star-shaped rays are shot at the opposing team. This attack never misses.', 'BP': '60'}, 'fissure': {'Name': 'Fissure', 'Hit': '30', 'Type': 'ground', 'Category': 'physical', 'PP': '5', 'Description': 'The user opens up a fissure in the ground and drops the target in. The target instantly faints if it hits.', 'BP': '--'}, 'weather ball': {'Name': 'Weather Ball', 'Hit': '100', 'Type': 'normal', 'Category': 'special', 'PP': '10', 'Description': 'An attack move that varies in power and type depending on the weather.', 'BP': '50'}, 'magic coat': {'Name': 'Magic Coat', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '15', 'Description': 'A barrier reflects back to the target moves like Leech Seed and moves that damage status.', 'BP': '--'}, 'beat up': {'Name': 'Beat Up', 'Hit': '100', 'Type': 'dark', 'Category': 'physical', 'PP': '10', 'Description': 'The user gets all party Pok&eacute;mon to attack the target. The more party Pok&eacute;mon', 'BP': '--'}, 'rock polish': {'Name': 'Rock Polish', 'Hit': '--', 'Type': 'rock', 'Category': 'other', 'PP': '20', 'Description': 'The user polishes its body to reduce drag. It can sharply raise the Speed stat.', 'BP': '--'}, 'flash': {'Name': 'Flash', 'Hit': '100', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': "The user flashes a bright light that cuts the target's accuracy. It can also be used to illuminate caves.", 'BP': '--'}, 'wood hammer': {'Name': 'Wood Hammer', 'Hit': '100', 'Type': 'grass', 'Category': 'physical', 'PP': '15', 'Description': 'The user slams its rugged body into the target to attack. The user also sustains serious damage.', 'BP': '120'}, 'razor wind': {'Name': 'Razor Wind', 'Hit': '100', 'Type': 'normal', 'Category': 'special', 'PP': '10', 'Description': 'A two-turn attack. Blades of wind hit opposing Pok&eacute;mon on the second turn. Critical hits land more easily."', 'BP': '80'}, 'cotton guard': {'Name': 'Cotton Guard', 'Hit': '--', 'Type': 'grass', 'Category': 'other', 'PP': '10', 'Description': "The user protects itself by wrapping its body in soft cotton, drastically raising the user's Defense stat.", 'BP': '--'}, 'nuzzle': {'Name': 'Nuzzle', 'Hit': '100', 'Type': 'electric', 'Category': 'physical', 'PP': '20', 'Description': 'The user attacks by nuzzling its electrified cheeks against the target. This also leaves the target with paralysis.', 'BP': '20'}, 'astonish': {'Name': 'Astonish', 'Hit': '100', 'Type': 'ghost', 'Category': 'physical', 'PP': '15', 'Description': 'The user attacks the target while shouting in a startling fashion. It may also make the target flinch.', 'BP': '30'}, 'guard swap': {'Name': 'Guard Swap', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '10', 'Description': 'The user employs its psychic power to switch changes to its Defense and Sp. Def with the target."', 'BP': '--'}, 'spiky shield': {'Name': 'Spiky Shield', 'Hit': '--', 'Type': 'grass', 'Category': 'other', 'PP': '10', 'Description': 'In addition to protecting the user from attacks', 'BP': '--'}, 'synthesis': {'Name': 'Synthesis', 'Hit': '--', 'Type': 'grass', 'Category': 'other', 'PP': '5', 'Description': 'The user restores its own HP. The amount of HP regained varies with the weather.', 'BP': '--'}, 'sky drop': {'Name': 'Sky Drop', 'Hit': '100', 'Type': 'flying', 'Category': 'physical', 'PP': '10', 'Description': 'The user takes the target into the sky', 'BP': '60'}, 'psychic': {'Name': 'Psychic', 'Hit': '100', 'Type': 'psychic', 'Category': 'special', 'PP': '10', 'Description': "The target is hit by a strong telekinetic force. It may also reduce the target's Sp. Def stat.", 'BP': '90'}, 'confide': {'Name': 'Confide', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': "The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.", 'BP': '--'}, 'wrap': {'Name': 'Wrap', 'Hit': '90', 'Type': 'normal', 'Category': 'physical', 'PP': '20', 'Description': 'A long body or vines are used to wrap and squeeze the target for four to five turns.', 'BP': '15'}, 'heavy slam': {'Name': 'Heavy Slam', 'Hit': '100', 'Type': 'steel', 'Category': 'physical', 'PP': '10', 'Description': 'The user slams into the target with its heavy body. The more the user outweighs the target, the greater its damage.', 'BP': '--'}, 'gravity': {'Name': 'Gravity', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '5', 'Description': 'Gravity is intensified for five turns, making moves involving flying unusable and negating Levitate.', 'BP': '--'}, 'mist ball': {'Name': 'Mist Ball', 'Hit': '100', 'Type': 'psychic', 'Category': 'special', 'PP': '5', 'Description': 'A mistlike flurry of down envelops and damages the target. It may also lower the target\'s Sp. Atk."', 'BP': '70'}, 'sheer cold': {'Name': 'Sheer Cold', 'Hit': '30', 'Type': 'ice', 'Category': 'special', 'PP': '5', 'Description': 'The target is attacked with a blast of absolute-zero cold. The target instantly faints if it hits."', 'BP': '--'}, 'electrify': {'Name': 'Electrify', 'Hit': '--', 'Type': 'electric', 'Category': 'other', 'PP': '20', 'Description': "If the target is electrified before it uses a move during that turn, the target's move becomes Electric type.", 'BP': '--'}, 'spacial rend': {'Name': 'Spacial Rend', 'Hit': '95', 'Type': 'dragon', 'Category': 'special', 'PP': '5', 'Description': 'The user tears the target along with the space around it. Critical hits land more easily."', 'BP': '100'}, 'boomburst': {'Name': 'Boomburst', 'Hit': '100', 'Type': 'normal', 'Category': 'special', 'PP': '10', 'Description': 'The user attacks everything around it with the destructive power of a terrible, explosive sound.', 'BP': '140'}, 'smokescreen': {'Name': 'Smokescreen', 'Hit': '100', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': "The user releases an obscuring cloud of smoke or ink. It reduces the target's accuracy.", 'BP': '--'}, 'substitute': {'Name': 'Substitute', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '10', 'Description': "The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.", 'BP': '--'}, 'lovely kiss': {'Name': 'Lovely Kiss', 'Hit': '75', 'Type': 'normal', 'Category': 'other', 'PP': '10', 'Description': 'With a scary face', 'BP': '--'}, 'leaf tornado': {'Name': 'Leaf Tornado', 'Hit': '90', 'Type': 'grass', 'Category': 'special', 'PP': '10', 'Description': 'The user attacks its target by encircling it in sharp leaves. This attack may also lower the target\'s accuracy."', 'BP': '65'}, 'snore': {'Name': 'Snore', 'Hit': '100', 'Type': 'normal', 'Category': 'special', 'PP': '15', 'Description': 'An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.', 'BP': '50'}, 'aeroblast': {'Name': 'Aeroblast', 'Hit': '95', 'Type': 'flying', 'Category': 'special', 'PP': '5', 'Description': 'A vortex of air is shot at the target to inflict damage. Critical hits land more easily.', 'BP': '100'}, 'flame charge': {'Name': 'Flame Charge', 'Hit': '100', 'Type': 'fire', 'Category': 'physical', 'PP': '20', 'Description': 'The user cloaks itself with flame and attacks. Building up more power', 'BP': '50'}, 'acid armor': {'Name': 'Acid Armor', 'Hit': '--', 'Type': 'poison', 'Category': 'other', 'PP': '20', 'Description': 'The user alters its cellular structure to liquefy itself', 'BP': '--'}, 'hidden power': {'Name': 'Hidden Power', 'Hit': '100', 'Type': 'normal', 'Category': 'special', 'PP': '15', 'Description': 'A unique attack that varies in type depending on the Pok&eacute;mon using it."', 'BP': '60'}, 'sleep powder': {'Name': 'Sleep Powder', 'Hit': '75', 'Type': 'grass', 'Category': 'other', 'PP': '15', 'Description': 'The user scatters a big cloud of sleep-inducing dust around the target.', 'BP': '--'}, 'water pulse': {'Name': 'Water Pulse', 'Hit': '100', 'Type': 'water', 'Category': 'special', 'PP': '20', 'Description': 'The user attacks the target with a pulsing blast of water. It may also confuse the target.', 'BP': '60'}, 'pay day': {'Name': 'Pay Day', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '20', 'Description': 'Numerous coins are hurled at the target to inflict damage. Money is earned after the battle.', 'BP': '40'}, 'bulldoze': {'Name': 'Bulldoze', 'Hit': '100', 'Type': 'ground', 'Category': 'physical', 'PP': '20', 'Description': "The user stomps down on the ground and attacks everything in the area. Hit Pok&eacute;mon's Speed stat is reduced.", 'BP': '60'}, 'dual chop': {'Name': 'Dual Chop', 'Hit': '90', 'Type': 'dragon', 'Category': 'physical', 'PP': '15', 'Description': 'The user attacks its target by hitting it with brutal strikes. The target is hit twice in a row."', 'BP': '40'}, 'zen headbutt': {'Name': 'Zen Headbutt', 'Hit': '90', 'Type': 'psychic', 'Category': 'physical', 'PP': '15', 'Description': 'The user focuses its willpower to its head and attacks the target. It may also make the target flinch."', 'BP': '80'}, 'rock wrecker': {'Name': 'Rock Wrecker', 'Hit': '90', 'Type': 'rock', 'Category': 'physical', 'PP': '5', 'Description': 'The user launches a huge boulder at the target to attack. It must rest on the next turn', 'BP': '150'}, 'safeguard': {'Name': 'Safeguard', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '25', 'Description': 'The user creates a protective field that prevents status problems for five turns.', 'BP': '--'}, 'thunder': {'Name': 'Thunder', 'Hit': '70', 'Type': 'electric', 'Category': 'special', 'PP': '10', 'Description': 'A wicked thunderbolt is dropped on the target to inflict damage. It may also leave the target with paralysis.', 'BP': '110'}, 'twineedle': {'Name': 'Twineedle', 'Hit': '100', 'Type': 'bug', 'Category': 'physical', 'PP': '20', 'Description': 'The user damages the target twice in succession by jabbing it with two spikes. It may also poison the target.', 'BP': '25'}, 'agility': {'Name': 'Agility', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '30', 'Description': 'The user relaxes and lightens its body to move faster. It sharply boosts the Speed stat.', 'BP': '--'}, 'hydro cannon': {'Name': 'Hydro Cannon', 'Hit': '90', 'Type': 'water', 'Category': 'special', 'PP': '5', 'Description': 'The target is hit with a watery blast. The user must rest on the next turn', 'BP': '150'}, 'power whip': {'Name': 'Power Whip', 'Hit': '85', 'Type': 'grass', 'Category': 'physical', 'PP': '10', 'Description': 'The user violently whirls its vines or tentacles to harshly lash the target.', 'BP': '120'}, 'blizzard': {'Name': 'Blizzard', 'Hit': '70', 'Type': 'ice', 'Category': 'special', 'PP': '5', 'Description': 'A howling blizzard is summoned to strike the opposing team. It may also freeze them solid.', 'BP': '110'}, 'soft-boiled': {'Name': 'Soft-Boiled', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '10', 'Description': 'The user restores its own HP by up to half of its maximum HP. May also be used in the field to heal HP.', 'BP': '--'}, 'block': {'Name': 'Block', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '5', 'Description': "The user blocks the target's way with arms spread wide to prevent escape.", 'BP': '--'}, 'return': {'Name': 'Return', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '20', 'Description': 'A full-power attack that grows more powerful the more the user likes its Trainer.', 'BP': '--'}, 'steamroller': {'Name': 'Steamroller', 'Hit': '100', 'Type': 'bug', 'Category': 'physical', 'PP': '20', 'Description': 'The user crushes its targets by rolling over them with its rolled-up body. This attack may make the target flinch.', 'BP': '65'}, 'searing shot': {'Name': 'Searing Shot', 'Hit': '100', 'Type': 'fire', 'Category': 'special', 'PP': '5', 'Description': 'An inferno of scarlet flames torches everything around the user. It may leave targets with a burn."', 'BP': '100'}, 'toxic': {'Name': 'Toxic', 'Hit': '90', 'Type': 'poison', 'Category': 'other', 'PP': '10', 'Description': 'A move that leaves the target badly poisoned. Its poison damage worsens every turn.', 'BP': '--'}, 'air cutter': {'Name': 'Air Cutter', 'Hit': '95', 'Type': 'flying', 'Category': 'special', 'PP': '25', 'Description': 'The user launches razor-like wind to slash the opposing team. Critical hits land more easily."', 'BP': '60'}, 'metal claw': {'Name': 'Metal Claw', 'Hit': '95', 'Type': 'steel', 'Category': 'physical', 'PP': '35', 'Description': 'The target is raked with steel claws. It may also raise the user\'s Attack stat."', 'BP': '50'}, 'fire fang': {'Name': 'Fire Fang', 'Hit': '95', 'Type': 'fire', 'Category': 'physical', 'PP': '15', 'Description': 'The user bites with flame-cloaked fangs. It may also make the target flinch or leave it burned.', 'BP': '65'}, 'barrage': {'Name': 'Barrage', 'Hit': '85', 'Type': 'normal', 'Category': 'physical', 'PP': '20', 'Description': 'Round objects are hurled at the target to strike two to five times in a row.', 'BP': '15'}, 'venom drench': {'Name': 'Venom Drench', 'Hit': '100', 'Type': 'poison', 'Category': 'other', 'PP': '20', 'Description': 'Opposing Pok&eacute;mon are drenched in an odd poisonous liquid. This lowers the Attack', 'BP': '--'}, 'ice shard': {'Name': 'Ice Shard', 'Hit': '100', 'Type': 'ice', 'Category': 'physical', 'PP': '30', 'Description': 'The user flash freezes chunks of ice and hurls them at the target. This move always goes first."', 'BP': '40'}, 'thunder punch': {'Name': 'Thunder Punch', 'Hit': '100', 'Type': 'electric', 'Category': 'physical', 'PP': '15', 'Description': 'The target is punched with an electrified fist. It may also leave the target with paralysis."', 'BP': '75'}, 'jump kick': {'Name': 'Jump Kick', 'Hit': '95', 'Type': 'fighting', 'Category': 'physical', 'PP': '10', 'Description': 'The user jumps up high, then strikes with a kick. If the kick misses, the user hurts itself.', 'BP': '100'}, 'feather dance': {'Name': 'Feather Dance', 'Hit': '100', 'Type': 'flying', 'Category': 'other', 'PP': '15', 'Description': "The user covers the target's body with a mass of down that harshly lowers its Attack stat.", 'BP': '--'}, 'detect': {'Name': 'Detect', 'Hit': '--', 'Type': 'fighting', 'Category': 'other', 'PP': '5', 'Description': 'It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.', 'BP': '--'}, 'tackle': {'Name': 'Tackle', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '35', 'Description': 'A physical attack in which the user charges and slams into the target with its whole body.', 'BP': '50'}, 'shadow claw': {'Name': 'Shadow Claw', 'Hit': '100', 'Type': 'ghost', 'Category': 'physical', 'PP': '15', 'Description': 'The user slashes with a sharp claw made from shadows. Critical hits land more easily."', 'BP': '70'}, 'octazooka': {'Name': 'Octazooka', 'Hit': '85', 'Type': 'water', 'Category': 'special', 'PP': '10', 'Description': "The user attacks by spraying ink in the target's face or eyes. It may also lower the target's accuracy.", 'BP': '65'}, 'frenzy plant': {'Name': 'Frenzy Plant', 'Hit': '90', 'Type': 'grass', 'Category': 'special', 'PP': '5', 'Description': 'The user slams the target with an enormous tree. The user can\'t move on the next turn."', 'BP': '150'}, 'chip away': {'Name': 'Chip Away', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '20', 'Description': 'Looking for an opening', 'BP': '70'}, 'fusion flare': {'Name': 'Fusion Flare', 'Hit': '100', 'Type': 'fire', 'Category': 'special', 'PP': '5', 'Description': 'The user brings down a giant flame. This attack does greater damage when influenced by an enormous thunderbolt."', 'BP': '100'}, 'endeavor': {'Name': 'Endeavor', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '5', 'Description': "An attack move that cuts down the target's HP to equal the user's HP.", 'BP': '--'}, 'bullet seed': {'Name': 'Bullet Seed', 'Hit': '100', 'Type': 'grass', 'Category': 'physical', 'PP': '30', 'Description': 'The user forcefully shoots seeds at the target. Two to five seeds are shot in rapid succession.', 'BP': '25'}, 'water shuriken': {'Name': 'Water Shuriken', 'Hit': '100', 'Type': 'water', 'Category': 'physical', 'PP': '20', 'Description': 'The user hits the target with throwing stars two to five times in a row. This move always goes first.', 'BP': '15'}, 'flying press': {'Name': 'Flying Press', 'Hit': '95', 'Type': 'fighting', 'Category': 'physical', 'PP': '10', 'Description': 'The user dives down onto the target from the sky. This move is Fighting and Flying type simultaneously.', 'BP': '80'}, 'noble roar': {'Name': 'Noble Roar', 'Hit': '100', 'Type': 'normal', 'Category': 'other', 'PP': '30', 'Description': 'Letting out a noble roar', 'BP': '--'}, 'leech life': {'Name': 'Leech Life', 'Hit': '100', 'Type': 'bug', 'Category': 'physical', 'PP': '15', 'Description': 'The user drains the target\'s blood. The user\'s HP is restored by half the damage taken by the target."', 'BP': '20'}, 'focus energy': {'Name': 'Focus Energy', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '30', 'Description': 'The user takes a deep breath and focuses so that critical hits land more easily."', 'BP': '--'}, 'sweet kiss': {'Name': 'Sweet Kiss', 'Hit': '75', 'Type': 'fairy', 'Category': 'other', 'PP': '10', 'Description': 'The user kisses the target with a sweet', 'BP': '--'}, 'meteor mash': {'Name': 'Meteor Mash', 'Hit': '90', 'Type': 'steel', 'Category': 'physical', 'PP': '10', 'Description': "The target is hit with a hard punch fired like a meteor. It may also raise the user's Attack.", 'BP': '90'}, 'mud sport': {'Name': 'Mud Sport', 'Hit': '--', 'Type': 'ground', 'Category': 'other', 'PP': '15', 'Description': 'The user covers itself with mud. It weakens Electric-type moves for five turns.', 'BP': '--'}, 'acrobatics': {'Name': 'Acrobatics', 'Hit': '100', 'Type': 'flying', 'Category': 'physical', 'PP': '15', 'Description': 'The user nimbly strikes the target. If the user is not holding an item, this attack inflicts massive damage.', 'BP': '55'}, 'petal dance': {'Name': 'Petal Dance', 'Hit': '100', 'Type': 'grass', 'Category': 'special', 'PP': '10', 'Description': 'The user attacks the target by scattering petals for two to three turns. The user then becomes confused.', 'BP': '120'}, 'frost breath': {'Name': 'Frost Breath', 'Hit': '90', 'Type': 'ice', 'Category': 'special', 'PP': '10', 'Description': 'The user blows a cold breath on the target. This attack always results in a critical hit.', 'BP': '60'}, 'after you': {'Name': 'After You', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '15', 'Description': 'The user helps the target and makes it use its move right after the user.', 'BP': '--'}, 'freeze shock': {'Name': 'Freeze Shock', 'Hit': '90', 'Type': 'ice', 'Category': 'physical', 'PP': '5', 'Description': 'On the second turn, the user hits the target with electrically charged ice. It may leave the target with paralysis.', 'BP': '140'}, 'water spout': {'Name': 'Water Spout', 'Hit': '100', 'Type': 'water', 'Category': 'special', 'PP': '5', 'Description': "The user spouts water to damage the opposing team. The lower the user's HP", 'BP': '150'}, 'sand attack': {'Name': 'Sand Attack', 'Hit': '100', 'Type': 'ground', 'Category': 'other', 'PP': '15', 'Description': "Sand is hurled in the target's face", 'BP': '--'}, 'attack order': {'Name': 'Attack Order', 'Hit': '100', 'Type': 'bug', 'Category': 'physical', 'PP': '15', 'Description': 'The user calls out its underlings to pummel the target. Critical hits land more easily."', 'BP': '90'}, 'magic room': {'Name': 'Magic Room', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '10', 'Description': 'The user creates a bizarre area in which Pok&eacute;mon\'s held items lose their effects for five turns."', 'BP': '--'}, 'copycat': {'Name': 'Copycat', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': 'The user mimics the move used immediately before it. The move fails if no other move has been used yet.', 'BP': '--'}, 'stored power': {'Name': 'Stored Power', 'Hit': '100', 'Type': 'psychic', 'Category': 'special', 'PP': '10', 'Description': "The user attacks the target with stored power. The more the user's stats are raised", 'BP': '20'}, 'shadow sneak': {'Name': 'Shadow Sneak', 'Hit': '100', 'Type': 'ghost', 'Category': 'physical', 'PP': '30', 'Description': 'The user extends its shadow and attacks the target from behind. This move always goes first."', 'BP': '40'}, 'powder': {'Name': 'Powder', 'Hit': '100', 'Type': 'bug', 'Category': 'other', 'PP': '20', 'Description': 'The user covers the target in a powder that explodes and damages the target if it uses a Fire-type move.', 'BP': '--'}, 'discharge': {'Name': 'Discharge', 'Hit': '100', 'Type': 'electric', 'Category': 'special', 'PP': '15', 'Description': 'A flare of electricity is loosed to strike the area around the user. It may also cause paralysis.', 'BP': '80'}, 'recover': {'Name': 'Recover', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '10', 'Description': 'Restoring its own cells, the user restores its own HP by half of its max HP.', 'BP': '--'}, 'ion deluge': {'Name': 'Ion Deluge', 'Hit': '--', 'Type': 'electric', 'Category': 'other', 'PP': '25', 'Description': 'The user disperses electrically charged particles, which changes Normal-type moves to Electric-type moves.', 'BP': '--'}, 'present': {'Name': 'Present', 'Hit': '90', 'Type': 'normal', 'Category': 'physical', 'PP': '15', 'Description': 'The user attacks by giving the target a gift with a hidden trap. It restores HP sometimes, however.', 'BP': '--'}, 'splash': {'Name': 'Splash', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '40', 'Description': 'The user just flops and splashes around to no effect at all...', 'BP': '--'}, 'spider web': {'Name': 'Spider Web', 'Hit': '--', 'Type': 'bug', 'Category': 'other', 'PP': '10', 'Description': 'The user ensnares the target with thin', 'BP': '--'}, 'fury swipes': {'Name': 'Fury Swipes', 'Hit': '80', 'Type': 'normal', 'Category': 'physical', 'PP': '15', 'Description': 'The target is raked with sharp claws or scythes for two to five times in quick succession."', 'BP': '18'}, 'geomancy': {'Name': 'Geomancy', 'Hit': '--', 'Type': 'fairy', 'Category': 'other', 'PP': '10', 'Description': 'The user absorbs energy and sharply raises its Sp. Atk, Sp. Def, and Speed stats on the next turn.', 'BP': '--'}, 'dragon breath': {'Name': 'Dragon Breath', 'Hit': '100', 'Type': 'dragon', 'Category': 'special', 'PP': '20', 'Description': 'The user exhales a mighty gust that inflicts damage. It may also leave the target with paralysis."', 'BP': '60'}, 'assist': {'Name': 'Assist', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': 'The user hurriedly and randomly uses a move among those known by other Pok&eacute;mon in the party.', 'BP': '--'}, 'u-turn': {'Name': 'U-turn', 'Hit': '100', 'Type': 'bug', 'Category': 'physical', 'PP': '20', 'Description': 'After making its attack, the user rushes back to switch places with a party Pok&eacute;mon in waiting.', 'BP': '70'}, 'telekinesis': {'Name': 'Telekinesis', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '15', 'Description': 'The user makes the target float with its psychic power. The target is easier to hit for three turns.', 'BP': '--'}, 'heart stamp': {'Name': 'Heart Stamp', 'Hit': '100', 'Type': 'psychic', 'Category': 'physical', 'PP': '25', 'Description': 'The user unleashes a vicious blow after its cute act makes the target less wary. It may also make the target flinch."', 'BP': '60'}, 'acid': {'Name': 'Acid', 'Hit': '100', 'Type': 'poison', 'Category': 'special', 'PP': '30', 'Description': "The opposing team is attacked with a spray of harsh acid. The acid may also lower the targets' Sp. Def stats.", 'BP': '40'}, 'icicle crash': {'Name': 'Icicle Crash', 'Hit': '90', 'Type': 'ice', 'Category': 'physical', 'PP': '10', 'Description': 'The user attacks by harshly dropping an icicle onto the target. It may also make the target flinch.', 'BP': '85'}, 'celebrate': {'Name': 'Celebrate', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '40', 'Description': 'The Pok&eacute;mon congratulates you on your special day!', 'BP': '--'}, 'rain dance': {'Name': 'Rain Dance', 'Hit': '--', 'Type': 'water', 'Category': 'other', 'PP': '5', 'Description': 'The user summons a heavy rain that falls for five turns', 'BP': '--'}, 'charge': {'Name': 'Charge', 'Hit': '--', 'Type': 'electric', 'Category': 'other', 'PP': '20', 'Description': "The user boosts the power of the Electric move it uses on the next turn. It also raises the user's Sp. Def stat.", 'BP': '--'}, 'heart swap': {'Name': 'Heart Swap', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '10', 'Description': 'The user employs its psychic power to switch stat changes with the target.', 'BP': '--'}, 'bug buzz': {'Name': 'Bug Buzz', 'Hit': '100', 'Type': 'bug', 'Category': 'special', 'PP': '10', 'Description': "The user vibrates its wings to generate a damaging sound wave. It may also lower the target's Sp. Def stat.", 'BP': '90'}, 'blue flare': {'Name': 'Blue Flare', 'Hit': '85', 'Type': 'fire', 'Category': 'special', 'PP': '5', 'Description': 'The user attacks by engulfing the target in an intense', 'BP': '130'}, 'memento': {'Name': 'Memento', 'Hit': '100', 'Type': 'dark', 'Category': 'other', 'PP': '10', 'Description': "The user faints when using this move. In return, it harshly lowers the target's Attack and Sp. Atk.", 'BP': '--'}, 'poison sting': {'Name': 'Poison Sting', 'Hit': '100', 'Type': 'poison', 'Category': 'physical', 'PP': '35', 'Description': 'The user stabs the target with a poisonous stinger. This may also poison the target.', 'BP': '15'}, 'tickle': {'Name': 'Tickle', 'Hit': '100', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': 'The user tickles the target into laughing, reducing its Attack and Defense stats.', 'BP': '--'}, 'fling': {'Name': 'Fling', 'Hit': '100', 'Type': 'dark', 'Category': 'physical', 'PP': '10', 'Description': 'The user flings its held item at the target to attack. Its power and effects depend on the item.', 'BP': '--'}, 'echoed voice': {'Name': 'Echoed Voice', 'Hit': '100', 'Type': 'normal', 'Category': 'special', 'PP': '15', 'Description': 'The user attacks the target with an echoing voice. If this move is used every turn', 'BP': '40'}, 'punishment': {'Name': 'Punishment', 'Hit': '100', 'Type': 'dark', 'Category': 'physical', 'PP': '5', 'Description': "This attack's power increases the more the target has powered up with stat changes.", 'BP': '--'}, 'horn leech': {'Name': 'Horn Leech', 'Hit': '100', 'Type': 'grass', 'Category': 'physical', 'PP': '10', 'Description': "The user drains the target's energy with its horns. The user's HP is restored by half the damage taken by the target.", 'BP': '75'}, 'taunt': {'Name': 'Taunt', 'Hit': '100', 'Type': 'dark', 'Category': 'other', 'PP': '20', 'Description': 'The target is taunted into a rage that allows it to use only attack moves for three turns.', 'BP': '--'}, 'kinesis': {'Name': 'Kinesis', 'Hit': '80', 'Type': 'psychic', 'Category': 'other', 'PP': '15', 'Description': "The user distracts the target by bending a spoon. It lowers the target's accuracy.", 'BP': '--'}, 'shock wave': {'Name': 'Shock Wave', 'Hit': '--', 'Type': 'electric', 'Category': 'special', 'PP': '20', 'Description': 'The user strikes the target with a quick jolt of electricity. This attack cannot be evaded.', 'BP': '60'}, 'drill peck': {'Name': 'Drill Peck', 'Hit': '100', 'Type': 'flying', 'Category': 'physical', 'PP': '20', 'Description': 'A corkscrewing attack with the sharp beak acting as a drill."', 'BP': '80'}, 'mud bomb': {'Name': 'Mud Bomb', 'Hit': '85', 'Type': 'ground', 'Category': 'special', 'PP': '10', 'Description': "The user launches a hard-packed mud ball to attack. It may also lower the target's accuracy.", 'BP': '65'}, 'slash': {'Name': 'Slash', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '20', 'Description': 'The target is attacked with a slash of claws or blades. Critical hits land more easily.', 'BP': '70'}, 'wake-up slap': {'Name': 'Wake-Up Slap', 'Hit': '100', 'Type': 'fighting', 'Category': 'physical', 'PP': '10', 'Description': 'This attack inflicts big damage on a sleeping target. It also wakes the target up, however.', 'BP': '70'}, 'charm': {'Name': 'Charm', 'Hit': '100', 'Type': 'fairy', 'Category': 'other', 'PP': '20', 'Description': "The user gazes at the target rather charmingly, making it less wary. The target's Attack is harshly lowered.", 'BP': '--'}, 'fake tears': {'Name': 'Fake Tears', 'Hit': '100', 'Type': 'dark', 'Category': 'other', 'PP': '20', 'Description': 'The user feigns crying to fluster the target, harshly lowering its Sp. Def stat.', 'BP': '--'}, 'cross chop': {'Name': 'Cross Chop', 'Hit': '80', 'Type': 'fighting', 'Category': 'physical', 'PP': '5', 'Description': 'The user delivers a double chop with its forearms crossed. Critical hits land more easily."', 'BP': '100'}, 'flash cannon': {'Name': 'Flash Cannon', 'Hit': '100', 'Type': 'steel', 'Category': 'special', 'PP': '10', 'Description': 'The user gathers all its light energy and releases it at once. It may also lower the target\'s Sp. Def stat."', 'BP': '80'}, 'triple kick': {'Name': 'Triple Kick', 'Hit': '90', 'Type': 'fighting', 'Category': 'physical', 'PP': '10', 'Description': 'A consecutive three-kick attack that becomes more powerful with each  successive hit.', 'BP': '10'}, 'vine whip': {'Name': 'Vine Whip', 'Hit': '100', 'Type': 'grass', 'Category': 'physical', 'PP': '25', 'Description': 'The target is struck with slender', 'BP': '45'}, 'snarl': {'Name': 'Snarl', 'Hit': '95', 'Type': 'dark', 'Category': 'special', 'PP': '15', 'Description': "The user yells as if it is ranting about something, making the target's Sp. Atk stat decrease.", 'BP': '55'}, 'stomp': {'Name': 'Stomp', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '20', 'Description': 'The target is stomped with a big foot. It may also make the target flinch.', 'BP': '65'}, 'bind': {'Name': 'Bind', 'Hit': '85', 'Type': 'normal', 'Category': 'physical', 'PP': '20', 'Description': 'Things such as long bodies or tentacles are used to bind and squeeze the target for four to five turns.', 'BP': '15'}, 'tail slap': {'Name': 'Tail Slap', 'Hit': '85', 'Type': 'normal', 'Category': 'physical', 'PP': '10', 'Description': 'The user attacks by striking the target with its hard tail. It hits the target two to five times in a row."', 'BP': '25'}, 'roost': {'Name': 'Roost', 'Hit': '--', 'Type': 'flying', 'Category': 'other', 'PP': '10', 'Description': "The user lands and rests its body. It restores the user's HP by up to half of its max HP.", 'BP': '--'}, 'power-up punch': {'Name': 'Power-Up Punch', 'Hit': '100', 'Type': 'fighting', 'Category': 'physical', 'PP': '20', 'Description': 'Striking opponents over and over makes the user\'s fists harder. Hitting a target raises the Attack stat."', 'BP': '40'}, 'smack down': {'Name': 'Smack Down', 'Hit': '100', 'Type': 'rock', 'Category': 'physical', 'PP': '15', 'Description': 'The user throws a stone or projectile to attack an opponent. A flying Pok&eacute;mon will fall to the ground when hit."', 'BP': '50'}, 'silver wind': {'Name': 'Silver Wind', 'Hit': '100', 'Type': 'bug', 'Category': 'special', 'PP': '5', 'Description': "The target is attacked with powdery scales blown by wind. It may also raise all the user's stats.", 'BP': '60'}, 'self-destruct': {'Name': 'Self-Destruct', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '5', 'Description': 'The user attacks everything around it by causing an explosion. The user faints upon using this move.', 'BP': '200'}, 'endure': {'Name': 'Endure', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '10', 'Description': 'The user endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession.', 'BP': '--'}, 'psywave': {'Name': 'Psywave', 'Hit': '100', 'Type': 'psychic', 'Category': 'special', 'PP': '15', 'Description': 'The target is attacked with an odd  psychic wave. The attack varies in intensity.', 'BP': '--'}, 'mud-slap': {'Name': 'Mud-Slap', 'Hit': '100', 'Type': 'ground', 'Category': 'special', 'PP': '10', 'Description': "The user hurls mud in the target's face to inflict damage and lower its accuracy.", 'BP': '20'}, 'string shot': {'Name': 'String Shot', 'Hit': '95', 'Type': 'bug', 'Category': 'other', 'PP': '40', 'Description': 'The targets are bound with silk blown from the user\'s mouth. This silk reduces the targets\' Speed stat."', 'BP': '--'}, 'storm throw': {'Name': 'Storm Throw', 'Hit': '100', 'Type': 'fighting', 'Category': 'physical', 'PP': '10', 'Description': 'The user strikes the target with a fierce blow. This attack always results in a critical hit.', 'BP': '60'}, 'dream eater': {'Name': 'Dream Eater', 'Hit': '100', 'Type': 'psychic', 'Category': 'special', 'PP': '15', 'Description': 'The user eats the dreams of a sleeping target. It absorbs half the damage caused to heal the user\'s HP."', 'BP': '100'}, 'fell stinger': {'Name': 'Fell Stinger', 'Hit': '100', 'Type': 'bug', 'Category': 'physical', 'PP': '25', 'Description': "When the user knocks out a target with this move, the user's Attack stat rises sharply.", 'BP': '30'}, 'spark': {'Name': 'Spark', 'Hit': '100', 'Type': 'electric', 'Category': 'physical', 'PP': '20', 'Description': 'The user throws an electrically charged tackle at the target. It may also leave the target with paralysis.', 'BP': '65'}, 'helping hand': {'Name': 'Helping Hand', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': 'The user assists an ally by boosting the power of its attack."', 'BP': '--'}, 'freeze-dry': {'Name': 'Freeze-Dry', 'Hit': '100', 'Type': 'ice', 'Category': 'special', 'PP': '20', 'Description': 'The user rapidly cools the target. This may also leave the target frozen. This move is super effective on Water types.', 'BP': '70'}, 'flamethrower': {'Name': 'Flamethrower', 'Hit': '100', 'Type': 'fire', 'Category': 'special', 'PP': '15', 'Description': 'The target is scorched with an intense blast of fire. It may also leave the target with a burn.', 'BP': '90'}, 'knock off': {'Name': 'Knock Off', 'Hit': '100', 'Type': 'dark', 'Category': 'physical', 'PP': '25', 'Description': "The user slaps down the target's held item", 'BP': '65'}, 'frustration': {'Name': 'Frustration', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '20', 'Description': 'A full-power attack that grows more powerful the less the user likes its Trainer.', 'BP': '--'}, 'future sight': {'Name': 'Future Sight', 'Hit': '100', 'Type': 'psychic', 'Category': 'special', 'PP': '10', 'Description': 'Two turns after this move is used, a hunk of psychic energy attacks the target.', 'BP': '120'}, 'grudge': {'Name': 'Grudge', 'Hit': '--', 'Type': 'ghost', 'Category': 'other', 'PP': '5', 'Description': "If the user faints, the user's grudge fully depletes the PP of the opponent's move that knocked it out.", 'BP': '--'}, 'constrict': {'Name': 'Constrict', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '35', 'Description': "The target is attacked with long, creeping tentacles or vines. It may also lower the target's Speed stat.", 'BP': '10'}, 'pound': {'Name': 'Pound', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '35', 'Description': 'The target is physically pounded with a long tail or a foreleg, etc.', 'BP': '40'}, 'thousand arrows': {'Name': 'Thousand Arrows', 'Hit': '100', 'Type': 'ground', 'Category': 'physical', 'PP': '10', 'Description': 'This move also hits opposing Pok&eacute;mon that are in the air. Those Pok&eacute;mon are knocked down to the ground."', 'BP': '90'}, 'wring out': {'Name': 'Wring Out', 'Hit': '100', 'Type': 'normal', 'Category': 'special', 'PP': '5', 'Description': 'The user powerfully wrings the target. The more HP the target has', 'BP': '--'}, "land's wrath": {'Name': "Land's Wrath", 'Hit': '100', 'Type': 'ground', 'Category': 'physical', 'PP': '10', 'Description': 'The user gathers the energy of the land and focuses that power on opposing Pok&eacute;mon to damage them.', 'BP': '90'}, 'relic song': {'Name': 'Relic Song', 'Hit': '100', 'Type': 'normal', 'Category': 'special', 'PP': '10', 'Description': 'The user sings an ancient song and attacks by appealing to the hearts of those listening. It may also induce sleep.', 'BP': '75'}, 'comet punch': {'Name': 'Comet Punch', 'Hit': '85', 'Type': 'normal', 'Category': 'physical', 'PP': '15', 'Description': 'The target is hit with a flurry of punches that strike two to five times in a row.', 'BP': '18'}, 'leaf blade': {'Name': 'Leaf Blade', 'Hit': '100', 'Type': 'grass', 'Category': 'physical', 'PP': '15', 'Description': 'The user handles a sharp leaf like a sword and attacks by cutting its target. Critical hits land more easily.', 'BP': '90'}, 'muddy water': {'Name': 'Muddy Water', 'Hit': '85', 'Type': 'water', 'Category': 'special', 'PP': '10', 'Description': 'The user attacks by shooting muddy water at the opposing team. It may also lower the targets\' accuracy."', 'BP': '90'}, 'acid spray': {'Name': 'Acid Spray', 'Hit': '100', 'Type': 'poison', 'Category': 'special', 'PP': '20', 'Description': 'The user spits fluid that works to melt the target. This harshly reduces the target\'s Sp. Def stat."', 'BP': '40'}, 'dragon pulse': {'Name': 'Dragon Pulse', 'Hit': '100', 'Type': 'dragon', 'Category': 'special', 'PP': '10', 'Description': "The target is attacked with a shock wave generated by the user's gaping mouth.", 'BP': '85'}, 'grass whistle': {'Name': 'Grass Whistle', 'Hit': '55', 'Type': 'grass', 'Category': 'other', 'PP': '15', 'Description': 'The user plays a pleasant melody that lulls the target into a deep sleep."', 'BP': '--'}, 'parabolic charge': {'Name': 'Parabolic Charge', 'Hit': '100', 'Type': 'electric', 'Category': 'special', 'PP': '20', 'Description': 'The user attacks everything around it. The user\'s HP is restored by half the damage taken by those hit."', 'BP': '50'}, 'baby-doll eyes': {'Name': 'Baby-Doll Eyes', 'Hit': '100', 'Type': 'fairy', 'Category': 'other', 'PP': '30', 'Description': 'The user stares at the target with its baby-doll eyes', 'BP': '--'}, 'hydro pump': {'Name': 'Hydro Pump', 'Hit': '80', 'Type': 'water', 'Category': 'special', 'PP': '5', 'Description': 'The target is blasted by a huge volume of water launched under great pressure.', 'BP': '110'}, 'giga impact': {'Name': 'Giga Impact', 'Hit': '90', 'Type': 'normal', 'Category': 'physical', 'PP': '5', 'Description': 'The user charges at the target using every bit of its power. The user must rest on the next turn.', 'BP': '150'}, 'shell smash': {'Name': 'Shell Smash', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '15', 'Description': 'The user breaks its shell, lowering its Defense and Sp. Def stats but sharply raising Attack, Sp. Atk, and Speed stats.', 'BP': '--'}, 'power split': {'Name': 'Power Split', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '10', 'Description': 'The user employs its psychic power to average its Attack and Sp. Atk stats with those of the target\'s."', 'BP': '--'}, 'venoshock': {'Name': 'Venoshock', 'Hit': '100', 'Type': 'poison', 'Category': 'special', 'PP': '10', 'Description': 'The user drenches the target in a special poisonous liquid. Its power is doubled if the target is poisoned.', 'BP': '65'}, 'magma storm': {'Name': 'Magma Storm', 'Hit': '75', 'Type': 'fire', 'Category': 'special', 'PP': '5', 'Description': 'The target becomes trapped within a maelstrom of fire that rages for four to five turns.', 'BP': '100'}, 'oblivion wing': {'Name': 'Oblivion Wing', 'Hit': '100', 'Type': 'flying', 'Category': 'special', 'PP': '10', 'Description': "The user absorbs its target's HP. The user's HP is restored by over half of the damage taken by the target.", 'BP': '80'}, 'peck': {'Name': 'Peck', 'Hit': '100', 'Type': 'flying', 'Category': 'physical', 'PP': '35', 'Description': 'The target is jabbed with a sharply pointed beak or horn.', 'BP': '35'}, 'barrier': {'Name': 'Barrier', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '20', 'Description': 'The user throws up a sturdy wall that sharply raises its Defense stat.', 'BP': '--'}, 'low kick': {'Name': 'Low Kick', 'Hit': '100', 'Type': 'fighting', 'Category': 'physical', 'PP': '20', 'Description': 'A powerful low kick that makes the target fall over. It inflicts greater damage on heavier targets.', 'BP': '--'}, 'protect': {'Name': 'Protect', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '10', 'Description': 'It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.', 'BP': '--'}, 'double hit': {'Name': 'Double Hit', 'Hit': '90', 'Type': 'normal', 'Category': 'physical', 'PP': '10', 'Description': 'The user slams the target with a long tail', 'BP': '35'}, 'fire pledge': {'Name': 'Fire Pledge', 'Hit': '100', 'Type': 'fire', 'Category': 'special', 'PP': '10', 'Description': 'A column of fire hits opposing Pok&eacute;mon. When used with its Grass equivalent, its damage increases into a vast sea of fire.', 'BP': '80'}, 'psych up': {'Name': 'Psych Up', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '10', 'Description': 'The user hypnotizes itself into copying any stat change made by the target."', 'BP': '--'}, 'shift gear': {'Name': 'Shift Gear', 'Hit': '--', 'Type': 'steel', 'Category': 'other', 'PP': '10', 'Description': 'The user rotates its gears, raising its Attack and sharply raising its Speed.', 'BP': '--'}, 'smelling salts': {'Name': 'Smelling Salts', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '10', 'Description': "This attack inflicts double damage on a target with paralysis. It also cures the target's paralysis, however.", 'BP': '70'}, 'curse': {'Name': 'Curse', 'Hit': '--', 'Type': 'ghost', 'Category': 'other', 'PP': '10', 'Description': 'A move that works differently for the Ghost type than for all other types.', 'BP': '--'}, 'crunch': {'Name': 'Crunch', 'Hit': '100', 'Type': 'dark', 'Category': 'physical', 'PP': '15', 'Description': "The user crunches up the target with sharp fangs. It may also lower the target's Defense stat.", 'BP': '80'}, 'will-o-wisp': {'Name': 'Will-O-Wisp', 'Hit': '85', 'Type': 'fire', 'Category': 'other', 'PP': '15', 'Description': 'The user shoots a sinister, bluish-white flame at the target to inflict a burn.', 'BP': '--'}, 'psycho shift': {'Name': 'Psycho Shift', 'Hit': '100', 'Type': 'psychic', 'Category': 'other', 'PP': '10', 'Description': 'Using its psychic power of suggestion, the user transfers its status problems to the target.', 'BP': '--'}, 'round': {'Name': 'Round', 'Hit': '100', 'Type': 'normal', 'Category': 'special', 'PP': '15', 'Description': 'The user attacks the target with a song. Others can join in the Round and make the attack do greater damage.', 'BP': '60'}, 'defend order': {'Name': 'Defend Order', 'Hit': '--', 'Type': 'bug', 'Category': 'other', 'PP': '10', 'Description': 'The user calls out its underlings to shield its body, raising its Defense and Sp. Def stats.', 'BP': '--'}, 'wing attack': {'Name': 'Wing Attack', 'Hit': '100', 'Type': 'flying', 'Category': 'physical', 'PP': '35', 'Description': 'The target is struck with large, imposing wings spread wide to inflict damage.', 'BP': '60'}, 'spore': {'Name': 'Spore', 'Hit': '100', 'Type': 'grass', 'Category': 'other', 'PP': '15', 'Description': 'The user scatters bursts of spores that induce sleep.', 'BP': '--'}, 'fake out': {'Name': 'Fake Out', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '10', 'Description': 'An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.', 'BP': '40'}, 'sleep talk': {'Name': 'Sleep Talk', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '10', 'Description': 'While it is asleep', 'BP': '--'}, 'headbutt': {'Name': 'Headbutt', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '15', 'Description': 'The user sticks out its head and attacks by charging straight into the target. It may also make the target flinch.', 'BP': '70'}, 'fairy wind': {'Name': 'Fairy Wind', 'Hit': '100', 'Type': 'fairy', 'Category': 'special', 'PP': '30', 'Description': 'The user stirs up a fairy wind and strikes the target with it.', 'BP': '40'}, 'attract': {'Name': 'Attract', 'Hit': '100', 'Type': 'normal', 'Category': 'other', 'PP': '15', 'Description': 'If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.', 'BP': '--'}, 'surf': {'Name': 'Surf', 'Hit': '100', 'Type': 'water', 'Category': 'special', 'PP': '15', 'Description': 'It swamps the area around the user with a giant wave. It can also be used for crossing water.', 'BP': '90'}, 'double-edge': {'Name': 'Double-Edge', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '15', 'Description': 'A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.', 'BP': '120'}, 'energy ball': {'Name': 'Energy Ball', 'Hit': '100', 'Type': 'grass', 'Category': 'special', 'PP': '10', 'Description': 'The user draws power from nature and fires it at the target. It may also lower the target\'s Sp. Def."', 'BP': '90'}, 'belch': {'Name': 'Belch', 'Hit': '90', 'Type': 'poison', 'Category': 'special', 'PP': '10', 'Description': 'The user lets out a damaging belch on the target. The user must eat a Berry to use this move.', 'BP': '120'}, 'struggle': {'Name': 'Struggle', 'Hit': '--', 'Type': 'normal', 'Category': 'physical', 'PP': '1', 'Description': 'An attack that is used in desperation only if the user has no PP. It also hurts the user slightly.', 'BP': '50'}, 'feint attack': {'Name': 'Feint Attack', 'Hit': '--', 'Type': 'dark', 'Category': 'physical', 'PP': '20', 'Description': 'The user approaches the target disarmingly', 'BP': '60'}, 'dragon claw': {'Name': 'Dragon Claw', 'Hit': '100', 'Type': 'dragon', 'Category': 'physical', 'PP': '15', 'Description': 'The user slashes the target with huge, sharp claws.', 'BP': '80'}, 'slack off': {'Name': 'Slack Off', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '10', 'Description': 'The user slacks off', 'BP': '--'}, 'counter': {'Name': 'Counter', 'Hit': '100', 'Type': 'fighting', 'Category': 'physical', 'PP': '20', 'Description': 'A retaliation move that counters any physical attack, inflicting double the damage taken.', 'BP': '--'}, 'secret sword': {'Name': 'Secret Sword', 'Hit': '100', 'Type': 'fighting', 'Category': 'special', 'PP': '10', 'Description': 'The user cuts with its long horn. The odd power contained in the horn does physical damage to the target.', 'BP': '85'}, 'milk drink': {'Name': 'Milk Drink', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '10', 'Description': 'The user restores its own HP by up to half of its maximum HP. May also be used in the field to heal HP."', 'BP': '--'}, 'leaf storm': {'Name': 'Leaf Storm', 'Hit': '90', 'Type': 'grass', 'Category': 'special', 'PP': '5', 'Description': "The user whips up a storm of leaves around the target. The attack's recoil harshly reduces the user's Sp. Atk stat.", 'BP': '130'}, 'cut': {'Name': 'Cut', 'Hit': '95', 'Type': 'normal', 'Category': 'physical', 'PP': '30', 'Description': 'The target is cut with a scythe or a claw. It can also be used to cut down thin trees.', 'BP': '50'}, 'cotton spore': {'Name': 'Cotton Spore', 'Hit': '100', 'Type': 'grass', 'Category': 'other', 'PP': '40', 'Description': 'The user releases cotton-like spores that cling to the target, harshly reducing its Speed stat.', 'BP': '--'}, 'crabhammer': {'Name': 'Crabhammer', 'Hit': '90', 'Type': 'water', 'Category': 'physical', 'PP': '10', 'Description': 'The target is hammered with a large pincer. Critical hits land more easily.', 'BP': '100'}, 'whirlpool': {'Name': 'Whirlpool', 'Hit': '85', 'Type': 'water', 'Category': 'special', 'PP': '15', 'Description': 'Traps foes in a violent swirling whirlpool for four to five turns.', 'BP': '35'}, 'clamp': {'Name': 'Clamp', 'Hit': '85', 'Type': 'water', 'Category': 'physical', 'PP': '15', 'Description': "The target is clamped and squeezed by the user's very thick and sturdy shell for four to five turns.", 'BP': '35'}, 'rock smash': {'Name': 'Rock Smash', 'Hit': '100', 'Type': 'fighting', 'Category': 'physical', 'PP': '15', 'Description': "The user attacks with a punch that can shatter a rock. It may also lower the target's Defense stat.", 'BP': '40'}, 'autotomize': {'Name': 'Autotomize', 'Hit': '--', 'Type': 'steel', 'Category': 'other', 'PP': '15', 'Description': 'The user sheds part of its body to make itself lighter and sharply raise its Speed stat.', 'BP': '--'}, 'tail glow': {'Name': 'Tail Glow', 'Hit': '--', 'Type': 'bug', 'Category': 'other', 'PP': '20', 'Description': 'The user stares at flashing lights to focus its mind', 'BP': '--'}, 'trick room': {'Name': 'Trick Room', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '5', 'Description': 'The user creates a bizarre area in which slower Pok&eacute;mon get to move first for five turns."', 'BP': '--'}, 'sweet scent': {'Name': 'Sweet Scent', 'Hit': '100', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': "A sweet scent that harshly lowers the opposing team's evasiveness. It also lures wild Pok&eacute;mon if used in grass, etc.", 'BP': '--'}, 'misty terrain': {'Name': 'Misty Terrain', 'Hit': '--', 'Type': 'fairy', 'Category': 'other', 'PP': '10', 'Description': 'The user covers the ground under everyone\'s feet with mist for five turns. This protects Pok&eacute;mon on the ground from status conditions."', 'BP': '--'}, 'dragon ascent': {'Name': 'Dragon Ascent', 'Hit': '100', 'Type': 'flying', 'Category': 'physical', 'PP': '5', 'Description': 'After soaring upward, the user attacks its target by dropping out of the sky at high speeds, although it lowers its own Defense and Sp. Def in the process.', 'BP': '120'}, 'crafty shield': {'Name': 'Crafty Shield', 'Hit': '--', 'Type': 'fairy', 'Category': 'other', 'PP': '10', 'Description': 'The user protects itself and its allies from status moves with a mysterious power. This does not stop moves that do damage.', 'BP': '--'}, 'growl': {'Name': 'Growl', 'Hit': '100', 'Type': 'normal', 'Category': 'other', 'PP': '40', 'Description': "The user growls in an endearing way, making the opposing team less wary. The foes' Attack stats are lowered.", 'BP': '--'}, 'rock throw': {'Name': 'Rock Throw', 'Hit': '90', 'Type': 'rock', 'Category': 'physical', 'PP': '15', 'Description': 'The user picks up and throws a small rock at the target to attack."', 'BP': '50'}, 'revenge': {'Name': 'Revenge', 'Hit': '100', 'Type': 'fighting', 'Category': 'physical', 'PP': '10', 'Description': 'An attack move that inflicts double the damage if the user has been hurt by the opponent in the same turn.', 'BP': '60'}, 'avalanche': {'Name': 'Avalanche', 'Hit': '100', 'Type': 'ice', 'Category': 'physical', 'PP': '10', 'Description': 'An attack move that inflicts double the damage if the user has been hurt by the target in the same turn.', 'BP': '60'}, 'bone club': {'Name': 'Bone Club', 'Hit': '85', 'Type': 'ground', 'Category': 'physical', 'PP': '20', 'Description': 'The user clubs the target with a bone. It may also make the target flinch.', 'BP': '65'}, 'aurora beam': {'Name': 'Aurora Beam', 'Hit': '100', 'Type': 'ice', 'Category': 'special', 'PP': '20', 'Description': 'The target is hit with a rainbow-colored beam. This may also lower the target\'s Attack stat."', 'BP': '65'}, 'guard split': {'Name': 'Guard Split', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '10', 'Description': "The user employs its psychic power to average its Defense and Sp. Def stats with those of its target's.", 'BP': '--'}, 'high jump kick': {'Name': 'High Jump Kick', 'Hit': '90', 'Type': 'fighting', 'Category': 'physical', 'PP': '10', 'Description': 'The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead.', 'BP': '130'}, 'dive': {'Name': 'Dive', 'Hit': '100', 'Type': 'water', 'Category': 'physical', 'PP': '10', 'Description': 'Diving on the first turn, the user floats up and attacks on the second turn. It can be used to dive deep in the ocean.', 'BP': '80'}, 'super fang': {'Name': 'Super Fang', 'Hit': '90', 'Type': 'normal', 'Category': 'physical', 'PP': '10', 'Description': "The user chomps hard on the target with its sharp front fangs. It cuts the target's HP to half.", 'BP': '--'}, 'scratch': {'Name': 'Scratch', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '35', 'Description': 'Hard', 'BP': '40'}, 'vital throw': {'Name': 'Vital Throw', 'Hit': '--', 'Type': 'fighting', 'Category': 'physical', 'PP': '10', 'Description': 'The user attacks last. In return, this throw move is guaranteed not to miss.', 'BP': '70'}, 'growth': {'Name': 'Growth', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': "The user's body grows all at once, raising the Attack and Sp. Atk stats.", 'BP': '--'}, 'meditate': {'Name': 'Meditate', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '40', 'Description': 'The user meditates to awaken the power deep within its body and raise its Attack stat.', 'BP': '--'}, 'bonemerang': {'Name': 'Bonemerang', 'Hit': '90', 'Type': 'ground', 'Category': 'physical', 'PP': '10', 'Description': 'The user throws the bone it holds. The bone loops to hit the target twice, coming and going.', 'BP': '50'}, 'vice grip': {'Name': 'Vice Grip', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '30', 'Description': 'The target is gripped and squeezed from both sides to inflict damage.', 'BP': '55'}, 'drain punch': {'Name': 'Drain Punch', 'Hit': '100', 'Type': 'fighting', 'Category': 'physical', 'PP': '10', 'Description': "An energy-draining punch. The user's HP is restored by half the damage taken by the target.", 'BP': '75'}, 'aura sphere': {'Name': 'Aura Sphere', 'Hit': '--', 'Type': 'fighting', 'Category': 'special', 'PP': '20', 'Description': 'The user looses a blast of aura power from deep within its body at the target. This move is certain to hit.', 'BP': '80'}, 'vacuum wave': {'Name': 'Vacuum Wave', 'Hit': '100', 'Type': 'fighting', 'Category': 'special', 'PP': '30', 'Description': 'The user whirls its fists to send a wave of pure vacuum at the target. This move always goes first.', 'BP': '40'}, 'petal blizzard': {'Name': 'Petal Blizzard', 'Hit': '100', 'Type': 'grass', 'Category': 'physical', 'PP': '15', 'Description': 'The user stirs up a violent petal blizzard and attacks everything around it."', 'BP': '90'}, 'sludge wave': {'Name': 'Sludge Wave', 'Hit': '100', 'Type': 'poison', 'Category': 'special', 'PP': '10', 'Description': 'It swamps the area around the user with a giant sludge wave. It may also poison those hit.', 'BP': '95'}, 'stealth rock': {'Name': 'Stealth Rock', 'Hit': '--', 'Type': 'rock', 'Category': 'other', 'PP': '20', 'Description': 'The user lays a trap of levitating stones around the opponent\'s team. The trap hurts opponents that switch into battle."', 'BP': '--'}, 'mach punch': {'Name': 'Mach Punch', 'Hit': '100', 'Type': 'fighting', 'Category': 'physical', 'PP': '30', 'Description': 'The user throws a punch at blinding speed. It is certain to strike first.', 'BP': '40'}, 'supersonic': {'Name': 'Supersonic', 'Hit': '55', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': 'The user generates odd sound waves from its body. It may confuse the target.', 'BP': '--'}, 'explosion': {'Name': 'Explosion', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '5', 'Description': 'The user explodes to inflict damage on those around it. The user faints upon using this move.', 'BP': '250'}, 'gunk shot': {'Name': 'Gunk Shot', 'Hit': '80', 'Type': 'poison', 'Category': 'physical', 'PP': '5', 'Description': 'The user shoots filthy garbage at the target to attack. It may also poison the target.', 'BP': '120'}, 'bubble': {'Name': 'Bubble', 'Hit': '100', 'Type': 'water', 'Category': 'special', 'PP': '30', 'Description': "A spray of countless bubbles is jetted at the opposing team. It may also lower the targets' Speed stats.", 'BP': '40'}, 'focus punch': {'Name': 'Focus Punch', 'Hit': '100', 'Type': 'fighting', 'Category': 'physical', 'PP': '20', 'Description': 'The user focuses its mind before launching a punch. It will fail if the user is hit before it is used."', 'BP': '150'}, 'spite': {'Name': 'Spite', 'Hit': '100', 'Type': 'ghost', 'Category': 'other', 'PP': '10', 'Description': 'The user unleashes its grudge on the move last used by the target by cutting 4 PP from it.', 'BP': '--'}, 'lock-on': {'Name': 'Lock-On', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '5', 'Description': 'The user takes sure aim at the target. It ensures the next attack does not fail to hit the target.', 'BP': '--'}, 'absorb': {'Name': 'Absorb', 'Hit': '100', 'Type': 'grass', 'Category': 'special', 'PP': '25', 'Description': "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.", 'BP': '20'}, 'horn drill': {'Name': 'Horn Drill', 'Hit': '30', 'Type': 'normal', 'Category': 'physical', 'PP': '5', 'Description': 'The user stabs the target with a horn that rotates like a drill. If it hits, the target faints instantly.', 'BP': '--'}, 'shadow ball': {'Name': 'Shadow Ball', 'Hit': '100', 'Type': 'ghost', 'Category': 'special', 'PP': '15', 'Description': "The user hurls a shadowy blob at the target. It may also lower the target's Sp. Def stat.", 'BP': '80'}, 'sketch': {'Name': 'Sketch', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '1', 'Description': 'It enables the user to permanently learn the move last used by the target. Once used, Sketch disappears.', 'BP': '--'}, 'mimic': {'Name': 'Mimic', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '10', 'Description': "The user copies the target's last move. The move can be used during battle until the Pok&eacute;mon is switched out.", 'BP': '--'}, 'baton pass': {'Name': 'Baton Pass', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '40', 'Description': 'The user switches places with a party Pok&eacute;mon in waiting', 'BP': '--'}, 'bulk up': {'Name': 'Bulk Up', 'Hit': '--', 'Type': 'fighting', 'Category': 'other', 'PP': '20', 'Description': 'The user tenses its muscles to bulk up its body', 'BP': '--'}, 'submission': {'Name': 'Submission', 'Hit': '80', 'Type': 'fighting', 'Category': 'physical', 'PP': '25', 'Description': 'The user grabs the target and recklessly dives for the ground. It also hurts the user slightly.', 'BP': '80'}, 'sand tomb': {'Name': 'Sand Tomb', 'Hit': '85', 'Type': 'ground', 'Category': 'physical', 'PP': '15', 'Description': 'The user traps the target inside a harshly raging sandstorm for four to five turns."', 'BP': '35'}, 'belly drum': {'Name': 'Belly Drum', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '10', 'Description': 'The user maximizes its Attack stat in exchange for HP equal to half its max HP.', 'BP': '--'}, 'play rough': {'Name': 'Play Rough', 'Hit': '90', 'Type': 'fairy', 'Category': 'physical', 'PP': '10', 'Description': 'The user plays rough with the target and attacks it. This may also lower the target\'s Attack stat."', 'BP': '90'}, 'covet': {'Name': 'Covet', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '25', 'Description': "The user endearingly approaches the target, then steals the target's held item.", 'BP': '60'}, 'dig': {'Name': 'Dig', 'Hit': '100', 'Type': 'ground', 'Category': 'physical', 'PP': '10', 'Description': 'The user burrows, then attacks on the second turn. It can also be used to exit dungeons.', 'BP': '80'}, 'gastro acid': {'Name': 'Gastro Acid', 'Hit': '100', 'Type': 'poison', 'Category': 'other', 'PP': '10', 'Description': "The user hurls up its stomach acids on the target. The fluid eliminates the effect of the target's Ability.", 'BP': '--'}, 'howl': {'Name': 'Howl', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '40', 'Description': 'The user howls loudly to raise its spirit, boosting its Attack stat.', 'BP': '--'}, 'retaliate': {'Name': 'Retaliate', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '5', 'Description': "The user gets revenge for a fainted ally. If an ally fainted in the previous turn, this attack's damage increases.", 'BP': '70'}, 'fire spin': {'Name': 'Fire Spin', 'Hit': '85', 'Type': 'fire', 'Category': 'special', 'PP': '15', 'Description': 'The target becomes trapped within a fierce vortex of fire that rages for four to five turns.', 'BP': '35'}, 'stun spore': {'Name': 'Stun Spore', 'Hit': '75', 'Type': 'grass', 'Category': 'other', 'PP': '30', 'Description': 'The user scatters a cloud of paralyzing powder. It may leave the target with paralysis.', 'BP': '--'}, 'air slash': {'Name': 'Air Slash', 'Hit': '95', 'Type': 'flying', 'Category': 'special', 'PP': '15', 'Description': 'The user attacks with a blade of air that slices even the sky. It may also make the target flinch.', 'BP': '75'}, 'sludge': {'Name': 'Sludge', 'Hit': '100', 'Type': 'poison', 'Category': 'special', 'PP': '20', 'Description': 'Unsanitary sludge is hurled at the target. It may also poison the target.', 'BP': '65'}, 'nasty plot': {'Name': 'Nasty Plot', 'Hit': '--', 'Type': 'dark', 'Category': 'other', 'PP': '20', 'Description': 'The user stimulates its brain by thinking bad thoughts. It sharply raises the user\'s Sp. Atk."', 'BP': '--'}, 'megahorn': {'Name': 'Megahorn', 'Hit': '85', 'Type': 'bug', 'Category': 'physical', 'PP': '10', 'Description': 'Using its tough and impressive horn, the user rams into the target with no letup.', 'BP': '120'}, 'poison fang': {'Name': 'Poison Fang', 'Hit': '100', 'Type': 'poison', 'Category': 'physical', 'PP': '15', 'Description': 'The user bites the target with toxic fangs. It may also leave the target badly poisoned.', 'BP': '50'}, 'conversion 2': {'Name': 'Conversion 2', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '30', 'Description': 'The user changes its type to make itself resistant to the type of the attack the opponent used last."', 'BP': '--'}, 'zap cannon': {'Name': 'Zap Cannon', 'Hit': '50', 'Type': 'electric', 'Category': 'special', 'PP': '5', 'Description': 'The user fires an electric blast like a cannon to inflict damage and cause paralysis.', 'BP': '120'}, 'bubble beam': {'Name': 'Bubble Beam', 'Hit': '100', 'Type': 'water', 'Category': 'special', 'PP': '20', 'Description': 'A spray of bubbles is forcefully ejected at the opposing team. It may also lower their Speed stats."', 'BP': '65'}, 'double team': {'Name': 'Double Team', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '15', 'Description': 'By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.', 'BP': '--'}, 'crush grip': {'Name': 'Crush Grip', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '5', 'Description': 'The target is crushed with great force. The attack is more powerful the more HP the target has left.', 'BP': '--'}, 'grassy terrain': {'Name': 'Grassy Terrain', 'Hit': '--', 'Type': 'grass', 'Category': 'other', 'PP': '10', 'Description': "The user turns the ground under everyone's feet to grass for five turns. This restores the HP of Pok&eacute;mon on the ground a little every turn.", 'BP': '--'}, 'eruption': {'Name': 'Eruption', 'Hit': '100', 'Type': 'fire', 'Category': 'special', 'PP': '5', 'Description': "The user attacks the opposing team with explosive fury. The lower the user's HP, the less powerful this attack becomes.", 'BP': '150'}, 'psycho boost': {'Name': 'Psycho Boost', 'Hit': '90', 'Type': 'psychic', 'Category': 'special', 'PP': '5', 'Description': 'The user attacks the target at full power. The attack\'s recoil harshly reduces the user\'s Sp. Atk stat."', 'BP': '140'}, 'trick': {'Name': 'Trick', 'Hit': '100', 'Type': 'psychic', 'Category': 'other', 'PP': '10', 'Description': 'The user catches the target off guard and swaps its held item with its own.', 'BP': '--'}, 'steel wing': {'Name': 'Steel Wing', 'Hit': '90', 'Type': 'steel', 'Category': 'physical', 'PP': '25', 'Description': 'The target is hit with wings of steel. It may also raise the user\'s Defense stat."', 'BP': '70'}, 'withdraw': {'Name': 'Withdraw', 'Hit': '--', 'Type': 'water', 'Category': 'other', 'PP': '40', 'Description': 'The user withdraws its body into its hard shell, raising its Defense stat.', 'BP': '--'}, 'secret power': {'Name': 'Secret Power', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '20', 'Description': "The user attacks the target with a secret power. Its added effects vary depending on the user's environment.", 'BP': '70'}, 'dark pulse': {'Name': 'Dark Pulse', 'Hit': '100', 'Type': 'dark', 'Category': 'special', 'PP': '15', 'Description': 'The user releases a horrible aura imbued with dark thoughts. It may also make the target flinch."', 'BP': '80'}, 'ice punch': {'Name': 'Ice Punch', 'Hit': '100', 'Type': 'ice', 'Category': 'physical', 'PP': '15', 'Description': 'The target is punched with an icy fist. It may also leave the target frozen.', 'BP': '75'}, 'rock slide': {'Name': 'Rock Slide', 'Hit': '90', 'Type': 'rock', 'Category': 'physical', 'PP': '10', 'Description': 'Large boulders are hurled at the opposing team to inflict damage. It may also make the targets flinch."', 'BP': '75'}, 'extrasensory': {'Name': 'Extrasensory', 'Hit': '100', 'Type': 'psychic', 'Category': 'special', 'PP': '20', 'Description': 'The user attacks with an odd, unseeable power. It may also make the target flinch.', 'BP': '80'}, 'whirlwind': {'Name': 'Whirlwind', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': 'The target is blown away, to be replaced by another Pok&eacute;mon in its party. In the wild, the battle ends.', 'BP': '--'}, 'sunny day': {'Name': 'Sunny Day', 'Hit': '--', 'Type': 'fire', 'Category': 'other', 'PP': '5', 'Description': 'The user intensifies the sun for five turns', 'BP': '--'}, 'flame wheel': {'Name': 'Flame Wheel', 'Hit': '100', 'Type': 'fire', 'Category': 'physical', 'PP': '25', 'Description': 'The user cloaks itself in fire and charges at the target. It may also leave the target with a burn.', 'BP': '60'}, 'thunder shock': {'Name': 'Thunder Shock', 'Hit': '100', 'Type': 'electric', 'Category': 'special', 'PP': '30', 'Description': 'A jolt of electricity is hurled at the target to inflict damage. It may also leave the target with paralysis."', 'BP': '40'}, 'spike cannon': {'Name': 'Spike Cannon', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '15', 'Description': 'Sharp spikes are shot at the target in rapid succession. They hit two to five times in a row."', 'BP': '20'}, 'payback': {'Name': 'Payback', 'Hit': '100', 'Type': 'dark', 'Category': 'physical', 'PP': '10', 'Description': "If the user moves after the target, this attack's power will be doubled.", 'BP': '50'}, 'flatter': {'Name': 'Flatter', 'Hit': '100', 'Type': 'dark', 'Category': 'other', 'PP': '15', 'Description': "Flattery is used to confuse the target. However, it also raises the target's Sp. Atk stat.", 'BP': '--'}, 'calm mind': {'Name': 'Calm Mind', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '20', 'Description': 'The user quietly focuses its mind and calms its spirit to raise its Sp. Atk and Sp. Def stats.', 'BP': '--'}, 'sticky web': {'Name': 'Sticky Web', 'Hit': '--', 'Type': 'bug', 'Category': 'other', 'PP': '20', 'Description': 'The user weaves a sticky net around the opposing team, which lowers their Speed stat upon switching into battle.', 'BP': '--'}, 'powder snow': {'Name': 'Powder Snow', 'Hit': '100', 'Type': 'ice', 'Category': 'special', 'PP': '25', 'Description': 'The user attacks with a chilling gust of powdery snow. It may also freeze the targets."', 'BP': '40'}, 'me first': {'Name': 'Me First', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': "The user tries to cut ahead of the target to steal and use the target's intended move with greater power.", 'BP': '--'}, 'swallow': {'Name': 'Swallow', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '10', 'Description': 'The power stored using the move Stockpile is absorbed by the user to heal its HP. Storing more power heals more HP.', 'BP': '--'}, 'dragon rage': {'Name': 'Dragon Rage', 'Hit': '100', 'Type': 'dragon', 'Category': 'special', 'PP': '10', 'Description': 'This attack hits the target with a shock wave of pure rage. This attack always inflicts 40 HP damage."', 'BP': '--'}, 'bide': {'Name': 'Bide', 'Hit': '--', 'Type': 'normal', 'Category': 'physical', 'PP': '10', 'Description': 'The user endures attacks for two turns, then strikes back to cause double the damage taken.', 'BP': '--'}, 'signal beam': {'Name': 'Signal Beam', 'Hit': '100', 'Type': 'bug', 'Category': 'special', 'PP': '15', 'Description': 'The user attacks with a sinister beam of light. It may also confuse the target."', 'BP': '75'}, 'egg bomb': {'Name': 'Egg Bomb', 'Hit': '75', 'Type': 'normal', 'Category': 'physical', 'PP': '10', 'Description': 'A large egg is hurled at the target with maximum force to inflict damage."', 'BP': '100'}, 'rapid spin': {'Name': 'Rapid Spin', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '40', 'Description': 'A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.', 'BP': '20'}, 'ingrain': {'Name': 'Ingrain', 'Hit': '--', 'Type': 'grass', 'Category': 'other', 'PP': '20', 'Description': "The user lays roots that restore its HP on every turn. Because it is rooted, it can't switch out.", 'BP': '--'}, 'scald': {'Name': 'Scald', 'Hit': '100', 'Type': 'water', 'Category': 'special', 'PP': '15', 'Description': 'The user shoots boiling hot water at its target. It may also leave the target with a burn.', 'BP': '80'}, 'double slap': {'Name': 'Double Slap', 'Hit': '85', 'Type': 'normal', 'Category': 'physical', 'PP': '10', 'Description': 'The target is slapped repeatedly', 'BP': '15'}, 'hold hands': {'Name': 'Hold Hands', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '40', 'Description': 'Ally Pok&eacute;mon hold hands. This makes them very happy.', 'BP': '--'}, 'rock tomb': {'Name': 'Rock Tomb', 'Hit': '95', 'Type': 'rock', 'Category': 'physical', 'PP': '15', 'Description': "Boulders are hurled at the target. It also lowers the target's Speed by preventing its movement.", 'BP': '60'}, 'night slash': {'Name': 'Night Slash', 'Hit': '100', 'Type': 'dark', 'Category': 'physical', 'PP': '15', 'Description': 'The user slashes the target the instant an opportunity arises. Critical hits land more easily."', 'BP': '70'}, 'refresh': {'Name': 'Refresh', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': 'The user rests to cure itself of a poisoning, burn, or paralysis.', 'BP': '--'}, 'thief': {'Name': 'Thief', 'Hit': '100', 'Type': 'dark', 'Category': 'physical', 'PP': '25', 'Description': "The user attacks and steals the target's held item simultaneously. It can't steal if the user holds an item.", 'BP': '60'}, 'swords dance': {'Name': 'Swords Dance', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': 'A frenetic dance to uplift the fighting spirit. It sharply raises the user\'s Attack stat."', 'BP': '--'}, 'disarming voice': {'Name': 'Disarming Voice', 'Hit': '--', 'Type': 'fairy', 'Category': 'special', 'PP': '15', 'Description': 'Letting out a charming cry', 'BP': '40'}, 'switcheroo': {'Name': 'Switcheroo', 'Hit': '100', 'Type': 'dark', 'Category': 'other', 'PP': '10', 'Description': 'The user trades held items with the target faster than the eye can follow.', 'BP': '--'}, 'diamond storm': {'Name': 'Diamond Storm', 'Hit': '95', 'Type': 'rock', 'Category': 'physical', 'PP': '5', 'Description': 'The user whips up a storm of diamonds to damage opposing Pok&eacute;mon. This may also raise the user\'s Defense stat."', 'BP': '100'}, 'dark void': {'Name': 'Dark Void', 'Hit': '80', 'Type': 'dark', 'Category': 'other', 'PP': '10', 'Description': 'Opposing Pok&eacute;mon are dragged into a world of total darkness that makes them sleep."', 'BP': '--'}, 'twister': {'Name': 'Twister', 'Hit': '100', 'Type': 'dragon', 'Category': 'special', 'PP': '20', 'Description': 'The user whips up a vicious tornado to tear at the opposing team. It may also make targets flinch.', 'BP': '40'}, 'bolt strike': {'Name': 'Bolt Strike', 'Hit': '85', 'Type': 'electric', 'Category': 'physical', 'PP': '5', 'Description': 'The user charges its target', 'BP': '130'}, 'origin pulse': {'Name': 'Origin Pulse', 'Hit': '85', 'Type': 'water', 'Category': 'special', 'PP': '10', 'Description': 'The user attacks opposing Pok&eacute;mon with countless beams of light that glow a deep and brilliant blue.', 'BP': '110'}, 'seed flare': {'Name': 'Seed Flare', 'Hit': '85', 'Type': 'grass', 'Category': 'special', 'PP': '5', 'Description': 'The user emits a shock wave from its body to attack its target. It may harshly lower the target\'s Sp. Def."', 'BP': '120'}, 'infestation': {'Name': 'Infestation', 'Hit': '100', 'Type': 'bug', 'Category': 'special', 'PP': '20', 'Description': "The target is infested and attacked for four to five turns. The target can't flee during this time.", 'BP': '20'}, 'lava plume': {'Name': 'Lava Plume', 'Hit': '100', 'Type': 'fire', 'Category': 'special', 'PP': '15', 'Description': 'An inferno of scarlet flames torches everything around the user. It may leave targets with a burn."', 'BP': '80'}, 'aromatherapy': {'Name': 'Aromatherapy', 'Hit': '--', 'Type': 'grass', 'Category': 'other', 'PP': '5', 'Description': "The user releases a soothing scent that heals all status problems affecting the user's party.", 'BP': '--'}, 'wild charge': {'Name': 'Wild Charge', 'Hit': '100', 'Type': 'electric', 'Category': 'physical', 'PP': '15', 'Description': 'The user shrouds itself in electricity and smashes into its target. It also damages the user a little."', 'BP': '90'}, 'struggle bug': {'Name': 'Struggle Bug', 'Hit': '100', 'Type': 'bug', 'Category': 'special', 'PP': '20', 'Description': "While resisting, the user attacks the opposing Pok&eacute;mon. The targets' Sp. Atk stat is reduced.", 'BP': '50'}, 'encore': {'Name': 'Encore', 'Hit': '100', 'Type': 'normal', 'Category': 'other', 'PP': '5', 'Description': 'The user compels the target to keep using only the move it last used for three turns.', 'BP': '--'}, 'reflect type': {'Name': 'Reflect Type', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '15', 'Description': "The user reflects the target's type", 'BP': '--'}, 'role play': {'Name': 'Role Play', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '10', 'Description': 'The user mimics the target completely', 'BP': '--'}, 'minimize': {'Name': 'Minimize', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '10', 'Description': 'The user compresses its body to make itself look smaller, which sharply raises its evasiveness.', 'BP': '--'}, 'assurance': {'Name': 'Assurance', 'Hit': '100', 'Type': 'dark', 'Category': 'physical', 'PP': '10', 'Description': "If the target has already taken some damage in the same turn, this attack's power is doubled.", 'BP': '60'}, 'lucky chant': {'Name': 'Lucky Chant', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '30', 'Description': 'The user chants an incantation toward the sky, preventing opposing Pok&eacute;mon from landing critical hits.', 'BP': '--'}, 'sharpen': {'Name': 'Sharpen', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '30', 'Description': 'The user reduces its polygon count to make itself more jagged, raising the Attack stat.', 'BP': '--'}, 'fly': {'Name': 'Fly', 'Hit': '95', 'Type': 'flying', 'Category': 'physical', 'PP': '15', 'Description': 'The user soars, then strikes its target on the second turn. It can also be used for flying to any familiar town.', 'BP': '90'}, 'sacred sword': {'Name': 'Sacred Sword', 'Hit': '100', 'Type': 'fighting', 'Category': 'physical', 'PP': '15', 'Description': "The user attacks by slicing with its long horns. The target's stat changes don't affect this attack's damage.", 'BP': '90'}, 'mega punch': {'Name': 'Mega Punch', 'Hit': '85', 'Type': 'normal', 'Category': 'physical', 'PP': '20', 'Description': 'The target is slugged by a punch thrown with muscle-packed power.', 'BP': '80'}, 'earthquake': {'Name': 'Earthquake', 'Hit': '100', 'Type': 'ground', 'Category': 'physical', 'PP': '10', 'Description': 'The user sets off an earthquake that strikes those around it.', 'BP': '100'}, 'mat block': {'Name': 'Mat Block', 'Hit': '--', 'Type': 'fighting', 'Category': 'other', 'PP': '15', 'Description': 'Using a pulled-up mat as a shield, the user protects itself and its allies from damaging moves. This does not stop status moves.', 'BP': '--'}, 'rollout': {'Name': 'Rollout', 'Hit': '90', 'Type': 'rock', 'Category': 'physical', 'PP': '20', 'Description': 'The user continually rolls into the target over five turns. It becomes stronger each time it hits.', 'BP': '30'}, 'sucker punch': {'Name': 'Sucker Punch', 'Hit': '100', 'Type': 'dark', 'Category': 'physical', 'PP': '5', 'Description': 'This move enables the user to attack first. It fails if the target is not readying an attack', 'BP': '80'}, 'poison powder': {'Name': 'Poison Powder', 'Hit': '75', 'Type': 'poison', 'Category': 'other', 'PP': '35', 'Description': 'The user scatters a cloud of poisonous dust on the target. It may poison the target."', 'BP': '--'}, 'steam eruption': {'Name': 'Steam Eruption', 'Hit': '95', 'Type': 'water', 'Category': 'special', 'PP': '5', 'Description': 'The user immerses the target in superheated steam. This may also leave the target with a burn.', 'BP': '110'}, 'magnetic flux': {'Name': 'Magnetic Flux', 'Hit': '--', 'Type': 'electric', 'Category': 'other', 'PP': '20', 'Description': 'The user manipulates magnetic fields which raises the Defense and Sp. Def stats of ally Pok&eacute;mon with the Plus or Minus Ability."', 'BP': '--'}, 'uproar': {'Name': 'Uproar', 'Hit': '100', 'Type': 'normal', 'Category': 'special', 'PP': '10', 'Description': 'The user attacks in an uproar for three turns. Over that time, no one can fall asleep.', 'BP': '90'}, 'nature power': {'Name': 'Nature Power', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': "An attack that makes use of nature's power. Its effects vary depending on the user's environment.", 'BP': '--'}, 'mind reader': {'Name': 'Mind Reader', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '5', 'Description': 'The user senses the target\'s movements with its mind to ensure its next attack does not miss the target."', 'BP': '--'}, 'confusion': {'Name': 'Confusion', 'Hit': '100', 'Type': 'psychic', 'Category': 'special', 'PP': '25', 'Description': 'The target is hit by a weak telekinetic force. It may also leave the target confused.', 'BP': '50'}, 'fire punch': {'Name': 'Fire Punch', 'Hit': '100', 'Type': 'fire', 'Category': 'physical', 'PP': '15', 'Description': 'The target is punched with a fiery fist. It may also leave the target with a burn."', 'BP': '75'}, 'thrash': {'Name': 'Thrash', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '10', 'Description': 'The user rampages and attacks for two to three turns. It then becomes confused, however.', 'BP': '120'}, 'rock blast': {'Name': 'Rock Blast', 'Hit': '90', 'Type': 'rock', 'Category': 'physical', 'PP': '10', 'Description': 'The user hurls hard rocks at the target. Two to five rocks are launched in quick succession."', 'BP': '25'}, 'overheat': {'Name': 'Overheat', 'Hit': '90', 'Type': 'fire', 'Category': 'special', 'PP': '5', 'Description': "The user attacks the target at full power. The attack's recoil harshly reduces the user's Sp. Atk stat.", 'BP': '130'}, 'bullet punch': {'Name': 'Bullet Punch', 'Hit': '100', 'Type': 'steel', 'Category': 'physical', 'PP': '30', 'Description': 'The user strikes the target with tough punches as fast as bullets. This move always goes first."', 'BP': '40'}, 'dragon rush': {'Name': 'Dragon Rush', 'Hit': '75', 'Type': 'dragon', 'Category': 'physical', 'PP': '10', 'Description': 'The user tackles the target while exhibiting overwhelming menace. It may also make the target flinch.', 'BP': '100'}, 'charge beam': {'Name': 'Charge Beam', 'Hit': '90', 'Type': 'electric', 'Category': 'special', 'PP': '10', 'Description': 'The user attacks with an electric charge. The user may use any remaining electricity to raise its Sp. Atk stat."', 'BP': '50'}, 'last resort': {'Name': 'Last Resort', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '5', 'Description': 'This move can be used only after the user has used all the other moves it knows in the battle."', 'BP': '140'}, 'slam': {'Name': 'Slam', 'Hit': '75', 'Type': 'normal', 'Category': 'physical', 'PP': '20', 'Description': 'The target is slammed with a long tail, vines, etc., to inflict damage.', 'BP': '80'}, 'happy hour': {'Name': 'Happy Hour', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '30', 'Description': 'Using Happy Hour doubles the amount of Prize Money received after battle."', 'BP': '--'}, 'foul play': {'Name': 'Foul Play', 'Hit': '100', 'Type': 'dark', 'Category': 'physical', 'PP': '15', 'Description': "The user turns the target's power against it. The higher the target's Attack stat", 'BP': '95'}, "king's shield": {'Name': "King's Shield", 'Hit': '--', 'Type': 'steel', 'Category': 'other', 'PP': '10', 'Description': 'The user takes a defensive stance while it protects itself from damage. It also harshly lowers the Attack stat of any attacker who makes direct contact."', 'BP': '--'}, 'grass knot': {'Name': 'Grass Knot', 'Hit': '100', 'Type': 'grass', 'Category': 'special', 'PP': '20', 'Description': 'The user snares the target with grass and trips it. The heavier the target', 'BP': '--'}, 'hex': {'Name': 'Hex', 'Hit': '100', 'Type': 'ghost', 'Category': 'special', 'PP': '10', 'Description': 'This relentless attack does massive damage to a target affected by status problems.', 'BP': '65'}, 'aqua jet': {'Name': 'Aqua Jet', 'Hit': '100', 'Type': 'water', 'Category': 'physical', 'PP': '20', 'Description': 'The user lunges at the target at a speed that makes it almost invisible. It is sure to strike first.', 'BP': '40'}, 'iron head': {'Name': 'Iron Head', 'Hit': '100', 'Type': 'steel', 'Category': 'physical', 'PP': '15', 'Description': 'The user slams the target with its steel-hard head. It may also make the target flinch.', 'BP': '80'}, 'arm thrust': {'Name': 'Arm Thrust', 'Hit': '100', 'Type': 'fighting', 'Category': 'physical', 'PP': '20', 'Description': 'The user looses a flurry of open-palmed arm thrusts that hit two to five times in a row.', 'BP': '15'}, 'skill swap': {'Name': 'Skill Swap', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '10', 'Description': 'The user employs its psychic power to exchange Abilities with the target.', 'BP': '--'}, 'torment': {'Name': 'Torment', 'Hit': '100', 'Type': 'dark', 'Category': 'other', 'PP': '15', 'Description': 'The user torments and enrages the target, making it incapable of using the same move twice in a row.', 'BP': '--'}, 'lick': {'Name': 'Lick', 'Hit': '100', 'Type': 'ghost', 'Category': 'physical', 'PP': '30', 'Description': 'The target is licked with a long tongue, causing damage. It may also leave the target with paralysis.', 'BP': '30'}, 'ominous wind': {'Name': 'Ominous Wind', 'Hit': '100', 'Type': 'ghost', 'Category': 'special', 'PP': '5', 'Description': 'The user blasts the target with a gust of repulsive wind. It may also raise all the user\'s stats at once."', 'BP': '60'}, 'draining kiss': {'Name': 'Draining Kiss', 'Hit': '100', 'Type': 'fairy', 'Category': 'special', 'PP': '10', 'Description': "The user steals the target's energy with a kiss. The user's HP is restored by over half of the damage taken by the target.", 'BP': '50'}, 'swagger': {'Name': 'Swagger', 'Hit': '90', 'Type': 'normal', 'Category': 'other', 'PP': '15', 'Description': "The user enrages and confuses the target. However, it also sharply raises the target's Attack stat.", 'BP': '--'}, 'brave bird': {'Name': 'Brave Bird', 'Hit': '100', 'Type': 'flying', 'Category': 'physical', 'PP': '15', 'Description': 'The user tucks in its wings and charges from a low altitude. The user also takes serious damage.', 'BP': '120'}, 'ice fang': {'Name': 'Ice Fang', 'Hit': '95', 'Type': 'ice', 'Category': 'physical', 'PP': '15', 'Description': 'The user bites with cold-infused fangs. It may also make the target flinch or leave it frozen."', 'BP': '65'}, 'dynamic punch': {'Name': 'Dynamic Punch', 'Hit': '50', 'Type': 'fighting', 'Category': 'physical', 'PP': '5', 'Description': 'The user punches the target with full, concentrated power. It confuses the target if it hits.', 'BP': '100'}, 'bug bite': {'Name': 'Bug Bite', 'Hit': '100', 'Type': 'bug', 'Category': 'physical', 'PP': '20', 'Description': 'The user bites the target. If the target is holding a Berry, the user eats it and gains its effect.', 'BP': '60'}, 'luster purge': {'Name': 'Luster Purge', 'Hit': '100', 'Type': 'psychic', 'Category': 'special', 'PP': '5', 'Description': "The user lets loose a damaging burst of light. It may also reduce the target's Sp. Def stat.", 'BP': '70'}, 'needle arm': {'Name': 'Needle Arm', 'Hit': '100', 'Type': 'grass', 'Category': 'physical', 'PP': '15', 'Description': 'The user attacks by wildly swinging its thorny arms. It may also make the target flinch.', 'BP': '60'}, 'waterfall': {'Name': 'Waterfall', 'Hit': '100', 'Type': 'water', 'Category': 'physical', 'PP': '15', 'Description': 'The user charges at the target and may make it flinch. It can also be used to climb a waterfall.', 'BP': '80'}, 'confuse ray': {'Name': 'Confuse Ray', 'Hit': '100', 'Type': 'ghost', 'Category': 'other', 'PP': '10', 'Description': 'The target is exposed to a sinister ray that triggers confusion.', 'BP': '--'}, 'blaze kick': {'Name': 'Blaze Kick', 'Hit': '90', 'Type': 'fire', 'Category': 'physical', 'PP': '10', 'Description': 'The user launches a kick that lands a critical hit more easily. It may also leave the target with a burn."', 'BP': '85'}, 'aqua tail': {'Name': 'Aqua Tail', 'Hit': '90', 'Type': 'water', 'Category': 'physical', 'PP': '10', 'Description': 'The user attacks by swinging its tail as if it were a vicious wave in a raging storm."', 'BP': '90'}, 'poison gas': {'Name': 'Poison Gas', 'Hit': '90', 'Type': 'poison', 'Category': 'other', 'PP': '40', 'Description': 'A cloud of poison gas is sprayed in the face of opposing Pok&eacute;mon. It may poison those hit.', 'BP': '--'}, 'hammer arm': {'Name': 'Hammer Arm', 'Hit': '90', 'Type': 'fighting', 'Category': 'physical', 'PP': '10', 'Description': "The user swings and hits with its strong and heavy fist. It lowers the user's Speed, however.", 'BP': '100'}, 'sky uppercut': {'Name': 'Sky Uppercut', 'Hit': '90', 'Type': 'fighting', 'Category': 'physical', 'PP': '15', 'Description': 'The user attacks the target with an uppercut thrown skyward with force.', 'BP': '85'}, 'acupressure': {'Name': 'Acupressure', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '30', 'Description': 'The user applies pressure to stress points, sharply boosting one of its stats.', 'BP': '--'}, 'water pledge': {'Name': 'Water Pledge', 'Hit': '100', 'Type': 'water', 'Category': 'special', 'PP': '10', 'Description': 'A column of water strikes the target. When combined with its fire equivalent', 'BP': '80'}, 'healing wish': {'Name': 'Healing Wish', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '10', 'Description': 'The user faints. In return, the Pok&eacute;mon taking its place will have its HP restored and status cured.', 'BP': '--'}, 'snatch': {'Name': 'Snatch', 'Hit': '--', 'Type': 'dark', 'Category': 'other', 'PP': '10', 'Description': 'The user steals the effects of any healing or stat-changing move the opponent attempts to use.', 'BP': '--'}, 'heat wave': {'Name': 'Heat Wave', 'Hit': '90', 'Type': 'fire', 'Category': 'special', 'PP': '10', 'Description': 'The user attacks by exhaling hot breath on the opposing team. It may also leave targets with a burn."', 'BP': '95'}, 'metal sound': {'Name': 'Metal Sound', 'Hit': '85', 'Type': 'steel', 'Category': 'other', 'PP': '40', 'Description': "A horrible sound like scraping metal harshly reduces the target's Sp. Def stat.", 'BP': '--'}, 'heat crash': {'Name': 'Heat Crash', 'Hit': '100', 'Type': 'fire', 'Category': 'physical', 'PP': '10', 'Description': 'The user slams its target with its flame- covered body. The more the user outweighs the target, the greater the damage.', 'BP': '--'}, 'reflect': {'Name': 'Reflect', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '20', 'Description': 'A wondrous wall of light is put up to suppress damage from physical attacks for five turns.', 'BP': '--'}, 'hail': {'Name': 'Hail', 'Hit': '--', 'Type': 'ice', 'Category': 'other', 'PP': '10', 'Description': 'The user summons a hailstorm lasting five turns. It damages all Pok&eacute;mon except the Ice type.', 'BP': '--'}, 'skull bash': {'Name': 'Skull Bash', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '10', 'Description': 'The user tucks in its head to raise its Defense in the first turn, then rams the target on the next turn.', 'BP': '130'}, 'sonic boom': {'Name': 'Sonic Boom', 'Hit': '90', 'Type': 'normal', 'Category': 'special', 'PP': '20', 'Description': 'The target is hit with a destructive shock wave that always inflicts 20 HP damage.', 'BP': '--'}, 'morning sun': {'Name': 'Morning Sun', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '5', 'Description': 'The user restores its own HP. The amount of HP regained varies with the weather."', 'BP': '--'}, 'nightmare': {'Name': 'Nightmare', 'Hit': '100', 'Type': 'ghost', 'Category': 'other', 'PP': '15', 'Description': 'A sleeping target sees a nightmare that inflicts some damage every turn.', 'BP': '--'}, 'natural gift': {'Name': 'Natural Gift', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '15', 'Description': 'The user draws power to attack by using its held Berry. The Berry determines its type and power."', 'BP': '--'}, 'body slam': {'Name': 'Body Slam', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '15', 'Description': 'The user drops onto the target with its full body weight. It may also leave the target with paralysis.', 'BP': '85'}, 'rage powder': {'Name': 'Rage Powder', 'Hit': '--', 'Type': 'bug', 'Category': 'other', 'PP': '20', 'Description': 'The user scatters a cloud of irritating powder to draw attention to itself. Opponents aim only at the user.', 'BP': '--'}, 'rock climb': {'Name': 'Rock Climb', 'Hit': '85', 'Type': 'normal', 'Category': 'physical', 'PP': '20', 'Description': 'The user attacks the target by smashing into it with incredible force. It may also confuse the target.', 'BP': '90'}, 'power swap': {'Name': 'Power Swap', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '10', 'Description': 'The user employs its psychic power to switch changes to its Attack and Sp. Atk with the target.', 'BP': '--'}, 'night shade': {'Name': 'Night Shade', 'Hit': '100', 'Type': 'ghost', 'Category': 'special', 'PP': '15', 'Description': 'The user makes the target see a frightening mirage. It inflicts damage matching the user\'s level."', 'BP': '--'}, 'bone rush': {'Name': 'Bone Rush', 'Hit': '90', 'Type': 'ground', 'Category': 'physical', 'PP': '10', 'Description': 'The user strikes the target with a hard bone two to five times in a row."', 'BP': '25'}, 'karate chop': {'Name': 'Karate Chop', 'Hit': '100', 'Type': 'fighting', 'Category': 'physical', 'PP': '25', 'Description': 'The target is attacked with a sharp chop. Critical hits land more easily.', 'BP': '50'}, 'outrage': {'Name': 'Outrage', 'Hit': '100', 'Type': 'dragon', 'Category': 'physical', 'PP': '10', 'Description': 'The user rampages and attacks for two to three turns. It then becomes confused, however.', 'BP': '120'}, 'spit up': {'Name': 'Spit Up', 'Hit': '100', 'Type': 'normal', 'Category': 'special', 'PP': '10', 'Description': 'The power stored using the move Stockpile is released at once in an attack. The more power is stored, the greater the damage.', 'BP': '--'}, "forest's curse": {'Name': "Forest's Curse", 'Hit': '100', 'Type': 'grass', 'Category': 'other', 'PP': '20', 'Description': 'The user puts a forest curse on the target. Afflicted targets are now Grass type as well."', 'BP': '--'}, 'spikes': {'Name': 'Spikes', 'Hit': '--', 'Type': 'ground', 'Category': 'other', 'PP': '20', 'Description': "The user lays a trap of spikes at the opposing team's feet. The trap hurts Pok&eacute;mon that switch into battle.", 'BP': '--'}, 'take down': {'Name': 'Take Down', 'Hit': '85', 'Type': 'normal', 'Category': 'physical', 'PP': '20', 'Description': 'A reckless, full-body charge attack for slamming into the target. It also damages the user a little.', 'BP': '90'}, 'defog': {'Name': 'Defog', 'Hit': '--', 'Type': 'flying', 'Category': 'other', 'PP': '15', 'Description': "A strong wind blows away the target's obstacles such as Reflect or Light Screen. It also lowers the target's evasiveness.", 'BP': '--'}, 'blast burn': {'Name': 'Blast Burn', 'Hit': '90', 'Type': 'fire', 'Category': 'special', 'PP': '5', 'Description': 'The target is razed by a fiery explosion. The user must rest on the next turn', 'BP': '150'}, 'judgment': {'Name': 'Judgment', 'Hit': '100', 'Type': 'normal', 'Category': 'special', 'PP': '10', 'Description': 'The user releases countless shots of light at the target. Its type varies with the kind of Plate the user is holding.', 'BP': '100'}, 'harden': {'Name': 'Harden', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '30', 'Description': 'The user stiffens all the muscles in its body to raise its Defense stat.', 'BP': '--'}, 'razor shell': {'Name': 'Razor Shell', 'Hit': '95', 'Type': 'water', 'Category': 'physical', 'PP': '10', 'Description': 'The user cuts its target with sharp shells. This attack may also lower the target\'s Defense stat."', 'BP': '75'}, 'teleport': {'Name': 'Teleport', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '20', 'Description': 'Use it to flee from any wild Pok&eacute;mon. It can also warp to the last Pok&eacute;mon Center visited.', 'BP': '--'}, 'iron defense': {'Name': 'Iron Defense', 'Hit': '--', 'Type': 'steel', 'Category': 'other', 'PP': '15', 'Description': "The user hardens its body's surface like iron, sharply raising its Defense stat.", 'BP': '--'}, 'fairy lock': {'Name': 'Fairy Lock', 'Hit': '--', 'Type': 'fairy', 'Category': 'other', 'PP': '10', 'Description': 'By locking down the battlefield, the user keeps all Pok&eacute;mon from fleeing during the next turn.', 'BP': '--'}, 'extreme speed': {'Name': 'Extreme Speed', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '5', 'Description': 'The user charges the target at blinding speed. This attack always goes before any other move."', 'BP': '80'}, 'focus blast': {'Name': 'Focus Blast', 'Hit': '70', 'Type': 'fighting', 'Category': 'special', 'PP': '5', 'Description': "The user heightens its mental focus and unleashes its power. It may also lower the target's Sp. Def.", 'BP': '120'}, 'rototiller': {'Name': 'Rototiller', 'Hit': '--', 'Type': 'ground', 'Category': 'other', 'PP': '10', 'Description': 'Tilling the soil, the user makes it easier for plants to grow. This raises the Attack and Sp. Atk stats of Grass-type Pok&eacute;mon.', 'BP': '--'}, 'haze': {'Name': 'Haze', 'Hit': '--', 'Type': 'ice', 'Category': 'other', 'PP': '30', 'Description': 'The user creates a haze that eliminates every stat change among all the Pok&eacute;mon engaged in battle.', 'BP': '--'}, 'transform': {'Name': 'Transform', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '10', 'Description': 'The user transforms into a copy of the target right down to having the same move set.', 'BP': '--'}, 'pin missile': {'Name': 'Pin Missile', 'Hit': '95', 'Type': 'bug', 'Category': 'physical', 'PP': '20', 'Description': 'Sharp spikes are shot at the target in rapid succession. They hit two to five times in a row.', 'BP': '25'}, 'embargo': {'Name': 'Embargo', 'Hit': '100', 'Type': 'dark', 'Category': 'other', 'PP': '15', 'Description': 'It prevents the target from using its held item. Its Trainer is also prevented from using items on it.', 'BP': '--'}, 'magnet bomb': {'Name': 'Magnet Bomb', 'Hit': '--', 'Type': 'steel', 'Category': 'physical', 'PP': '20', 'Description': 'The user launches steel bombs that stick to the target. This attack will not miss."', 'BP': '60'}, 'destiny bond': {'Name': 'Destiny Bond', 'Hit': '--', 'Type': 'ghost', 'Category': 'other', 'PP': '5', 'Description': 'When this move is used', 'BP': '--'}, 'follow me': {'Name': 'Follow Me', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': 'The user draws attention to itself, making all targets take aim only at the user.', 'BP': '--'}, 'bounce': {'Name': 'Bounce', 'Hit': '85', 'Type': 'flying', 'Category': 'physical', 'PP': '5', 'Description': 'The user bounces up high, then drops on the target on the second turn. It may also leave the target with paralysis.', 'BP': '85'}, 'precipice blades': {'Name': 'Precipice Blades', 'Hit': '85', 'Type': 'ground', 'Category': 'physical', 'PP': '10', 'Description': 'The user attacks opposing Pok&eacute;mon by manifesting the power of the land in fearsome blades of stone.', 'BP': '120'}, 'hyper fang': {'Name': 'Hyper Fang', 'Hit': '90', 'Type': 'normal', 'Category': 'physical', 'PP': '15', 'Description': 'The user bites hard on the target with its sharp front fangs. It may also make the target flinch."', 'BP': '80'}, 'quash': {'Name': 'Quash', 'Hit': '100', 'Type': 'dark', 'Category': 'other', 'PP': '15', 'Description': 'The user suppresses the target and makes its move go last.', 'BP': '--'}, 'v-create': {'Name': 'V-create', 'Hit': '95', 'Type': 'fire', 'Category': 'physical', 'PP': '5', 'Description': "With a hot flame on its forehead, the user hurls itself at its target. It lowers the user's Defense, Sp. Def, and Speed stats.", 'BP': '180'}, 'solar beam': {'Name': 'Solar Beam', 'Hit': '100', 'Type': 'grass', 'Category': 'special', 'PP': '10', 'Description': 'A two-turn attack. The user gathers light', 'BP': '120'}, 'chatter': {'Name': 'Chatter', 'Hit': '100', 'Type': 'flying', 'Category': 'special', 'PP': '20', 'Description': 'The user attacks using a sound wave based on words it has learned. It may also confuse the target.', 'BP': '65'}, 'crush claw': {'Name': 'Crush Claw', 'Hit': '95', 'Type': 'normal', 'Category': 'physical', 'PP': '10', 'Description': 'The user slashes the target with hard and sharp claws. It may also lower the target\'s Defense."', 'BP': '75'}, 'fury attack': {'Name': 'Fury Attack', 'Hit': '85', 'Type': 'normal', 'Category': 'physical', 'PP': '20', 'Description': 'The target is jabbed repeatedly with a horn or beak two to five times in a row."', 'BP': '15'}, 'perish song': {'Name': 'Perish Song', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '5', 'Description': 'Any Pok&eacute;mon that hears this song faints in three turns, unless it switches out of battle.', 'BP': '--'}, 'roar': {'Name': 'Roar', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': 'The target is scared off and replaced by another Pok&eacute;mon in its party. In the wild, the battle ends.', 'BP': '--'}, 'flare blitz': {'Name': 'Flare Blitz', 'Hit': '100', 'Type': 'fire', 'Category': 'physical', 'PP': '15', 'Description': 'The user cloaks itself in fire and charges at the target. The user sustains serious damage and may leave the target burned."', 'BP': '120'}, 'hypnosis': {'Name': 'Hypnosis', 'Hit': '60', 'Type': 'psychic', 'Category': 'other', 'PP': '20', 'Description': 'The user employs hypnotic suggestion to make the target fall into a deep sleep.', 'BP': '--'}, 'fire blast': {'Name': 'Fire Blast', 'Hit': '85', 'Type': 'fire', 'Category': 'special', 'PP': '5', 'Description': 'The target is attacked with an intense blast of all-consuming fire. It may also leave the target with a burn."', 'BP': '110'}, 'grass pledge': {'Name': 'Grass Pledge', 'Hit': '100', 'Type': 'grass', 'Category': 'special', 'PP': '10', 'Description': 'A column of grass hits opposing Pok&eacute;mon. When used with its water equivalent, its damage increases into a vast swamp.', 'BP': '80'}, 'hurricane': {'Name': 'Hurricane', 'Hit': '70', 'Type': 'flying', 'Category': 'special', 'PP': '10', 'Description': 'The user attacks by wrapping its opponent in a fierce wind that flies up into the sky. It may also confuse the target.', 'BP': '110'}, 'aromatic mist': {'Name': 'Aromatic Mist', 'Hit': '100', 'Type': 'fairy', 'Category': 'other', 'PP': '20', 'Description': 'The user raises the Sp. Def stat of ally Pok&eacute;mon with a mysterious aroma."', 'BP': '--'}, 'mirror coat': {'Name': 'Mirror Coat', 'Hit': '100', 'Type': 'psychic', 'Category': 'special', 'PP': '20', 'Description': 'A retaliation move that counters any special attack, inflicting double the damage taken.', 'BP': '--'}, 'false swipe': {'Name': 'False Swipe', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '40', 'Description': 'A restrained attack that prevents the target from fainting. The target is left with at least 1 HP."', 'BP': '40'}, 'quick guard': {'Name': 'Quick Guard', 'Hit': '--', 'Type': 'fighting', 'Category': 'other', 'PP': '15', 'Description': 'The user protects itself and its allies from priority moves. If used in succession', 'BP': '--'}, 'synchronoise': {'Name': 'Synchronoise', 'Hit': '100', 'Type': 'psychic', 'Category': 'special', 'PP': '10', 'Description': 'Using an odd shock wave, the user inflicts damage on any Pok&eacute;mon of the same type in the area around it.', 'BP': '120'}, 'giga drain': {'Name': 'Giga Drain', 'Hit': '100', 'Type': 'grass', 'Category': 'special', 'PP': '10', 'Description': "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.", 'BP': '75'}, 'leech seed': {'Name': 'Leech Seed', 'Hit': '90', 'Type': 'grass', 'Category': 'other', 'PP': '10', 'Description': 'A seed is planted on the target. It steals some HP from the target every turn.', 'BP': '--'}, 'trick-or-treat': {'Name': 'Trick-or-Treat', 'Hit': '100', 'Type': 'ghost', 'Category': 'other', 'PP': '20', 'Description': "The user takes the target trick-or-treating. This adds Ghost type to the target's type.", 'BP': '--'}, 'heal bell': {'Name': 'Heal Bell', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '5', 'Description': 'The user makes a soothing bell chime to heal the status problems of all the party Pok&eacute;mon."', 'BP': '--'}, 'poison jab': {'Name': 'Poison Jab', 'Hit': '100', 'Type': 'poison', 'Category': 'physical', 'PP': '20', 'Description': 'The target is stabbed with a tentacle or arm steeped in poison. It may also poison the target."', 'BP': '80'}, 'topsy-turvy': {'Name': 'Topsy-Turvy', 'Hit': '100', 'Type': 'dark', 'Category': 'other', 'PP': '20', 'Description': 'All stat changes affecting the target turn topsy-turvy and become the opposite of what they were.', 'BP': '--'}, 'seed bomb': {'Name': 'Seed Bomb', 'Hit': '100', 'Type': 'grass', 'Category': 'physical', 'PP': '15', 'Description': 'The user slams a barrage of hard-shelled seeds down on the target from above."', 'BP': '80'}, 'stockpile': {'Name': 'Stockpile', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': 'The user charges up power and raises both its Defense and Sp. Def. The move can be used three times.', 'BP': '--'}, 'smog': {'Name': 'Smog', 'Hit': '70', 'Type': 'poison', 'Category': 'special', 'PP': '20', 'Description': 'The target is attacked with a discharge of filthy gases. It may also poison the target.', 'BP': '30'}, 'electro ball': {'Name': 'Electro Ball', 'Hit': '100', 'Type': 'electric', 'Category': 'special', 'PP': '10', 'Description': 'The user hurls an electric orb at the target. The faster the user is than the target, the greater the damage.', 'BP': '--'}, 'ice burn': {'Name': 'Ice Burn', 'Hit': '90', 'Type': 'ice', 'Category': 'special', 'PP': '5', 'Description': 'On the second turn', 'BP': '140'}, 'magnet rise': {'Name': 'Magnet Rise', 'Hit': '--', 'Type': 'electric', 'Category': 'other', 'PP': '10', 'Description': 'The user levitates using electrically generated magnetism for five turns.', 'BP': '--'}, 'dragon dance': {'Name': 'Dragon Dance', 'Hit': '--', 'Type': 'dragon', 'Category': 'other', 'PP': '20', 'Description': 'The user vigorously performs a mystic, powerful dance that boosts its Attack and Speed stats.', 'BP': '--'}, 'ice ball': {'Name': 'Ice Ball', 'Hit': '90', 'Type': 'ice', 'Category': 'physical', 'PP': '20', 'Description': 'The user continually rolls into the target over five turns. It becomes stronger each time it hits.', 'BP': '30'}, 'pursuit': {'Name': 'Pursuit', 'Hit': '100', 'Type': 'dark', 'Category': 'physical', 'PP': '20', 'Description': 'An attack move that inflicts double damage if used on a target that is switching out of battle.', 'BP': '40'}, 'entrainment': {'Name': 'Entrainment', 'Hit': '100', 'Type': 'normal', 'Category': 'other', 'PP': '15', 'Description': "The user dances with an odd rhythm that compels the target to mimic it, making the target's Ability the same as the user's.", 'BP': '--'}, 'incinerate': {'Name': 'Incinerate', 'Hit': '100', 'Type': 'fire', 'Category': 'special', 'PP': '15', 'Description': 'The user attacks opposing Pokemon with fire. If a Pokemon is holding a certain item, such as a berry, the item becomes burned up and unusable', 'BP': '60'}, 'sacred fire': {'Name': 'Sacred Fire', 'Hit': '95', 'Type': 'fire', 'Category': 'physical', 'PP': '5', 'Description': 'The target is razed with a mystical fire of great intensity. It may also leave the target with a burn."', 'BP': '100'}, 'moonlight': {'Name': 'Moonlight', 'Hit': '--', 'Type': 'fairy', 'Category': 'other', 'PP': '5', 'Description': 'The user restores its own HP. The amount of HP regained varies with the weather.', 'BP': '--'}, 'worry seed': {'Name': 'Worry Seed', 'Hit': '100', 'Type': 'grass', 'Category': 'other', 'PP': '10', 'Description': 'A seed that causes worry is planted on the target. It prevents sleep by making its Ability Insomnia.', 'BP': '--'}, 'wide guard': {'Name': 'Wide Guard', 'Hit': '--', 'Type': 'rock', 'Category': 'other', 'PP': '10', 'Description': 'The user and its allies are protected from wide-ranging attacks for one turn. If used in succession, its chance of failing rises.', 'BP': '--'}, 'dazzling gleam': {'Name': 'Dazzling Gleam', 'Hit': '100', 'Type': 'fairy', 'Category': 'special', 'PP': '10', 'Description': 'The user damages opposing Pok&eacute;mon by emitting a powerful flash.', 'BP': '80'}, 'play nice': {'Name': 'Play Nice', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': "The user and the target become friends, and the target loses its will to fight. This lowers the target's Attack stat.", 'BP': '--'}, 'moonblast': {'Name': 'Moonblast', 'Hit': '100', 'Type': 'fairy', 'Category': 'special', 'PP': '15', 'Description': "Borrowing the power of the moon, the user attacks the target. This may also lower the target's Sp. Atk stat.", 'BP': '95'}, 'defense curl': {'Name': 'Defense Curl', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '40', 'Description': 'The user curls up to conceal weak spots and raise its Defense stat.', 'BP': '--'}, 'trump card': {'Name': 'Trump Card', 'Hit': '--', 'Type': 'normal', 'Category': 'special', 'PP': '5', 'Description': 'The fewer PP this move has, the greater its attack power.', 'BP': '--'}, 'poison tail': {'Name': 'Poison Tail', 'Hit': '100', 'Type': 'poison', 'Category': 'physical', 'PP': '25', 'Description': 'The user hits the target with its tail. It may also poison the target. Critical hits land more easily."', 'BP': '50'}, 'teeter dance': {'Name': 'Teeter Dance', 'Hit': '100', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': 'The user performs a wobbly dance that confuses the Pok&eacute;mon around it."', 'BP': '--'}, 'amnesia': {'Name': 'Amnesia', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '20', 'Description': "The user temporarily empties its mind to forget its concerns. It sharply raises the user's Sp. Def stat.", 'BP': '--'}, 'pain split': {'Name': 'Pain Split', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': "The user adds its HP to the target's HP", 'BP': '--'}, 'fusion bolt': {'Name': 'Fusion Bolt', 'Hit': '100', 'Type': 'electric', 'Category': 'physical', 'PP': '5', 'Description': 'The user throws down a giant thunderbolt. This attack does greater damage when influenced by an enormous flame.', 'BP': '100'}, 'heal pulse': {'Name': 'Heal Pulse', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '10', 'Description': 'The user emits a healing pulse which restores the target\'s HP by up to half of its max HP."', 'BP': '--'}, 'lunar dance': {'Name': 'Lunar Dance', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '10', 'Description': 'The user faints. In return, the Pok&eacute;mon taking its place will have its status and HP fully restored.', 'BP': '--'}, 'electroweb': {'Name': 'Electroweb', 'Hit': '95', 'Type': 'electric', 'Category': 'special', 'PP': '15', 'Description': "The user captures and attacks opposing Pok&eacute;mon by using an electric net. It reduces the targets' Speed stat.", 'BP': '55'}, 'ancient power': {'Name': 'Ancient Power', 'Hit': '100', 'Type': 'rock', 'Category': 'special', 'PP': '5', 'Description': 'The user attacks with a prehistoric power. It may also raise all the user\'s stats at once."', 'BP': '60'}, 'cross poison': {'Name': 'Cross Poison', 'Hit': '100', 'Type': 'poison', 'Category': 'physical', 'PP': '20', 'Description': 'A slashing attack with a poisonous blade that may also leave the target poisoned. Critical hits land more easily.', 'BP': '70'}, 'imprison': {'Name': 'Imprison', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '10', 'Description': 'If the opponents know any move also known by the user, the opponents are prevented from using it.', 'BP': '--'}, 'mirror shot': {'Name': 'Mirror Shot', 'Hit': '85', 'Type': 'steel', 'Category': 'special', 'PP': '10', 'Description': "The user looses a flash of energy at the target from its polished body. It may also lower the target's accuracy.", 'BP': '65'}, 'mist': {'Name': 'Mist', 'Hit': '--', 'Type': 'ice', 'Category': 'other', 'PP': '30', 'Description': 'The user cloaks its body with a white mist that prevents any of its stats from being cut for five turns.', 'BP': '--'}, 'hyper voice': {'Name': 'Hyper Voice', 'Hit': '100', 'Type': 'normal', 'Category': 'special', 'PP': '10', 'Description': 'The user lets loose a horribly echoing shout with the power to inflict damage.', 'BP': '90'}, 'metal burst': {'Name': 'Metal Burst', 'Hit': '100', 'Type': 'steel', 'Category': 'physical', 'PP': '10', 'Description': 'The user retaliates with much greater power against the target that last inflicted damage on it.', 'BP': '--'}, 'miracle eye': {'Name': 'Miracle Eye', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '40', 'Description': 'Enables a Dark-type target to be hit by Psychic-type attacks. It also enables an evasive target to be hit.', 'BP': '--'}, 'mystical fire': {'Name': 'Mystical Fire', 'Hit': '100', 'Type': 'fire', 'Category': 'special', 'PP': '10', 'Description': "The user attacks by breathing a special, hot fire. This also lowers the target's Sp. Atk stat.", 'BP': '65'}, 'superpower': {'Name': 'Superpower', 'Hit': '100', 'Type': 'fighting', 'Category': 'physical', 'PP': '5', 'Description': "The user attacks the target with great power. However, it also lowers the user's Attack and Defense.", 'BP': '120'}, 'soak': {'Name': 'Soak', 'Hit': '100', 'Type': 'water', 'Category': 'other', 'PP': '20', 'Description': "The user shoots a torrent of water at the target and changes the target's type to Water.", 'BP': '--'}, 'water sport': {'Name': 'Water Sport', 'Hit': '--', 'Type': 'water', 'Category': 'other', 'PP': '15', 'Description': 'The user soaks itself with water. The move weakens Fire-type moves for five turns.', 'BP': '--'}, 'bestow': {'Name': 'Bestow', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '15', 'Description': "The user passes its held item to the target when the target isn't holding an item.", 'BP': '--'}, 'force palm': {'Name': 'Force Palm', 'Hit': '100', 'Type': 'fighting', 'Category': 'physical', 'PP': '10', 'Description': 'The target is attacked with a shock wave. It may also leave the target with paralysis.', 'BP': '60'}, 'clear smog': {'Name': 'Clear Smog', 'Hit': '--', 'Type': 'poison', 'Category': 'special', 'PP': '15', 'Description': 'The user attacks by throwing a clump of special mud. All status changes are returned to normal."', 'BP': '50'}, 'strength': {'Name': 'Strength', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '15', 'Description': 'The target is slugged with a punch thrown at maximum power. It can also be used to move heavy boulders.', 'BP': '80'}, 'gear grind': {'Name': 'Gear Grind', 'Hit': '85', 'Type': 'steel', 'Category': 'physical', 'PP': '15', 'Description': 'The user attacks by throwing two steel gears at its target."', 'BP': '50'}, 'glare': {'Name': 'Glare', 'Hit': '100', 'Type': 'normal', 'Category': 'other', 'PP': '30', 'Description': 'The user intimidates the target with the pattern on its belly to cause paralysis.', 'BP': '--'}, 'glaciate': {'Name': 'Glaciate', 'Hit': '95', 'Type': 'ice', 'Category': 'special', 'PP': '10', 'Description': "The user attacks by blowing freezing cold air at opposing Pok&eacute;mon. This attack reduces the targets' Speed stat.", 'BP': '65'}, 'metronome': {'Name': 'Metronome', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '10', 'Description': 'The user waggles a finger and stimulates its brain into randomly using nearly any move.', 'BP': '--'}, 'bite': {'Name': 'Bite', 'Hit': '100', 'Type': 'dark', 'Category': 'physical', 'PP': '25', 'Description': 'The target is bitten with viciously sharp fangs. It may make the target flinch.', 'BP': '60'}, 'captivate': {'Name': 'Captivate', 'Hit': '100', 'Type': 'normal', 'Category': 'other', 'PP': '20', 'Description': 'If it is the opposite gender of the user, the target is charmed into harshly lowering its Sp. Atk stat.', 'BP': '--'}, 'scary face': {'Name': 'Scary Face', 'Hit': '100', 'Type': 'normal', 'Category': 'other', 'PP': '10', 'Description': 'The user frightens the target with a scary face to harshly reduce its Speed stat.', 'BP': '--'}, 'gust': {'Name': 'Gust', 'Hit': '100', 'Type': 'flying', 'Category': 'special', 'PP': '35', 'Description': 'A gust of wind is whipped up by wings and launched at the target to inflict damage.', 'BP': '40'}, 'rest': {'Name': 'Rest', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '10', 'Description': "The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem.", 'BP': '--'}, 'thunder wave': {'Name': 'Thunder Wave', 'Hit': '100', 'Type': 'electric', 'Category': 'other', 'PP': '20', 'Description': 'A weak electric charge is launched at the target. It causes paralysis if it hits."', 'BP': '--'}, 'ember': {'Name': 'Ember', 'Hit': '100', 'Type': 'fire', 'Category': 'special', 'PP': '25', 'Description': 'The target is attacked with small flames. It may also leave the target with a burn.', 'BP': '40'}, 'thunder fang': {'Name': 'Thunder Fang', 'Hit': '95', 'Type': 'electric', 'Category': 'physical', 'PP': '15', 'Description': 'The user bites with electrified fangs. It may also make the target flinch or leave it with paralysis.', 'BP': '65'}, 'quick attack': {'Name': 'Quick Attack', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '30', 'Description': 'The user lunges at the target at a speed that makes it almost invisible. It is sure to strike first."', 'BP': '40'}, 'wish': {'Name': 'Wish', 'Hit': '--', 'Type': 'normal', 'Category': 'other', 'PP': '10', 'Description': "One turn after this move is used, the target's HP is restored by half the user's maximum HP.", 'BP': '--'}, 'shadow force': {'Name': 'Shadow Force', 'Hit': '100', 'Type': 'ghost', 'Category': 'physical', 'PP': '5', 'Description': 'The user disappears, then strikes the target on the second turn. It hits even if the target protects itself.', 'BP': '120'}, 'light screen': {'Name': 'Light Screen', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '30', 'Description': 'A wondrous wall of light is put up to suppress damage from special attacks for five turns."', 'BP': '--'}, 'volt tackle': {'Name': 'Volt Tackle', 'Hit': '100', 'Type': 'electric', 'Category': 'physical', 'PP': '15', 'Description': 'The user electrifies itself, then charges.  It causes considerable damage to the user and may leave the target with paralysis.', 'BP': '120'}, 'sky attack': {'Name': 'Sky Attack', 'Hit': '90', 'Type': 'flying', 'Category': 'physical', 'PP': '5', 'Description': 'A second-turn attack move where critical hits land more easily. It may also make the target flinch.', 'BP': '140'}, 'psybeam': {'Name': 'Psybeam', 'Hit': '100', 'Type': 'psychic', 'Category': 'special', 'PP': '20', 'Description': 'The target is attacked with a peculiar ray. It may also cause confusion.', 'BP': '65'}, 'flower shield': {'Name': 'Flower Shield', 'Hit': '--', 'Type': 'fairy', 'Category': 'other', 'PP': '10', 'Description': 'The user raises the Defense stat of all Grass-type Pok&eacute;mon in battle with a mysterious power.', 'BP': '--'}, 'electric terrain': {'Name': 'Electric Terrain', 'Hit': '--', 'Type': 'electric', 'Category': 'other', 'PP': '10', 'Description': 'The user electrifies the ground under everyone\'s feet for five turns.  Pok&eacute;mon on the ground no longer fall asleep."', 'BP': '--'}, 'facade': {'Name': 'Facade', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '20', 'Description': 'An attack move that doubles its power if the user is poisoned, burned, or has paralysis.', 'BP': '70'}, 'aqua ring': {'Name': 'Aqua Ring', 'Hit': '--', 'Type': 'water', 'Category': 'other', 'PP': '20', 'Description': 'The user envelops itself in a veil made of water. It regains some HP on every turn."', 'BP': '--'}, 'parting shot': {'Name': 'Parting Shot', 'Hit': '100', 'Type': 'dark', 'Category': 'other', 'PP': '20', 'Description': "With a parting threat, the user lowers the target's Attack and Sp. Atk stats. Then it switches with a party Pok&eacute;mon.", 'BP': '--'}, 'roar of time': {'Name': 'Roar of Time', 'Hit': '90', 'Type': 'dragon', 'Category': 'special', 'PP': '5', 'Description': 'The user blasts the target with power that distorts even time. The user must rest on the next turn."', 'BP': '150'}, 'inferno': {'Name': 'Inferno', 'Hit': '50', 'Type': 'fire', 'Category': 'special', 'PP': '5', 'Description': 'The user attacks by engulfing the target in an intense fire. It leaves the target with a burn.', 'BP': '100'}, 'ally switch': {'Name': 'Ally Switch', 'Hit': '--', 'Type': 'psychic', 'Category': 'other', 'PP': '15', 'Description': 'The user teleports using a strange power and switches its place with one of its allies."', 'BP': '--'}, 'coil': {'Name': 'Coil', 'Hit': '--', 'Type': 'poison', 'Category': 'other', 'PP': '20', 'Description': 'The user coils up and concentrates. This raises its Attack and Defense stats as well as its accuracy.', 'BP': '--'}, 'circle throw': {'Name': 'Circle Throw', 'Hit': '90', 'Type': 'fighting', 'Category': 'physical', 'PP': '10', 'Description': 'The user throws the target and drags out another Pok&eacute;mon in its party. In the wild, the battle ends.', 'BP': '60'}, 'water gun': {'Name': 'Water Gun', 'Hit': '100', 'Type': 'water', 'Category': 'special', 'PP': '25', 'Description': 'The target is blasted with a forceful shot of water.', 'BP': '40'}, 'horn attack': {'Name': 'Horn Attack', 'Hit': '100', 'Type': 'normal', 'Category': 'physical', 'PP': '25', 'Description': 'The target is jabbed with a sharply pointed horn to inflict damage."', 'BP': '65'}, 'heal block': {'Name': 'Heal Block', 'Hit': '100', 'Type': 'psychic', 'Category': 'other', 'PP': '15', 'Description': 'For five turns, the user prevents the opposing team from using any moves, Abilities, or held items that recover HP.', 'BP': '--'}};
+moves = {
+    'hone claws': {
+        name: 'Hone Claws',
+        hit: '--',
+        type: 'Dark',
+        category: 'Other',
+        pp: '15',
+        desc: 'The user sharpens its claws to boost its Attack stat and accuracy."',
+        bp: '--'
+    },
+    'flame burst': {
+        name: 'Flame Burst',
+        hit: '100',
+        type: 'Fire',
+        category: 'Special',
+        pp: '15',
+        desc: 'The user attacks the target with a bursting flame. The bursting flame damages Pok&eacute;mon next to the target as well."',
+        bp: '70'
+    },
+    'sing': {
+        name: 'Sing',
+        hit: '55',
+        type: 'Normal',
+        category: 'Other',
+        pp: '15',
+        desc: 'A soothing lullaby is sung in a calming voice that puts the target into a deep slumber.',
+        bp: '--'
+    },
+    'camouflage': {
+        name: 'Camouflage',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: "The user's type is changed depending on its environment, such as at water's edge, in grass, or in a cave.",
+        bp: '--'
+    },
+    'odor sleuth': {
+        name: 'Odor Sleuth',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '40',
+        desc: 'Enables a Ghost-type target to be hit with Normal- and Fighting-type attacks. It also enables an evasive target to be hit.',
+        bp: '--'
+    },
+    'hyperspace fury': {
+        name: 'Hyperspace Fury',
+        hit: '--',
+        type: 'Dark',
+        category: 'Physical',
+        pp: '5',
+        desc: "Using its many arms, the user unleashes a barrage of attacks that ignore the effects of moves like Protect and Detect. This attack lowers the user's Defense.",
+        bp: '100'
+    },
+    'close combat': {
+        name: 'Close Combat',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '5',
+        desc: 'The user fights the target up close without guarding itself. It also cuts the user\'s Defense and Sp. Def."',
+        bp: '120'
+    },
+    'icicle spear': {
+        name: 'Icicle Spear',
+        hit: '100',
+        type: 'Ice',
+        category: 'Physical',
+        pp: '30',
+        desc: 'The user launches sharp icicles at the target. It strikes two to five times in a row."',
+        bp: '25'
+    },
+    'sludge bomb': {
+        name: 'Sludge Bomb',
+        hit: '100',
+        type: 'Poison',
+        category: 'Special',
+        pp: '10',
+        desc: 'Unsanitary sludge is hurled at the target. It may also poison the target."',
+        bp: '90'
+    },
+    'x-scissor': {
+        name: 'X-Scissor',
+        hit: '100',
+        type: 'Bug',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user slashes at the target by crossing its scythes or claws as if they were a pair of scissors.',
+        bp: '80'
+    },
+    'mega kick': {
+        name: 'Mega Kick',
+        hit: '75',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '5',
+        desc: 'The target is attacked by a kick launched with muscle-packed power."',
+        bp: '120'
+    },
+    'conversion': {
+        name: 'Conversion',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '30',
+        desc: 'The user changes its type to become the same type as the move at the top of the list of moves it knows.',
+        bp: '--'
+    },
+    'screech': {
+        name: 'Screech',
+        hit: '85',
+        type: 'Normal',
+        category: 'Other',
+        pp: '40',
+        desc: "An earsplitting screech harshly reduces the target's Defense stat.",
+        bp: '--'
+    },
+    'magical leaf': {
+        name: 'Magical Leaf',
+        hit: '--',
+        type: 'Grass',
+        category: 'Special',
+        pp: '20',
+        desc: 'The user scatters curious leaves that chase the target. This attack will not miss."',
+        bp: '60'
+    },
+    'low sweep': {
+        name: 'Low Sweep',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '20',
+        desc: "The user attacks the target's legs swiftly",
+        bp: '65'
+    },
+    'rage': {
+        name: 'Rage',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '20',
+        desc: 'As long as this move is in use, the power of rage raises the Attack stat each time the user is hit in battle.',
+        bp: '20'
+    },
+    'volt switch': {
+        name: 'Volt Switch',
+        hit: '100',
+        type: 'Electric',
+        category: 'Special',
+        pp: '20',
+        desc: 'After making its attack',
+        bp: '70'
+    },
+    'flail': {
+        name: 'Flail',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user flails about aimlessly to attack. It becomes more powerful the less HP the user has.',
+        bp: '--'
+    },
+    'aerial ace': {
+        name: 'Aerial Ace',
+        hit: '--',
+        type: 'Flying',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The user confounds the target with speed, then slashes. The attack lands without fail.',
+        bp: '60'
+    },
+    'magnitude': {
+        name: 'Magnitude',
+        hit: '100',
+        type: 'Ground',
+        category: 'Physical',
+        pp: '30',
+        desc: 'The user looses a ground-shaking quake affecting everyone around the user. Its power varies.',
+        bp: '--'
+    },
+    'thousand waves': {
+        name: 'Thousand Waves',
+        hit: '100',
+        type: 'Ground',
+        category: 'Physical',
+        pp: '10',
+        desc: "The user attacks with a wave that crawls along the ground. Those hit can't flee from battle.",
+        bp: '90'
+    },
+    'hyperspace hole': {
+        name: 'Hyperspace Hole',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Special',
+        pp: '5',
+        desc: 'Using a hyperspace hole',
+        bp: '80'
+    },
+    'psystrike': {
+        name: 'Psystrike',
+        hit: '100',
+        type: 'Psychic',
+        category: 'Special',
+        pp: '10',
+        desc: 'The user materializes an odd psychic wave to attack the target. This attack does physical damage.',
+        bp: '100'
+    },
+    'draco meteor': {
+        name: 'Draco Meteor',
+        hit: '90',
+        type: 'Dragon',
+        category: 'Special',
+        pp: '5',
+        desc: "Comets are summoned down from the sky onto the target. The attack's recoil harshly reduces the user's Sp. Atk stat.",
+        bp: '130'
+    },
+    'dizzy punch': {
+        name: 'Dizzy Punch',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The target is hit with rhythmically launched punches that may also leave it confused.',
+        bp: '70'
+    },
+    'power trick': {
+        name: 'Power Trick',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user employs its psychic power to switch its Attack with its Defense stat."',
+        bp: '--'
+    },
+    'pluck': {
+        name: 'Pluck',
+        hit: '100',
+        type: 'Flying',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The user pecks the target. If the target is holding a Berry, the user eats it and gains its effect.',
+        bp: '60'
+    },
+    'psycho cut': {
+        name: 'Psycho Cut',
+        hit: '100',
+        type: 'Psychic',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The user tears at the target with blades formed by psychic power. Critical hits land more easily.',
+        bp: '70'
+    },
+    'mega drain': {
+        name: 'Mega Drain',
+        hit: '100',
+        type: 'Grass',
+        category: 'Special',
+        pp: '15',
+        desc: 'A nutrient-draining attack. The user\'s HP is restored by half the damage taken by the target."',
+        bp: '40'
+    },
+    'gyro ball': {
+        name: 'Gyro Ball',
+        hit: '100',
+        type: 'Steel',
+        category: 'Physical',
+        pp: '5',
+        desc: 'The user tackles the target with a high-speed spin. The slower the user',
+        bp: '--'
+    },
+    'tri attack': {
+        name: 'Tri Attack',
+        hit: '100',
+        type: 'Normal',
+        category: 'Special',
+        pp: '10',
+        desc: 'The user strikes with a simultaneous three-beam attack. May also burn',
+        bp: '80'
+    },
+    'stone edge': {
+        name: 'Stone Edge',
+        hit: '80',
+        type: 'Rock',
+        category: 'Physical',
+        pp: '5',
+        desc: 'The user stabs the foe with sharpened stones from below. It has a high critical-hit ratio."',
+        bp: '100'
+    },
+    'simple beam': {
+        name: 'Simple Beam',
+        hit: '100',
+        type: 'Normal',
+        category: 'Other',
+        pp: '15',
+        desc: "The user's mysterious psychic wave changes the target's Ability to Simple.",
+        bp: '--'
+    },
+    'head smash': {
+        name: 'Head Smash',
+        hit: '80',
+        type: 'Rock',
+        category: 'Physical',
+        pp: '5',
+        desc: 'The user attacks the target with a hazardous, full-power headbutt. The user also takes terrible damage.',
+        bp: '150'
+    },
+    'leer': {
+        name: 'Leer',
+        hit: '100',
+        type: 'Normal',
+        category: 'Other',
+        pp: '30',
+        desc: "The opposing team gains an intimidating leer with sharp eyes. The opposing team's Defense stats are reduced.",
+        bp: '--'
+    },
+    'power gem': {
+        name: 'Power Gem',
+        hit: '100',
+        type: 'Rock',
+        category: 'Special',
+        pp: '20',
+        desc: 'The user attacks with a ray of light that sparkles as if it were made of gemstones.',
+        bp: '80'
+    },
+    'disable': {
+        name: 'Disable',
+        hit: '100',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: 'For four turns, this move prevents the target from using the move it last used.',
+        bp: '--'
+    },
+    'phantom force': {
+        name: 'Phantom Force',
+        hit: '100',
+        type: 'Ghost',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user vanishes somewhere, then strikes the target on the next turn. This move hits even if the target protects itself.',
+        bp: '90'
+    },
+    'thunderbolt': {
+        name: 'Thunderbolt',
+        hit: '100',
+        type: 'Electric',
+        category: 'Special',
+        pp: '15',
+        desc: 'A strong electric blast is loosed at the target. It may also leave the target with paralysis.',
+        bp: '90'
+    },
+    'rolling kick': {
+        name: 'Rolling Kick',
+        hit: '85',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user lashes out with a quick, spinning kick. It may also make the target flinch.',
+        bp: '60'
+    },
+    'hold back': {
+        name: 'Hold Back',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '40',
+        desc: 'The user holds back when it attacks and the target is left with at least 1 HP.',
+        bp: '40'
+    },
+    'toxic spikes': {
+        name: 'Toxic Spikes',
+        hit: '--',
+        type: 'Poison',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user lays a trap of poison spikes at the opponent\'s feet. They poison opponents that switch into battle."',
+        bp: '--'
+    },
+    'feint': {
+        name: 'Feint',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '10',
+        desc: 'An attack that hits a target using Protect or Detect. It also lifts the effects of those moves.',
+        bp: '30'
+    },
+    'eerie impulse': {
+        name: 'Eerie Impulse',
+        hit: '100',
+        type: 'Electric',
+        category: 'Other',
+        pp: '15',
+        desc: "The user's body generates an eerie impulse. Exposing the target to it harshly lowers the target's Sp. Atk stat.",
+        bp: '--'
+    },
+    'drill run': {
+        name: 'Drill Run',
+        hit: '95',
+        type: 'Ground',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user crashes into its target while rotating its body like a drill. Critical hits land more easily.',
+        bp: '80'
+    },
+    'tail whip': {
+        name: 'Tail Whip',
+        hit: '100',
+        type: 'Normal',
+        category: 'Other',
+        pp: '30',
+        desc: 'The user wags its tail cutely, making opposing Pok&eacute;mon less wary and lowering their Defense stat.',
+        bp: '--'
+    },
+    'final gambit': {
+        name: 'Final Gambit',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Special',
+        pp: '5',
+        desc: "The user risks everything to attack its target. The user faints but does damage equal to the user's HP.",
+        bp: '--'
+    },
+    'mirror move': {
+        name: 'Mirror Move',
+        hit: '--',
+        type: 'Flying',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user counters the target by mimicking the target\'s last move."',
+        bp: '--'
+    },
+    'dragon tail': {
+        name: 'Dragon Tail',
+        hit: '90',
+        type: 'Dragon',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user knocks away the target and drags out another Pok&eacute;mon in its party. In the wild',
+        bp: '60'
+    },
+    'guillotine': {
+        name: 'Guillotine',
+        hit: '30',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '5',
+        desc: 'A vicious, tearing attack with big pincers. The target will faint instantly if this attack hits.',
+        bp: '--'
+    },
+    'icy wind': {
+        name: 'Icy Wind',
+        hit: '95',
+        type: 'Ice',
+        category: 'Special',
+        pp: '15',
+        desc: "The user attacks with a gust of chilled air. It also reduces the targets' Speed stat.",
+        bp: '55'
+    },
+    'ice beam': {
+        name: 'Ice Beam',
+        hit: '100',
+        type: 'Ice',
+        category: 'Special',
+        pp: '10',
+        desc: 'The target is struck with an icy-cold beam of energy. It may also freeze the target solid.',
+        bp: '90'
+    },
+    'shadow punch': {
+        name: 'Shadow Punch',
+        hit: '--',
+        type: 'Ghost',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The user throws a punch from the shadows. The punch lands without fail.',
+        bp: '60'
+    },
+    'wonder room': {
+        name: 'Wonder Room',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '10',
+        desc: "The user creates a bizarre area in which Pok&eacute;mon's Defense and Sp. Def stats are swapped for five turns.",
+        bp: '--'
+    },
+    'iron tail': {
+        name: 'Iron Tail',
+        hit: '75',
+        type: 'Steel',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The target is slammed with a steel-hard tail. It may also lower the target\'s Defense stat."',
+        bp: '100'
+    },
+    'double kick': {
+        name: 'Double Kick',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '30',
+        desc: 'The target is quickly kicked twice in succession using both feet.',
+        bp: '30'
+    },
+    'head charge': {
+        name: 'Head Charge',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user charges its head into its target, using its powerful guard hair. It also damages the user a little.',
+        bp: '120'
+    },
+    'quiver dance': {
+        name: 'Quiver Dance',
+        hit: '--',
+        type: 'Bug',
+        category: 'Other',
+        pp: '20',
+        desc: "The user lightly performs a beautiful, mystic dance. It boosts the user's Sp. Atk, Sp. Def, and Speed stats.",
+        bp: '--'
+    },
+    'light of ruin': {
+        name: 'Light of Ruin',
+        hit: '90',
+        type: 'Fairy',
+        category: 'Special',
+        pp: '5',
+        desc: 'Drawing power from the Eternal Flower, the user fires a powerful beam of light. This also damages the user quite a lot.',
+        bp: '140'
+    },
+    'night daze': {
+        name: 'Night Daze',
+        hit: '95',
+        type: 'Dark',
+        category: 'Special',
+        pp: '10',
+        desc: "The user lets loose a pitch-black shock wave at its target. It may also lower the target's accuracy.",
+        bp: '85'
+    },
+    'doom desire': {
+        name: 'Doom Desire',
+        hit: '100',
+        type: 'Steel',
+        category: 'Special',
+        pp: '5',
+        desc: 'Two turns after this move is used',
+        bp: '140'
+    },
+    'work up': {
+        name: 'Work Up',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '30',
+        desc: 'The user is roused',
+        bp: '--'
+    },
+    'techno blast': {
+        name: 'Techno Blast',
+        hit: '100',
+        type: 'Normal',
+        category: 'Special',
+        pp: '5',
+        desc: 'The user fires a beam of light at its target. The type changes depending on the Drive the user holds.',
+        bp: '120'
+    },
+    'sandstorm': {
+        name: 'Sandstorm',
+        hit: '--',
+        type: 'Rock',
+        category: 'Other',
+        pp: '10',
+        desc: 'A five-turn sandstorm is summoned to hurt all combatants except the Rock, Ground, and Steel types.',
+        bp: '--'
+    },
+    'mud shot': {
+        name: 'Mud Shot',
+        hit: '95',
+        type: 'Ground',
+        category: 'Special',
+        pp: '15',
+        desc: 'The user attacks by hurling a blob of mud at the target. It also reduces the target\'s Speed."',
+        bp: '55'
+    },
+    'fiery dance': {
+        name: 'Fiery Dance',
+        hit: '100',
+        type: 'Fire',
+        category: 'Special',
+        pp: '10',
+        desc: 'Cloaked in flames',
+        bp: '80'
+    },
+    'fury cutter': {
+        name: 'Fury Cutter',
+        hit: '95',
+        type: 'Bug',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The target is slashed with scythes or claws. Its power increases if it hits in succession.',
+        bp: '40'
+    },
+    'foresight': {
+        name: 'Foresight',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '40',
+        desc: 'Enables a Ghost-type target to be hit by Normal- and Fighting-type attacks. It also enables an evasive target to be hit.',
+        bp: '--'
+    },
+    'brine': {
+        name: 'Brine',
+        hit: '100',
+        type: 'Water',
+        category: 'Special',
+        pp: '10',
+        desc: "If the target's HP is down to about half, this attack will hit with double the power.",
+        bp: '65'
+    },
+    'seismic toss': {
+        name: 'Seismic Toss',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '20',
+        desc: "The target is thrown using the power of gravity. It inflicts damage equal to the user's level.",
+        bp: '--'
+    },
+    'psyshock': {
+        name: 'Psyshock',
+        hit: '100',
+        type: 'Psychic',
+        category: 'Special',
+        pp: '10',
+        desc: 'The user materializes an odd psychic wave to attack the target. This attack does physical damage.',
+        bp: '80'
+    },
+    'heal order': {
+        name: 'Heal Order',
+        hit: '--',
+        type: 'Bug',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user calls out its underlings to heal it. The user regains up to half of its max HP.',
+        bp: '--'
+    },
+    'yawn': {
+        name: 'Yawn',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user lets loose a huge yawn that lulls the target into falling asleep on the next turn.',
+        bp: '--'
+    },
+    'reversal': {
+        name: 'Reversal',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '15',
+        desc: 'An all-out attack that becomes more powerful the less HP the user has.',
+        bp: '--'
+    },
+    'tailwind': {
+        name: 'Tailwind',
+        hit: '--',
+        type: 'Flying',
+        category: 'Other',
+        pp: '15',
+        desc: 'The user whips up a turbulent whirlwind that ups the Speed of all party Pok&eacute;mon for four turns.',
+        bp: '--'
+    },
+    'earth power': {
+        name: 'Earth Power',
+        hit: '100',
+        type: 'Ground',
+        category: 'Special',
+        pp: '10',
+        desc: "The user makes the ground under the target erupt with power. It may also lower the target's Sp. Def.",
+        bp: '90'
+    },
+    'razor leaf': {
+        name: 'Razor Leaf',
+        hit: '95',
+        type: 'Grass',
+        category: 'Physical',
+        pp: '25',
+        desc: 'Sharp-edged leaves are launched to slash at the opposing team. Critical hits land more easily.',
+        bp: '55'
+    },
+    'mean look': {
+        name: 'Mean Look',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '5',
+        desc: 'The user pins the target with a dark',
+        bp: '--'
+    },
+    'hyper beam': {
+        name: 'Hyper Beam',
+        hit: '90',
+        type: 'Normal',
+        category: 'Special',
+        pp: '5',
+        desc: 'The target is attacked with a powerful beam. The user must rest on the next turn to regain its energy."',
+        bp: '150'
+    },
+    'brick break': {
+        name: 'Brick Break',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user attacks with a swift chop. It can also break any barrier such as Light Screen and Reflect."',
+        bp: '75'
+    },
+    'cosmic power': {
+        name: 'Cosmic Power',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user absorbs a mystical power from space to raise its Defense and Sp. Def stats."',
+        bp: '--'
+    },
+    'recycle': {
+        name: 'Recycle',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user recycles a held item that has been used in battle so it can be used again.',
+        bp: '--'
+    },
+    'swift': {
+        name: 'Swift',
+        hit: '--',
+        type: 'Normal',
+        category: 'Special',
+        pp: '20',
+        desc: 'Star-shaped rays are shot at the opposing team. This attack never misses.',
+        bp: '60'
+    },
+    'fissure': {
+        name: 'Fissure',
+        hit: '30',
+        type: 'Ground',
+        category: 'Physical',
+        pp: '5',
+        desc: 'The user opens up a fissure in the ground and drops the target in. The target instantly faints if it hits.',
+        bp: '--'
+    },
+    'weather ball': {
+        name: 'Weather Ball',
+        hit: '100',
+        type: 'Normal',
+        category: 'Special',
+        pp: '10',
+        desc: 'An attack move that varies in power and type depending on the weather.',
+        bp: '50'
+    },
+    'magic coat': {
+        name: 'Magic Coat',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '15',
+        desc: 'A barrier reflects back to the target moves like Leech Seed and moves that damage status.',
+        bp: '--'
+    },
+    'beat up': {
+        name: 'Beat Up',
+        hit: '100',
+        type: 'Dark',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user gets all party Pok&eacute;mon to attack the target. The more party Pok&eacute;mon',
+        bp: '--'
+    },
+    'rock polish': {
+        name: 'Rock Polish',
+        hit: '--',
+        type: 'Rock',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user polishes its body to reduce drag. It can sharply raise the Speed stat.',
+        bp: '--'
+    },
+    'flash': {
+        name: 'Flash',
+        hit: '100',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: "The user flashes a bright light that cuts the target's accuracy. It can also be used to illuminate caves.",
+        bp: '--'
+    },
+    'wood hammer': {
+        name: 'Wood Hammer',
+        hit: '100',
+        type: 'Grass',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user slams its rugged body into the target to attack. The user also sustains serious damage.',
+        bp: '120'
+    },
+    'razor wind': {
+        name: 'Razor Wind',
+        hit: '100',
+        type: 'Normal',
+        category: 'Special',
+        pp: '10',
+        desc: 'A two-turn attack. Blades of wind hit opposing Pok&eacute;mon on the second turn. Critical hits land more easily."',
+        bp: '80'
+    },
+    'cotton guard': {
+        name: 'Cotton Guard',
+        hit: '--',
+        type: 'Grass',
+        category: 'Other',
+        pp: '10',
+        desc: "The user protects itself by wrapping its body in soft cotton, drastically raising the user's Defense stat.",
+        bp: '--'
+    },
+    'nuzzle': {
+        name: 'Nuzzle',
+        hit: '100',
+        type: 'Electric',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The user attacks by nuzzling its electrified cheeks against the target. This also leaves the target with paralysis.',
+        bp: '20'
+    },
+    'astonish': {
+        name: 'Astonish',
+        hit: '100',
+        type: 'Ghost',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user attacks the target while shouting in a startling fashion. It may also make the target flinch.',
+        bp: '30'
+    },
+    'guard swap': {
+        name: 'Guard Swap',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user employs its psychic power to switch changes to its Defense and Sp. Def with the target."',
+        bp: '--'
+    },
+    'spiky shield': {
+        name: 'Spiky Shield',
+        hit: '--',
+        type: 'Grass',
+        category: 'Other',
+        pp: '10',
+        desc: 'In addition to protecting the user from attacks',
+        bp: '--'
+    },
+    'synthesis': {
+        name: 'Synthesis',
+        hit: '--',
+        type: 'Grass',
+        category: 'Other',
+        pp: '5',
+        desc: 'The user restores its own HP. The amount of HP regained varies with the weather.',
+        bp: '--'
+    },
+    'sky drop': {
+        name: 'Sky Drop',
+        hit: '100',
+        type: 'Flying',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user takes the target into the sky',
+        bp: '60'
+    },
+    'psychic': {
+        name: 'Psychic',
+        hit: '100',
+        type: 'Psychic',
+        category: 'Special',
+        pp: '10',
+        desc: "The target is hit by a strong telekinetic force. It may also reduce the target's Sp. Def stat.",
+        bp: '90'
+    },
+    'confide': {
+        name: 'Confide',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: "The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.",
+        bp: '--'
+    },
+    'wrap': {
+        name: 'Wrap',
+        hit: '90',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '20',
+        desc: 'A long body or vines are used to wrap and squeeze the target for four to five turns.',
+        bp: '15'
+    },
+    'heavy slam': {
+        name: 'Heavy Slam',
+        hit: '100',
+        type: 'Steel',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user slams into the target with its heavy body. The more the user outweighs the target, the greater its damage.',
+        bp: '--'
+    },
+    'gravity': {
+        name: 'Gravity',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '5',
+        desc: 'Gravity is intensified for five turns, making moves involving flying unusable and negating Levitate.',
+        bp: '--'
+    },
+    'mist ball': {
+        name: 'Mist Ball',
+        hit: '100',
+        type: 'Psychic',
+        category: 'Special',
+        pp: '5',
+        desc: 'A mistlike flurry of down envelops and damages the target. It may also lower the target\'s Sp. Atk."',
+        bp: '70'
+    },
+    'sheer cold': {
+        name: 'Sheer Cold',
+        hit: '30',
+        type: 'Ice',
+        category: 'Special',
+        pp: '5',
+        desc: 'The target is attacked with a blast of absolute-zero cold. The target instantly faints if it hits."',
+        bp: '--'
+    },
+    'electrify': {
+        name: 'Electrify',
+        hit: '--',
+        type: 'Electric',
+        category: 'Other',
+        pp: '20',
+        desc: "If the target is electrified before it uses a move during that turn, the target's move becomes Electric type.",
+        bp: '--'
+    },
+    'spacial rend': {
+        name: 'Spacial Rend',
+        hit: '95',
+        type: 'Dragon',
+        category: 'Special',
+        pp: '5',
+        desc: 'The user tears the target along with the space around it. Critical hits land more easily."',
+        bp: '100'
+    },
+    'boomburst': {
+        name: 'Boomburst',
+        hit: '100',
+        type: 'Normal',
+        category: 'Special',
+        pp: '10',
+        desc: 'The user attacks everything around it with the destructive power of a terrible, explosive sound.',
+        bp: '140'
+    },
+    'smokescreen': {
+        name: 'Smokescreen',
+        hit: '100',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: "The user releases an obscuring cloud of smoke or ink. It reduces the target's accuracy.",
+        bp: '--'
+    },
+    'substitute': {
+        name: 'Substitute',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '10',
+        desc: "The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.",
+        bp: '--'
+    },
+    'lovely kiss': {
+        name: 'Lovely Kiss',
+        hit: '75',
+        type: 'Normal',
+        category: 'Other',
+        pp: '10',
+        desc: 'With a scary face',
+        bp: '--'
+    },
+    'leaf tornado': {
+        name: 'Leaf Tornado',
+        hit: '90',
+        type: 'Grass',
+        category: 'Special',
+        pp: '10',
+        desc: 'The user attacks its target by encircling it in sharp leaves. This attack may also lower the target\'s accuracy."',
+        bp: '65'
+    },
+    'snore': {
+        name: 'Snore',
+        hit: '100',
+        type: 'Normal',
+        category: 'Special',
+        pp: '15',
+        desc: 'An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.',
+        bp: '50'
+    },
+    'aeroblast': {
+        name: 'Aeroblast',
+        hit: '95',
+        type: 'Flying',
+        category: 'Special',
+        pp: '5',
+        desc: 'A vortex of air is shot at the target to inflict damage. Critical hits land more easily.',
+        bp: '100'
+    },
+    'flame charge': {
+        name: 'Flame Charge',
+        hit: '100',
+        type: 'Fire',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The user cloaks itself with flame and attacks. Building up more power',
+        bp: '50'
+    },
+    'acid armor': {
+        name: 'Acid Armor',
+        hit: '--',
+        type: 'Poison',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user alters its cellular structure to liquefy itself',
+        bp: '--'
+    },
+    'hidden power': {
+        name: 'Hidden Power',
+        hit: '100',
+        type: 'Normal',
+        category: 'Special',
+        pp: '15',
+        desc: 'A unique attack that varies in type depending on the Pok&eacute;mon using it."',
+        bp: '60'
+    },
+    'sleep powder': {
+        name: 'Sleep Powder',
+        hit: '75',
+        type: 'Grass',
+        category: 'Other',
+        pp: '15',
+        desc: 'The user scatters a big cloud of sleep-inducing dust around the target.',
+        bp: '--'
+    },
+    'water pulse': {
+        name: 'Water Pulse',
+        hit: '100',
+        type: 'Water',
+        category: 'Special',
+        pp: '20',
+        desc: 'The user attacks the target with a pulsing blast of water. It may also confuse the target.',
+        bp: '60'
+    },
+    'pay day': {
+        name: 'Pay Day',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '20',
+        desc: 'Numerous coins are hurled at the target to inflict damage. Money is earned after the battle.',
+        bp: '40'
+    },
+    'bulldoze': {
+        name: 'Bulldoze',
+        hit: '100',
+        type: 'Ground',
+        category: 'Physical',
+        pp: '20',
+        desc: "The user stomps down on the ground and attacks everything in the area. Hit Pok&eacute;mon's Speed stat is reduced.",
+        bp: '60'
+    },
+    'dual chop': {
+        name: 'Dual Chop',
+        hit: '90',
+        type: 'Dragon',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user attacks its target by hitting it with brutal strikes. The target is hit twice in a row."',
+        bp: '40'
+    },
+    'zen headbutt': {
+        name: 'Zen Headbutt',
+        hit: '90',
+        type: 'Psychic',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user focuses its willpower to its head and attacks the target. It may also make the target flinch."',
+        bp: '80'
+    },
+    'rock wrecker': {
+        name: 'Rock Wrecker',
+        hit: '90',
+        type: 'Rock',
+        category: 'Physical',
+        pp: '5',
+        desc: 'The user launches a huge boulder at the target to attack. It must rest on the next turn',
+        bp: '150'
+    },
+    'safeguard': {
+        name: 'Safeguard',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '25',
+        desc: 'The user creates a protective field that prevents status problems for five turns.',
+        bp: '--'
+    },
+    'thunder': {
+        name: 'Thunder',
+        hit: '70',
+        type: 'Electric',
+        category: 'Special',
+        pp: '10',
+        desc: 'A wicked thunderbolt is dropped on the target to inflict damage. It may also leave the target with paralysis.',
+        bp: '110'
+    },
+    'twineedle': {
+        name: 'Twineedle',
+        hit: '100',
+        type: 'Bug',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The user damages the target twice in succession by jabbing it with two spikes. It may also poison the target.',
+        bp: '25'
+    },
+    'agility': {
+        name: 'Agility',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '30',
+        desc: 'The user relaxes and lightens its body to move faster. It sharply boosts the Speed stat.',
+        bp: '--'
+    },
+    'hydro cannon': {
+        name: 'Hydro Cannon',
+        hit: '90',
+        type: 'Water',
+        category: 'Special',
+        pp: '5',
+        desc: 'The target is hit with a watery blast. The user must rest on the next turn',
+        bp: '150'
+    },
+    'power whip': {
+        name: 'Power Whip',
+        hit: '85',
+        type: 'Grass',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user violently whirls its vines or tentacles to harshly lash the target.',
+        bp: '120'
+    },
+    'blizzard': {
+        name: 'Blizzard',
+        hit: '70',
+        type: 'Ice',
+        category: 'Special',
+        pp: '5',
+        desc: 'A howling blizzard is summoned to strike the opposing team. It may also freeze them solid.',
+        bp: '110'
+    },
+    'soft-boiled': {
+        name: 'Soft-Boiled',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user restores its own HP by up to half of its maximum HP. May also be used in the field to heal HP.',
+        bp: '--'
+    },
+    'block': {
+        name: 'Block',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '5',
+        desc: "The user blocks the target's way with arms spread wide to prevent escape.",
+        bp: '--'
+    },
+    'return': {
+        name: 'Return',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '20',
+        desc: 'A full-power attack that grows more powerful the more the user likes its Trainer.',
+        bp: '--'
+    },
+    'steamroller': {
+        name: 'Steamroller',
+        hit: '100',
+        type: 'Bug',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The user crushes its targets by rolling over them with its rolled-up body. This attack may make the target flinch.',
+        bp: '65'
+    },
+    'searing shot': {
+        name: 'Searing Shot',
+        hit: '100',
+        type: 'Fire',
+        category: 'Special',
+        pp: '5',
+        desc: 'An inferno of scarlet flames torches everything around the user. It may leave targets with a burn."',
+        bp: '100'
+    },
+    'toxic': {
+        name: 'Toxic',
+        hit: '90',
+        type: 'Poison',
+        category: 'Other',
+        pp: '10',
+        desc: 'A move that leaves the target badly poisoned. Its poison damage worsens every turn.',
+        bp: '--'
+    },
+    'air cutter': {
+        name: 'Air Cutter',
+        hit: '95',
+        type: 'Flying',
+        category: 'Special',
+        pp: '25',
+        desc: 'The user launches razor-like wind to slash the opposing team. Critical hits land more easily."',
+        bp: '60'
+    },
+    'metal claw': {
+        name: 'Metal Claw',
+        hit: '95',
+        type: 'Steel',
+        category: 'Physical',
+        pp: '35',
+        desc: 'The target is raked with steel claws. It may also raise the user\'s Attack stat."',
+        bp: '50'
+    },
+    'fire fang': {
+        name: 'Fire Fang',
+        hit: '95',
+        type: 'Fire',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user bites with flame-cloaked fangs. It may also make the target flinch or leave it burned.',
+        bp: '65'
+    },
+    'barrage': {
+        name: 'Barrage',
+        hit: '85',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '20',
+        desc: 'Round objects are hurled at the target to strike two to five times in a row.',
+        bp: '15'
+    },
+    'venom drench': {
+        name: 'Venom Drench',
+        hit: '100',
+        type: 'Poison',
+        category: 'Other',
+        pp: '20',
+        desc: 'Opposing Pok&eacute;mon are drenched in an odd poisonous liquid. This lowers the Attack',
+        bp: '--'
+    },
+    'ice shard': {
+        name: 'Ice Shard',
+        hit: '100',
+        type: 'Ice',
+        category: 'Physical',
+        pp: '30',
+        desc: 'The user flash freezes chunks of ice and hurls them at the target. This move always goes first."',
+        bp: '40'
+    },
+    'thunder punch': {
+        name: 'Thunder Punch',
+        hit: '100',
+        type: 'Electric',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The target is punched with an electrified fist. It may also leave the target with paralysis."',
+        bp: '75'
+    },
+    'jump kick': {
+        name: 'Jump Kick',
+        hit: '95',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user jumps up high, then strikes with a kick. If the kick misses, the user hurts itself.',
+        bp: '100'
+    },
+    'feather dance': {
+        name: 'Feather Dance',
+        hit: '100',
+        type: 'Flying',
+        category: 'Other',
+        pp: '15',
+        desc: "The user covers the target's body with a mass of down that harshly lowers its Attack stat.",
+        bp: '--'
+    },
+    'detect': {
+        name: 'Detect',
+        hit: '--',
+        type: 'Fighting',
+        category: 'Other',
+        pp: '5',
+        desc: 'It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.',
+        bp: '--'
+    },
+    'tackle': {
+        name: 'Tackle',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '35',
+        desc: 'A physical attack in which the user charges and slams into the target with its whole body.',
+        bp: '50'
+    },
+    'shadow claw': {
+        name: 'Shadow Claw',
+        hit: '100',
+        type: 'Ghost',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user slashes with a sharp claw made from shadows. Critical hits land more easily."',
+        bp: '70'
+    },
+    'octazooka': {
+        name: 'Octazooka',
+        hit: '85',
+        type: 'Water',
+        category: 'Special',
+        pp: '10',
+        desc: "The user attacks by spraying ink in the target's face or eyes. It may also lower the target's accuracy.",
+        bp: '65'
+    },
+    'frenzy plant': {
+        name: 'Frenzy Plant',
+        hit: '90',
+        type: 'Grass',
+        category: 'Special',
+        pp: '5',
+        desc: 'The user slams the target with an enormous tree. The user can\'t move on the next turn."',
+        bp: '150'
+    },
+    'chip away': {
+        name: 'Chip Away',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '20',
+        desc: 'Looking for an opening',
+        bp: '70'
+    },
+    'fusion flare': {
+        name: 'Fusion Flare',
+        hit: '100',
+        type: 'Fire',
+        category: 'Special',
+        pp: '5',
+        desc: 'The user brings down a giant flame. This attack does greater damage when influenced by an enormous thunderbolt."',
+        bp: '100'
+    },
+    'endeavor': {
+        name: 'Endeavor',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '5',
+        desc: "An attack move that cuts down the target's HP to equal the user's HP.",
+        bp: '--'
+    },
+    'bullet seed': {
+        name: 'Bullet Seed',
+        hit: '100',
+        type: 'Grass',
+        category: 'Physical',
+        pp: '30',
+        desc: 'The user forcefully shoots seeds at the target. Two to five seeds are shot in rapid succession.',
+        bp: '25'
+    },
+    'water shuriken': {
+        name: 'Water Shuriken',
+        hit: '100',
+        type: 'Water',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The user hits the target with throwing stars two to five times in a row. This move always goes first.',
+        bp: '15'
+    },
+    'flying press': {
+        name: 'Flying Press',
+        hit: '95',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user dives down onto the target from the sky. This move is Fighting and Flying type simultaneously.',
+        bp: '80'
+    },
+    'noble roar': {
+        name: 'Noble Roar',
+        hit: '100',
+        type: 'Normal',
+        category: 'Other',
+        pp: '30',
+        desc: 'Letting out a noble roar',
+        bp: '--'
+    },
+    'leech life': {
+        name: 'Leech Life',
+        hit: '100',
+        type: 'Bug',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user drains the target\'s blood. The user\'s HP is restored by half the damage taken by the target."',
+        bp: '20'
+    },
+    'focus energy': {
+        name: 'Focus Energy',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '30',
+        desc: 'The user takes a deep breath and focuses so that critical hits land more easily."',
+        bp: '--'
+    },
+    'sweet kiss': {
+        name: 'Sweet Kiss',
+        hit: '75',
+        type: 'Fairy',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user kisses the target with a sweet',
+        bp: '--'
+    },
+    'meteor mash': {
+        name: 'Meteor Mash',
+        hit: '90',
+        type: 'Steel',
+        category: 'Physical',
+        pp: '10',
+        desc: "The target is hit with a hard punch fired like a meteor. It may also raise the user's Attack.",
+        bp: '90'
+    },
+    'mud sport': {
+        name: 'Mud Sport',
+        hit: '--',
+        type: 'Ground',
+        category: 'Other',
+        pp: '15',
+        desc: 'The user covers itself with mud. It weakens Electric-type moves for five turns.',
+        bp: '--'
+    },
+    'acrobatics': {
+        name: 'Acrobatics',
+        hit: '100',
+        type: 'Flying',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user nimbly strikes the target. If the user is not holding an item, this attack inflicts massive damage.',
+        bp: '55'
+    },
+    'petal dance': {
+        name: 'Petal Dance',
+        hit: '100',
+        type: 'Grass',
+        category: 'Special',
+        pp: '10',
+        desc: 'The user attacks the target by scattering petals for two to three turns. The user then becomes confused.',
+        bp: '120'
+    },
+    'frost breath': {
+        name: 'Frost Breath',
+        hit: '90',
+        type: 'Ice',
+        category: 'Special',
+        pp: '10',
+        desc: 'The user blows a cold breath on the target. This attack always results in a critical hit.',
+        bp: '60'
+    },
+    'after you': {
+        name: 'After You',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '15',
+        desc: 'The user helps the target and makes it use its move right after the user.',
+        bp: '--'
+    },
+    'freeze shock': {
+        name: 'Freeze Shock',
+        hit: '90',
+        type: 'Ice',
+        category: 'Physical',
+        pp: '5',
+        desc: 'On the second turn, the user hits the target with electrically charged ice. It may leave the target with paralysis.',
+        bp: '140'
+    },
+    'water spout': {
+        name: 'Water Spout',
+        hit: '100',
+        type: 'Water',
+        category: 'Special',
+        pp: '5',
+        desc: "The user spouts water to damage the opposing team. The lower the user's HP",
+        bp: '150'
+    },
+    'sand attack': {
+        name: 'Sand Attack',
+        hit: '100',
+        type: 'Ground',
+        category: 'Other',
+        pp: '15',
+        desc: "Sand is hurled in the target's face",
+        bp: '--'
+    },
+    'attack order': {
+        name: 'Attack Order',
+        hit: '100',
+        type: 'Bug',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user calls out its underlings to pummel the target. Critical hits land more easily."',
+        bp: '90'
+    },
+    'magic room': {
+        name: 'Magic Room',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user creates a bizarre area in which Pok&eacute;mon\'s held items lose their effects for five turns."',
+        bp: '--'
+    },
+    'copycat': {
+        name: 'Copycat',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user mimics the move used immediately before it. The move fails if no other move has been used yet.',
+        bp: '--'
+    },
+    'stored power': {
+        name: 'Stored Power',
+        hit: '100',
+        type: 'Psychic',
+        category: 'Special',
+        pp: '10',
+        desc: "The user attacks the target with stored power. The more the user's stats are raised",
+        bp: '20'
+    },
+    'shadow sneak': {
+        name: 'Shadow Sneak',
+        hit: '100',
+        type: 'Ghost',
+        category: 'Physical',
+        pp: '30',
+        desc: 'The user extends its shadow and attacks the target from behind. This move always goes first."',
+        bp: '40'
+    },
+    'powder': {
+        name: 'Powder',
+        hit: '100',
+        type: 'Bug',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user covers the target in a powder that explodes and damages the target if it uses a Fire-type move.',
+        bp: '--'
+    },
+    'discharge': {
+        name: 'Discharge',
+        hit: '100',
+        type: 'Electric',
+        category: 'Special',
+        pp: '15',
+        desc: 'A flare of electricity is loosed to strike the area around the user. It may also cause paralysis.',
+        bp: '80'
+    },
+    'recover': {
+        name: 'Recover',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '10',
+        desc: 'Restoring its own cells, the user restores its own HP by half of its max HP.',
+        bp: '--'
+    },
+    'ion deluge': {
+        name: 'Ion Deluge',
+        hit: '--',
+        type: 'Electric',
+        category: 'Other',
+        pp: '25',
+        desc: 'The user disperses electrically charged particles, which changes Normal-type moves to Electric-type moves.',
+        bp: '--'
+    },
+    'present': {
+        name: 'Present',
+        hit: '90',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user attacks by giving the target a gift with a hidden trap. It restores HP sometimes, however.',
+        bp: '--'
+    },
+    'splash': {
+        name: 'Splash',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '40',
+        desc: 'The user just flops and splashes around to no effect at all...',
+        bp: '--'
+    },
+    'spider web': {
+        name: 'Spider Web',
+        hit: '--',
+        type: 'Bug',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user ensnares the target with thin',
+        bp: '--'
+    },
+    'fury swipes': {
+        name: 'Fury Swipes',
+        hit: '80',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The target is raked with sharp claws or scythes for two to five times in quick succession."',
+        bp: '18'
+    },
+    'geomancy': {
+        name: 'Geomancy',
+        hit: '--',
+        type: 'Fairy',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user absorbs energy and sharply raises its Sp. Atk, Sp. Def, and Speed stats on the next turn.',
+        bp: '--'
+    },
+    'dragon breath': {
+        name: 'Dragon Breath',
+        hit: '100',
+        type: 'Dragon',
+        category: 'Special',
+        pp: '20',
+        desc: 'The user exhales a mighty gust that inflicts damage. It may also leave the target with paralysis."',
+        bp: '60'
+    },
+    'assist': {
+        name: 'Assist',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user hurriedly and randomly uses a move among those known by other Pok&eacute;mon in the party.',
+        bp: '--'
+    },
+    'u-turn': {
+        name: 'U-turn',
+        hit: '100',
+        type: 'Bug',
+        category: 'Physical',
+        pp: '20',
+        desc: 'After making its attack, the user rushes back to switch places with a party Pok&eacute;mon in waiting.',
+        bp: '70'
+    },
+    'telekinesis': {
+        name: 'Telekinesis',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '15',
+        desc: 'The user makes the target float with its psychic power. The target is easier to hit for three turns.',
+        bp: '--'
+    },
+    'heart stamp': {
+        name: 'Heart Stamp',
+        hit: '100',
+        type: 'Psychic',
+        category: 'Physical',
+        pp: '25',
+        desc: 'The user unleashes a vicious blow after its cute act makes the target less wary. It may also make the target flinch."',
+        bp: '60'
+    },
+    'acid': {
+        name: 'Acid',
+        hit: '100',
+        type: 'Poison',
+        category: 'Special',
+        pp: '30',
+        desc: "The opposing team is attacked with a spray of harsh acid. The acid may also lower the targets' Sp. Def stats.",
+        bp: '40'
+    },
+    'icicle crash': {
+        name: 'Icicle Crash',
+        hit: '90',
+        type: 'Ice',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user attacks by harshly dropping an icicle onto the target. It may also make the target flinch.',
+        bp: '85'
+    },
+    'celebrate': {
+        name: 'Celebrate',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '40',
+        desc: 'The Pok&eacute;mon congratulates you on your special day!',
+        bp: '--'
+    },
+    'rain dance': {
+        name: 'Rain Dance',
+        hit: '--',
+        type: 'Water',
+        category: 'Other',
+        pp: '5',
+        desc: 'The user summons a heavy rain that falls for five turns',
+        bp: '--'
+    },
+    'charge': {
+        name: 'Charge',
+        hit: '--',
+        type: 'Electric',
+        category: 'Other',
+        pp: '20',
+        desc: "The user boosts the power of the Electric move it uses on the next turn. It also raises the user's Sp. Def stat.",
+        bp: '--'
+    },
+    'heart swap': {
+        name: 'Heart Swap',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user employs its psychic power to switch stat changes with the target.',
+        bp: '--'
+    },
+    'bug buzz': {
+        name: 'Bug Buzz',
+        hit: '100',
+        type: 'Bug',
+        category: 'Special',
+        pp: '10',
+        desc: "The user vibrates its wings to generate a damaging sound wave. It may also lower the target's Sp. Def stat.",
+        bp: '90'
+    },
+    'blue flare': {
+        name: 'Blue Flare',
+        hit: '85',
+        type: 'Fire',
+        category: 'Special',
+        pp: '5',
+        desc: 'The user attacks by engulfing the target in an intense',
+        bp: '130'
+    },
+    'memento': {
+        name: 'Memento',
+        hit: '100',
+        type: 'Dark',
+        category: 'Other',
+        pp: '10',
+        desc: "The user faints when using this move. In return, it harshly lowers the target's Attack and Sp. Atk.",
+        bp: '--'
+    },
+    'poison sting': {
+        name: 'Poison Sting',
+        hit: '100',
+        type: 'Poison',
+        category: 'Physical',
+        pp: '35',
+        desc: 'The user stabs the target with a poisonous stinger. This may also poison the target.',
+        bp: '15'
+    },
+    'tickle': {
+        name: 'Tickle',
+        hit: '100',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user tickles the target into laughing, reducing its Attack and Defense stats.',
+        bp: '--'
+    },
+    'fling': {
+        name: 'Fling',
+        hit: '100',
+        type: 'Dark',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user flings its held item at the target to attack. Its power and effects depend on the item.',
+        bp: '--'
+    },
+    'echoed voice': {
+        name: 'Echoed Voice',
+        hit: '100',
+        type: 'Normal',
+        category: 'Special',
+        pp: '15',
+        desc: 'The user attacks the target with an echoing voice. If this move is used every turn',
+        bp: '40'
+    },
+    'punishment': {
+        name: 'Punishment',
+        hit: '100',
+        type: 'Dark',
+        category: 'Physical',
+        pp: '5',
+        desc: "This attack's power increases the more the target has powered up with stat changes.",
+        bp: '--'
+    },
+    'horn leech': {
+        name: 'Horn Leech',
+        hit: '100',
+        type: 'Grass',
+        category: 'Physical',
+        pp: '10',
+        desc: "The user drains the target's energy with its horns. The user's HP is restored by half the damage taken by the target.",
+        bp: '75'
+    },
+    'taunt': {
+        name: 'Taunt',
+        hit: '100',
+        type: 'Dark',
+        category: 'Other',
+        pp: '20',
+        desc: 'The target is taunted into a rage that allows it to use only attack moves for three turns.',
+        bp: '--'
+    },
+    'kinesis': {
+        name: 'Kinesis',
+        hit: '80',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '15',
+        desc: "The user distracts the target by bending a spoon. It lowers the target's accuracy.",
+        bp: '--'
+    },
+    'shock wave': {
+        name: 'Shock Wave',
+        hit: '--',
+        type: 'Electric',
+        category: 'Special',
+        pp: '20',
+        desc: 'The user strikes the target with a quick jolt of electricity. This attack cannot be evaded.',
+        bp: '60'
+    },
+    'drill peck': {
+        name: 'Drill Peck',
+        hit: '100',
+        type: 'Flying',
+        category: 'Physical',
+        pp: '20',
+        desc: 'A corkscrewing attack with the sharp beak acting as a drill."',
+        bp: '80'
+    },
+    'mud bomb': {
+        name: 'Mud Bomb',
+        hit: '85',
+        type: 'Ground',
+        category: 'Special',
+        pp: '10',
+        desc: "The user launches a hard-packed mud ball to attack. It may also lower the target's accuracy.",
+        bp: '65'
+    },
+    'slash': {
+        name: 'Slash',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The target is attacked with a slash of claws or blades. Critical hits land more easily.',
+        bp: '70'
+    },
+    'wake-up slap': {
+        name: 'Wake-Up Slap',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '10',
+        desc: 'This attack inflicts big damage on a sleeping target. It also wakes the target up, however.',
+        bp: '70'
+    },
+    'charm': {
+        name: 'Charm',
+        hit: '100',
+        type: 'Fairy',
+        category: 'Other',
+        pp: '20',
+        desc: "The user gazes at the target rather charmingly, making it less wary. The target's Attack is harshly lowered.",
+        bp: '--'
+    },
+    'fake tears': {
+        name: 'Fake Tears',
+        hit: '100',
+        type: 'Dark',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user feigns crying to fluster the target, harshly lowering its Sp. Def stat.',
+        bp: '--'
+    },
+    'cross chop': {
+        name: 'Cross Chop',
+        hit: '80',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '5',
+        desc: 'The user delivers a double chop with its forearms crossed. Critical hits land more easily."',
+        bp: '100'
+    },
+    'flash cannon': {
+        name: 'Flash Cannon',
+        hit: '100',
+        type: 'Steel',
+        category: 'Special',
+        pp: '10',
+        desc: 'The user gathers all its light energy and releases it at once. It may also lower the target\'s Sp. Def stat."',
+        bp: '80'
+    },
+    'triple kick': {
+        name: 'Triple Kick',
+        hit: '90',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '10',
+        desc: 'A consecutive three-kick attack that becomes more powerful with each  successive hit.',
+        bp: '10'
+    },
+    'vine whip': {
+        name: 'Vine Whip',
+        hit: '100',
+        type: 'Grass',
+        category: 'Physical',
+        pp: '25',
+        desc: 'The target is struck with slender',
+        bp: '45'
+    },
+    'snarl': {
+        name: 'Snarl',
+        hit: '95',
+        type: 'Dark',
+        category: 'Special',
+        pp: '15',
+        desc: "The user yells as if it is ranting about something, making the target's Sp. Atk stat decrease.",
+        bp: '55'
+    },
+    'stomp': {
+        name: 'Stomp',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The target is stomped with a big foot. It may also make the target flinch.',
+        bp: '65'
+    },
+    'bind': {
+        name: 'Bind',
+        hit: '85',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '20',
+        desc: 'Things such as long bodies or tentacles are used to bind and squeeze the target for four to five turns.',
+        bp: '15'
+    },
+    'tail slap': {
+        name: 'Tail Slap',
+        hit: '85',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user attacks by striking the target with its hard tail. It hits the target two to five times in a row."',
+        bp: '25'
+    },
+    'roost': {
+        name: 'Roost',
+        hit: '--',
+        type: 'Flying',
+        category: 'Other',
+        pp: '10',
+        desc: "The user lands and rests its body. It restores the user's HP by up to half of its max HP.",
+        bp: '--'
+    },
+    'power-up punch': {
+        name: 'Power-Up Punch',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '20',
+        desc: 'Striking opponents over and over makes the user\'s fists harder. Hitting a target raises the Attack stat."',
+        bp: '40'
+    },
+    'smack down': {
+        name: 'Smack Down',
+        hit: '100',
+        type: 'Rock',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user throws a stone or projectile to attack an opponent. A flying Pok&eacute;mon will fall to the ground when hit."',
+        bp: '50'
+    },
+    'silver wind': {
+        name: 'Silver Wind',
+        hit: '100',
+        type: 'Bug',
+        category: 'Special',
+        pp: '5',
+        desc: "The target is attacked with powdery scales blown by wind. It may also raise all the user's stats.",
+        bp: '60'
+    },
+    'self-destruct': {
+        name: 'Self-Destruct',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '5',
+        desc: 'The user attacks everything around it by causing an explosion. The user faints upon using this move.',
+        bp: '200'
+    },
+    'endure': {
+        name: 'Endure',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession.',
+        bp: '--'
+    },
+    'psywave': {
+        name: 'Psywave',
+        hit: '100',
+        type: 'Psychic',
+        category: 'Special',
+        pp: '15',
+        desc: 'The target is attacked with an odd  psychic wave. The attack varies in intensity.',
+        bp: '--'
+    },
+    'mud-slap': {
+        name: 'Mud-Slap',
+        hit: '100',
+        type: 'Ground',
+        category: 'Special',
+        pp: '10',
+        desc: "The user hurls mud in the target's face to inflict damage and lower its accuracy.",
+        bp: '20'
+    },
+    'string shot': {
+        name: 'String Shot',
+        hit: '95',
+        type: 'Bug',
+        category: 'Other',
+        pp: '40',
+        desc: 'The targets are bound with silk blown from the user\'s mouth. This silk reduces the targets\' Speed stat."',
+        bp: '--'
+    },
+    'storm throw': {
+        name: 'Storm Throw',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user strikes the target with a fierce blow. This attack always results in a critical hit.',
+        bp: '60'
+    },
+    'dream eater': {
+        name: 'Dream Eater',
+        hit: '100',
+        type: 'Psychic',
+        category: 'Special',
+        pp: '15',
+        desc: 'The user eats the dreams of a sleeping target. It absorbs half the damage caused to heal the user\'s HP."',
+        bp: '100'
+    },
+    'fell stinger': {
+        name: 'Fell Stinger',
+        hit: '100',
+        type: 'Bug',
+        category: 'Physical',
+        pp: '25',
+        desc: "When the user knocks out a target with this move, the user's Attack stat rises sharply.",
+        bp: '30'
+    },
+    'spark': {
+        name: 'Spark',
+        hit: '100',
+        type: 'Electric',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The user throws an electrically charged tackle at the target. It may also leave the target with paralysis.',
+        bp: '65'
+    },
+    'helping hand': {
+        name: 'Helping Hand',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user assists an ally by boosting the power of its attack."',
+        bp: '--'
+    },
+    'freeze-dry': {
+        name: 'Freeze-Dry',
+        hit: '100',
+        type: 'Ice',
+        category: 'Special',
+        pp: '20',
+        desc: 'The user rapidly cools the target. This may also leave the target frozen. This move is super effective on Water types.',
+        bp: '70'
+    },
+    'flamethrower': {
+        name: 'Flamethrower',
+        hit: '100',
+        type: 'Fire',
+        category: 'Special',
+        pp: '15',
+        desc: 'The target is scorched with an intense blast of fire. It may also leave the target with a burn.',
+        bp: '90'
+    },
+    'knock off': {
+        name: 'Knock Off',
+        hit: '100',
+        type: 'Dark',
+        category: 'Physical',
+        pp: '25',
+        desc: "The user slaps down the target's held item",
+        bp: '65'
+    },
+    'frustration': {
+        name: 'Frustration',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '20',
+        desc: 'A full-power attack that grows more powerful the less the user likes its Trainer.',
+        bp: '--'
+    },
+    'future sight': {
+        name: 'Future Sight',
+        hit: '100',
+        type: 'Psychic',
+        category: 'Special',
+        pp: '10',
+        desc: 'Two turns after this move is used, a hunk of psychic energy attacks the target.',
+        bp: '120'
+    },
+    'grudge': {
+        name: 'Grudge',
+        hit: '--',
+        type: 'Ghost',
+        category: 'Other',
+        pp: '5',
+        desc: "If the user faints, the user's grudge fully depletes the PP of the opponent's move that knocked it out.",
+        bp: '--'
+    },
+    'constrict': {
+        name: 'Constrict',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '35',
+        desc: "The target is attacked with long, creeping tentacles or vines. It may also lower the target's Speed stat.",
+        bp: '10'
+    },
+    'pound': {
+        name: 'Pound',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '35',
+        desc: 'The target is physically pounded with a long tail or a foreleg, etc.',
+        bp: '40'
+    },
+    'thousand arrows': {
+        name: 'Thousand Arrows',
+        hit: '100',
+        type: 'Ground',
+        category: 'Physical',
+        pp: '10',
+        desc: 'This move also hits opposing Pok&eacute;mon that are in the air. Those Pok&eacute;mon are knocked down to the ground."',
+        bp: '90'
+    },
+    'wring out': {
+        name: 'Wring Out',
+        hit: '100',
+        type: 'Normal',
+        category: 'Special',
+        pp: '5',
+        desc: 'The user powerfully wrings the target. The more HP the target has',
+        bp: '--'
+    }, 
+    "land's wrath": {
+        name: "Land's Wrath",
+        hit: '100',
+        type: 'Ground',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user gathers the energy of the land and focuses that power on opposing Pok&eacute;mon to damage them.',
+        bp: '90'
+    },
+    'relic song': {
+        name: 'Relic Song',
+        hit: '100',
+        type: 'Normal',
+        category: 'Special',
+        pp: '10',
+        desc: 'The user sings an ancient song and attacks by appealing to the hearts of those listening. It may also induce sleep.',
+        bp: '75'
+    },
+    'comet punch': {
+        name: 'Comet Punch',
+        hit: '85',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The target is hit with a flurry of punches that strike two to five times in a row.',
+        bp: '18'
+    },
+    'leaf blade': {
+        name: 'Leaf Blade',
+        hit: '100',
+        type: 'Grass',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user handles a sharp leaf like a sword and attacks by cutting its target. Critical hits land more easily.',
+        bp: '90'
+    },
+    'muddy water': {
+        name: 'Muddy Water',
+        hit: '85',
+        type: 'Water',
+        category: 'Special',
+        pp: '10',
+        desc: 'The user attacks by shooting muddy water at the opposing team. It may also lower the targets\' accuracy."',
+        bp: '90'
+    },
+    'acid spray': {
+        name: 'Acid Spray',
+        hit: '100',
+        type: 'Poison',
+        category: 'Special',
+        pp: '20',
+        desc: 'The user spits fluid that works to melt the target. This harshly reduces the target\'s Sp. Def stat."',
+        bp: '40'
+    },
+    'dragon pulse': {
+        name: 'Dragon Pulse',
+        hit: '100',
+        type: 'Dragon',
+        category: 'Special',
+        pp: '10',
+        desc: "The target is attacked with a shock wave generated by the user's gaping mouth.",
+        bp: '85'
+    },
+    'grass whistle': {
+        name: 'Grass Whistle',
+        hit: '55',
+        type: 'Grass',
+        category: 'Other',
+        pp: '15',
+        desc: 'The user plays a pleasant melody that lulls the target into a deep sleep."',
+        bp: '--'
+    },
+    'parabolic charge': {
+        name: 'Parabolic Charge',
+        hit: '100',
+        type: 'Electric',
+        category: 'Special',
+        pp: '20',
+        desc: 'The user attacks everything around it. The user\'s HP is restored by half the damage taken by those hit."',
+        bp: '50'
+    },
+    'baby-doll eyes': {
+        name: 'Baby-Doll Eyes',
+        hit: '100',
+        type: 'Fairy',
+        category: 'Other',
+        pp: '30',
+        desc: 'The user stares at the target with its baby-doll eyes',
+        bp: '--'
+    },
+    'hydro pump': {
+        name: 'Hydro Pump',
+        hit: '80',
+        type: 'Water',
+        category: 'Special',
+        pp: '5',
+        desc: 'The target is blasted by a huge volume of water launched under great pressure.',
+        bp: '110'
+    },
+    'giga impact': {
+        name: 'Giga Impact',
+        hit: '90',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '5',
+        desc: 'The user charges at the target using every bit of its power. The user must rest on the next turn.',
+        bp: '150'
+    },
+    'shell smash': {
+        name: 'Shell Smash',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '15',
+        desc: 'The user breaks its shell, lowering its Defense and Sp. Def stats but sharply raising Attack, Sp. Atk, and Speed stats.',
+        bp: '--'
+    },
+    'power split': {
+        name: 'Power Split',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user employs its psychic power to average its Attack and Sp. Atk stats with those of the target\'s."',
+        bp: '--'
+    },
+    'venoshock': {
+        name: 'Venoshock',
+        hit: '100',
+        type: 'Poison',
+        category: 'Special',
+        pp: '10',
+        desc: 'The user drenches the target in a special poisonous liquid. Its power is doubled if the target is poisoned.',
+        bp: '65'
+    },
+    'magma storm': {
+        name: 'Magma Storm',
+        hit: '75',
+        type: 'Fire',
+        category: 'Special',
+        pp: '5',
+        desc: 'The target becomes trapped within a maelstrom of fire that rages for four to five turns.',
+        bp: '100'
+    },
+    'oblivion wing': {
+        name: 'Oblivion Wing',
+        hit: '100',
+        type: 'Flying',
+        category: 'Special',
+        pp: '10',
+        desc: "The user absorbs its target's HP. The user's HP is restored by over half of the damage taken by the target.",
+        bp: '80'
+    },
+    'peck': {
+        name: 'Peck',
+        hit: '100',
+        type: 'Flying',
+        category: 'Physical',
+        pp: '35',
+        desc: 'The target is jabbed with a sharply pointed beak or horn.',
+        bp: '35'
+    },
+    'barrier': {
+        name: 'Barrier',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user throws up a sturdy wall that sharply raises its Defense stat.',
+        bp: '--'
+    },
+    'low kick': {
+        name: 'Low Kick',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '20',
+        desc: 'A powerful low kick that makes the target fall over. It inflicts greater damage on heavier targets.',
+        bp: '--'
+    },
+    'protect': {
+        name: 'Protect',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '10',
+        desc: 'It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.',
+        bp: '--'
+    },
+    'double hit': {
+        name: 'Double Hit',
+        hit: '90',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user slams the target with a long tail',
+        bp: '35'
+    },
+    'fire pledge': {
+        name: 'Fire Pledge',
+        hit: '100',
+        type: 'Fire',
+        category: 'Special',
+        pp: '10',
+        desc: 'A column of fire hits opposing Pok&eacute;mon. When used with its Grass equivalent, its damage increases into a vast sea of fire.',
+        bp: '80'
+    },
+    'psych up': {
+        name: 'Psych Up',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user hypnotizes itself into copying any stat change made by the target."',
+        bp: '--'
+    },
+    'shift gear': {
+        name: 'Shift Gear',
+        hit: '--',
+        type: 'Steel',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user rotates its gears, raising its Attack and sharply raising its Speed.',
+        bp: '--'
+    },
+    'smelling salts': {
+        name: 'Smelling Salts',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '10',
+        desc: "This attack inflicts double damage on a target with paralysis. It also cures the target's paralysis, however.",
+        bp: '70'
+    },
+    'curse': {
+        name: 'Curse',
+        hit: '--',
+        type: 'Ghost',
+        category: 'Other',
+        pp: '10',
+        desc: 'A move that works differently for the Ghost type than for all other types.',
+        bp: '--'
+    },
+    'crunch': {
+        name: 'Crunch',
+        hit: '100',
+        type: 'Dark',
+        category: 'Physical',
+        pp: '15',
+        desc: "The user crunches up the target with sharp fangs. It may also lower the target's Defense stat.",
+        bp: '80'
+    },
+    'will-o-wisp': {
+        name: 'Will-O-Wisp',
+        hit: '85',
+        type: 'Fire',
+        category: 'Other',
+        pp: '15',
+        desc: 'The user shoots a sinister, bluish-white flame at the target to inflict a burn.',
+        bp: '--'
+    },
+    'psycho shift': {
+        name: 'Psycho Shift',
+        hit: '100',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '10',
+        desc: 'Using its psychic power of suggestion, the user transfers its status problems to the target.',
+        bp: '--'
+    },
+    'round': {
+        name: 'Round',
+        hit: '100',
+        type: 'Normal',
+        category: 'Special',
+        pp: '15',
+        desc: 'The user attacks the target with a song. Others can join in the Round and make the attack do greater damage.',
+        bp: '60'
+    },
+    'defend order': {
+        name: 'Defend Order',
+        hit: '--',
+        type: 'Bug',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user calls out its underlings to shield its body, raising its Defense and Sp. Def stats.',
+        bp: '--'
+    },
+    'wing attack': {
+        name: 'Wing Attack',
+        hit: '100',
+        type: 'Flying',
+        category: 'Physical',
+        pp: '35',
+        desc: 'The target is struck with large, imposing wings spread wide to inflict damage.',
+        bp: '60'
+    },
+    'spore': {
+        name: 'Spore',
+        hit: '100',
+        type: 'Grass',
+        category: 'Other',
+        pp: '15',
+        desc: 'The user scatters bursts of spores that induce sleep.',
+        bp: '--'
+    },
+    'fake out': {
+        name: 'Fake Out',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '10',
+        desc: 'An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.',
+        bp: '40'
+    },
+    'sleep talk': {
+        name: 'Sleep Talk',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '10',
+        desc: 'While it is asleep',
+        bp: '--'
+    },
+    'headbutt': {
+        name: 'Headbutt',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user sticks out its head and attacks by charging straight into the target. It may also make the target flinch.',
+        bp: '70'
+    },
+    'fairy wind': {
+        name: 'Fairy Wind',
+        hit: '100',
+        type: 'Fairy',
+        category: 'Special',
+        pp: '30',
+        desc: 'The user stirs up a fairy wind and strikes the target with it.',
+        bp: '40'
+    },
+    'attract': {
+        name: 'Attract',
+        hit: '100',
+        type: 'Normal',
+        category: 'Other',
+        pp: '15',
+        desc: 'If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.',
+        bp: '--'
+    },
+    'surf': {
+        name: 'Surf',
+        hit: '100',
+        type: 'Water',
+        category: 'Special',
+        pp: '15',
+        desc: 'It swamps the area around the user with a giant wave. It can also be used for crossing water.',
+        bp: '90'
+    },
+    'double-edge': {
+        name: 'Double-Edge',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '15',
+        desc: 'A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.',
+        bp: '120'
+    },
+    'energy ball': {
+        name: 'Energy Ball',
+        hit: '100',
+        type: 'Grass',
+        category: 'Special',
+        pp: '10',
+        desc: 'The user draws power from nature and fires it at the target. It may also lower the target\'s Sp. Def."',
+        bp: '90'
+    },
+    'belch': {
+        name: 'Belch',
+        hit: '90',
+        type: 'Poison',
+        category: 'Special',
+        pp: '10',
+        desc: 'The user lets out a damaging belch on the target. The user must eat a Berry to use this move.',
+        bp: '120'
+    },
+    'struggle': {
+        name: 'Struggle',
+        hit: '--',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '1',
+        desc: 'An attack that is used in desperation only if the user has no PP. It also hurts the user slightly.',
+        bp: '50'
+    },
+    'feint attack': {
+        name: 'Feint Attack',
+        hit: '--',
+        type: 'Dark',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The user approaches the target disarmingly',
+        bp: '60'
+    },
+    'dragon claw': {
+        name: 'Dragon Claw',
+        hit: '100',
+        type: 'Dragon',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user slashes the target with huge, sharp claws.',
+        bp: '80'
+    },
+    'slack off': {
+        name: 'Slack Off',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user slacks off',
+        bp: '--'
+    },
+    'counter': {
+        name: 'Counter',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '20',
+        desc: 'A retaliation move that counters any physical attack, inflicting double the damage taken.',
+        bp: '--'
+    },
+    'secret sword': {
+        name: 'Secret Sword',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Special',
+        pp: '10',
+        desc: 'The user cuts with its long horn. The odd power contained in the horn does physical damage to the target.',
+        bp: '85'
+    },
+    'milk drink': {
+        name: 'Milk Drink',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user restores its own HP by up to half of its maximum HP. May also be used in the field to heal HP."',
+        bp: '--'
+    },
+    'leaf storm': {
+        name: 'Leaf Storm',
+        hit: '90',
+        type: 'Grass',
+        category: 'Special',
+        pp: '5',
+        desc: "The user whips up a storm of leaves around the target. The attack's recoil harshly reduces the user's Sp. Atk stat.",
+        bp: '130'
+    },
+    'cut': {
+        name: 'Cut',
+        hit: '95',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '30',
+        desc: 'The target is cut with a scythe or a claw. It can also be used to cut down thin trees.',
+        bp: '50'
+    },
+    'cotton spore': {
+        name: 'Cotton Spore',
+        hit: '100',
+        type: 'Grass',
+        category: 'Other',
+        pp: '40',
+        desc: 'The user releases cotton-like spores that cling to the target, harshly reducing its Speed stat.',
+        bp: '--'
+    },
+    'crabhammer': {
+        name: 'Crabhammer',
+        hit: '90',
+        type: 'Water',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The target is hammered with a large pincer. Critical hits land more easily.',
+        bp: '100'
+    },
+    'whirlpool': {
+        name: 'Whirlpool',
+        hit: '85',
+        type: 'Water',
+        category: 'Special',
+        pp: '15',
+        desc: 'Traps foes in a violent swirling whirlpool for four to five turns.',
+        bp: '35'
+    },
+    'clamp': {
+        name: 'Clamp',
+        hit: '85',
+        type: 'Water',
+        category: 'Physical',
+        pp: '15',
+        desc: "The target is clamped and squeezed by the user's very thick and sturdy shell for four to five turns.",
+        bp: '35'
+    },
+    'rock smash': {
+        name: 'Rock Smash',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '15',
+        desc: "The user attacks with a punch that can shatter a rock. It may also lower the target's Defense stat.",
+        bp: '40'
+    },
+    'autotomize': {
+        name: 'Autotomize',
+        hit: '--',
+        type: 'Steel',
+        category: 'Other',
+        pp: '15',
+        desc: 'The user sheds part of its body to make itself lighter and sharply raise its Speed stat.',
+        bp: '--'
+    },
+    'tail glow': {
+        name: 'Tail Glow',
+        hit: '--',
+        type: 'Bug',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user stares at flashing lights to focus its mind',
+        bp: '--'
+    },
+    'trick room': {
+        name: 'Trick Room',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '5',
+        desc: 'The user creates a bizarre area in which slower Pok&eacute;mon get to move first for five turns."',
+        bp: '--'
+    },
+    'sweet scent': {
+        name: 'Sweet Scent',
+        hit: '100',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: "A sweet scent that harshly lowers the opposing team's evasiveness. It also lures wild Pok&eacute;mon if used in grass, etc.",
+        bp: '--'
+    },
+    'misty terrain': {
+        name: 'Misty Terrain',
+        hit: '--',
+        type: 'Fairy',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user covers the ground under everyone\'s feet with mist for five turns. This protects Pok&eacute;mon on the ground from status conditions."',
+        bp: '--'
+    },
+    'dragon ascent': {
+        name: 'Dragon Ascent',
+        hit: '100',
+        type: 'Flying',
+        category: 'Physical',
+        pp: '5',
+        desc: 'After soaring upward, the user attacks its target by dropping out of the sky at high speeds, although it lowers its own Defense and Sp. Def in the process.',
+        bp: '120'
+    },
+    'crafty shield': {
+        name: 'Crafty Shield',
+        hit: '--',
+        type: 'Fairy',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user protects itself and its allies from status moves with a mysterious power. This does not stop moves that do damage.',
+        bp: '--'
+    },
+    'growl': {
+        name: 'Growl',
+        hit: '100',
+        type: 'Normal',
+        category: 'Other',
+        pp: '40',
+        desc: "The user growls in an endearing way, making the opposing team less wary. The foes' Attack stats are lowered.",
+        bp: '--'
+    },
+    'rock throw': {
+        name: 'Rock Throw',
+        hit: '90',
+        type: 'Rock',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user picks up and throws a small rock at the target to attack."',
+        bp: '50'
+    },
+    'revenge': {
+        name: 'Revenge',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '10',
+        desc: 'An attack move that inflicts double the damage if the user has been hurt by the opponent in the same turn.',
+        bp: '60'
+    },
+    'avalanche': {
+        name: 'Avalanche',
+        hit: '100',
+        type: 'Ice',
+        category: 'Physical',
+        pp: '10',
+        desc: 'An attack move that inflicts double the damage if the user has been hurt by the target in the same turn.',
+        bp: '60'
+    },
+    'bone club': {
+        name: 'Bone Club',
+        hit: '85',
+        type: 'Ground',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The user clubs the target with a bone. It may also make the target flinch.',
+        bp: '65'
+    },
+    'aurora beam': {
+        name: 'Aurora Beam',
+        hit: '100',
+        type: 'Ice',
+        category: 'Special',
+        pp: '20',
+        desc: 'The target is hit with a rainbow-colored beam. This may also lower the target\'s Attack stat."',
+        bp: '65'
+    },
+    'guard split': {
+        name: 'Guard Split',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '10',
+        desc: "The user employs its psychic power to average its Defense and Sp. Def stats with those of its target's.",
+        bp: '--'
+    },
+    'high jump kick': {
+        name: 'High Jump Kick',
+        hit: '90',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead.',
+        bp: '130'
+    },
+    'dive': {
+        name: 'Dive',
+        hit: '100',
+        type: 'Water',
+        category: 'Physical',
+        pp: '10',
+        desc: 'Diving on the first turn, the user floats up and attacks on the second turn. It can be used to dive deep in the ocean.',
+        bp: '80'
+    },
+    'super fang': {
+        name: 'Super Fang',
+        hit: '90',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '10',
+        desc: "The user chomps hard on the target with its sharp front fangs. It cuts the target's HP to half.",
+        bp: '--'
+    },
+    'scratch': {
+        name: 'Scratch',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '35',
+        desc: 'Hard',
+        bp: '40'
+    },
+    'vital throw': {
+        name: 'Vital Throw',
+        hit: '--',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user attacks last. In return, this throw move is guaranteed not to miss.',
+        bp: '70'
+    },
+    'growth': {
+        name: 'Growth',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: "The user's body grows all at once, raising the Attack and Sp. Atk stats.",
+        bp: '--'
+    },
+    'meditate': {
+        name: 'Meditate',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '40',
+        desc: 'The user meditates to awaken the power deep within its body and raise its Attack stat.',
+        bp: '--'
+    },
+    'bonemerang': {
+        name: 'Bonemerang',
+        hit: '90',
+        type: 'Ground',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user throws the bone it holds. The bone loops to hit the target twice, coming and going.',
+        bp: '50'
+    },
+    'vice grip': {
+        name: 'Vice Grip',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '30',
+        desc: 'The target is gripped and squeezed from both sides to inflict damage.',
+        bp: '55'
+    },
+    'drain punch': {
+        name: 'Drain Punch',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '10',
+        desc: "An energy-draining punch. The user's HP is restored by half the damage taken by the target.",
+        bp: '75'
+    },
+    'aura sphere': {
+        name: 'Aura Sphere',
+        hit: '--',
+        type: 'Fighting',
+        category: 'Special',
+        pp: '20',
+        desc: 'The user looses a blast of aura power from deep within its body at the target. This move is certain to hit.',
+        bp: '80'
+    },
+    'vacuum wave': {
+        name: 'Vacuum Wave',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Special',
+        pp: '30',
+        desc: 'The user whirls its fists to send a wave of pure vacuum at the target. This move always goes first.',
+        bp: '40'
+    },
+    'petal blizzard': {
+        name: 'Petal Blizzard',
+        hit: '100',
+        type: 'Grass',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user stirs up a violent petal blizzard and attacks everything around it."',
+        bp: '90'
+    },
+    'sludge wave': {
+        name: 'Sludge Wave',
+        hit: '100',
+        type: 'Poison',
+        category: 'Special',
+        pp: '10',
+        desc: 'It swamps the area around the user with a giant sludge wave. It may also poison those hit.',
+        bp: '95'
+    },
+    'stealth rock': {
+        name: 'Stealth Rock',
+        hit: '--',
+        type: 'Rock',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user lays a trap of levitating stones around the opponent\'s team. The trap hurts opponents that switch into battle."',
+        bp: '--'
+    },
+    'mach punch': {
+        name: 'Mach Punch',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '30',
+        desc: 'The user throws a punch at blinding speed. It is certain to strike first.',
+        bp: '40'
+    },
+    'supersonic': {
+        name: 'Supersonic',
+        hit: '55',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user generates odd sound waves from its body. It may confuse the target.',
+        bp: '--'
+    },
+    'explosion': {
+        name: 'Explosion',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '5',
+        desc: 'The user explodes to inflict damage on those around it. The user faints upon using this move.',
+        bp: '250'
+    },
+    'gunk shot': {
+        name: 'Gunk Shot',
+        hit: '80',
+        type: 'Poison',
+        category: 'Physical',
+        pp: '5',
+        desc: 'The user shoots filthy garbage at the target to attack. It may also poison the target.',
+        bp: '120'
+    },
+    'bubble': {
+        name: 'Bubble',
+        hit: '100',
+        type: 'Water',
+        category: 'Special',
+        pp: '30',
+        desc: "A spray of countless bubbles is jetted at the opposing team. It may also lower the targets' Speed stats.",
+        bp: '40'
+    },
+    'focus punch': {
+        name: 'Focus Punch',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The user focuses its mind before launching a punch. It will fail if the user is hit before it is used."',
+        bp: '150'
+    },
+    'spite': {
+        name: 'Spite',
+        hit: '100',
+        type: 'Ghost',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user unleashes its grudge on the move last used by the target by cutting 4 PP from it.',
+        bp: '--'
+    },
+    'lock-on': {
+        name: 'Lock-On',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '5',
+        desc: 'The user takes sure aim at the target. It ensures the next attack does not fail to hit the target.',
+        bp: '--'
+    },
+    'absorb': {
+        name: 'Absorb',
+        hit: '100',
+        type: 'Grass',
+        category: 'Special',
+        pp: '25',
+        desc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+        bp: '20'
+    },
+    'horn drill': {
+        name: 'Horn Drill',
+        hit: '30',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '5',
+        desc: 'The user stabs the target with a horn that rotates like a drill. If it hits, the target faints instantly.',
+        bp: '--'
+    },
+    'shadow ball': {
+        name: 'Shadow Ball',
+        hit: '100',
+        type: 'Ghost',
+        category: 'Special',
+        pp: '15',
+        desc: "The user hurls a shadowy blob at the target. It may also lower the target's Sp. Def stat.",
+        bp: '80'
+    },
+    'sketch': {
+        name: 'Sketch',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '1',
+        desc: 'It enables the user to permanently learn the move last used by the target. Once used, Sketch disappears.',
+        bp: '--'
+    },
+    'mimic': {
+        name: 'Mimic',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '10',
+        desc: "The user copies the target's last move. The move can be used during battle until the Pok&eacute;mon is switched out.",
+        bp: '--'
+    },
+    'baton pass': {
+        name: 'Baton Pass',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '40',
+        desc: 'The user switches places with a party Pok&eacute;mon in waiting',
+        bp: '--'
+    },
+    'bulk up': {
+        name: 'Bulk Up',
+        hit: '--',
+        type: 'Fighting',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user tenses its muscles to bulk up its body',
+        bp: '--'
+    },
+    'submission': {
+        name: 'Submission',
+        hit: '80',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '25',
+        desc: 'The user grabs the target and recklessly dives for the ground. It also hurts the user slightly.',
+        bp: '80'
+    },
+    'sand tomb': {
+        name: 'Sand Tomb',
+        hit: '85',
+        type: 'Ground',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user traps the target inside a harshly raging sandstorm for four to five turns."',
+        bp: '35'
+    },
+    'belly drum': {
+        name: 'Belly Drum',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user maximizes its Attack stat in exchange for HP equal to half its max HP.',
+        bp: '--'
+    },
+    'play rough': {
+        name: 'Play Rough',
+        hit: '90',
+        type: 'Fairy',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user plays rough with the target and attacks it. This may also lower the target\'s Attack stat."',
+        bp: '90'
+    },
+    'covet': {
+        name: 'Covet',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '25',
+        desc: "The user endearingly approaches the target, then steals the target's held item.",
+        bp: '60'
+    },
+    'dig': {
+        name: 'Dig',
+        hit: '100',
+        type: 'Ground',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user burrows, then attacks on the second turn. It can also be used to exit dungeons.',
+        bp: '80'
+    },
+    'gastro acid': {
+        name: 'Gastro Acid',
+        hit: '100',
+        type: 'Poison',
+        category: 'Other',
+        pp: '10',
+        desc: "The user hurls up its stomach acids on the target. The fluid eliminates the effect of the target's Ability.",
+        bp: '--'
+    },
+    'howl': {
+        name: 'Howl',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '40',
+        desc: 'The user howls loudly to raise its spirit, boosting its Attack stat.',
+        bp: '--'
+    },
+    'retaliate': {
+        name: 'Retaliate',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '5',
+        desc: "The user gets revenge for a fainted ally. If an ally fainted in the previous turn, this attack's damage increases.",
+        bp: '70'
+    },
+    'fire spin': {
+        name: 'Fire Spin',
+        hit: '85',
+        type: 'Fire',
+        category: 'Special',
+        pp: '15',
+        desc: 'The target becomes trapped within a fierce vortex of fire that rages for four to five turns.',
+        bp: '35'
+    },
+    'stun spore': {
+        name: 'Stun Spore',
+        hit: '75',
+        type: 'Grass',
+        category: 'Other',
+        pp: '30',
+        desc: 'The user scatters a cloud of paralyzing powder. It may leave the target with paralysis.',
+        bp: '--'
+    },
+    'air slash': {
+        name: 'Air Slash',
+        hit: '95',
+        type: 'Flying',
+        category: 'Special',
+        pp: '15',
+        desc: 'The user attacks with a blade of air that slices even the sky. It may also make the target flinch.',
+        bp: '75'
+    },
+    'sludge': {
+        name: 'Sludge',
+        hit: '100',
+        type: 'Poison',
+        category: 'Special',
+        pp: '20',
+        desc: 'Unsanitary sludge is hurled at the target. It may also poison the target.',
+        bp: '65'
+    },
+    'nasty plot': {
+        name: 'Nasty Plot',
+        hit: '--',
+        type: 'Dark',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user stimulates its brain by thinking bad thoughts. It sharply raises the user\'s Sp. Atk."',
+        bp: '--'
+    },
+    'megahorn': {
+        name: 'Megahorn',
+        hit: '85',
+        type: 'Bug',
+        category: 'Physical',
+        pp: '10',
+        desc: 'Using its tough and impressive horn, the user rams into the target with no letup.',
+        bp: '120'
+    },
+    'poison fang': {
+        name: 'Poison Fang',
+        hit: '100',
+        type: 'Poison',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user bites the target with toxic fangs. It may also leave the target badly poisoned.',
+        bp: '50'
+    },
+    'conversion 2': {
+        name: 'Conversion 2',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '30',
+        desc: 'The user changes its type to make itself resistant to the type of the attack the opponent used last."',
+        bp: '--'
+    },
+    'zap cannon': {
+        name: 'Zap Cannon',
+        hit: '50',
+        type: 'Electric',
+        category: 'Special',
+        pp: '5',
+        desc: 'The user fires an electric blast like a cannon to inflict damage and cause paralysis.',
+        bp: '120'
+    },
+    'bubble beam': {
+        name: 'Bubble Beam',
+        hit: '100',
+        type: 'Water',
+        category: 'Special',
+        pp: '20',
+        desc: 'A spray of bubbles is forcefully ejected at the opposing team. It may also lower their Speed stats."',
+        bp: '65'
+    },
+    'double team': {
+        name: 'Double Team',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '15',
+        desc: 'By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.',
+        bp: '--'
+    },
+    'crush grip': {
+        name: 'Crush Grip',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '5',
+        desc: 'The target is crushed with great force. The attack is more powerful the more HP the target has left.',
+        bp: '--'
+    },
+    'grassy terrain': {
+        name: 'Grassy Terrain',
+        hit: '--',
+        type: 'Grass',
+        category: 'Other',
+        pp: '10',
+        desc: "The user turns the ground under everyone's feet to grass for five turns. This restores the HP of Pok&eacute;mon on the ground a little every turn.",
+        bp: '--'
+    },
+    'eruption': {
+        name: 'Eruption',
+        hit: '100',
+        type: 'Fire',
+        category: 'Special',
+        pp: '5',
+        desc: "The user attacks the opposing team with explosive fury. The lower the user's HP, the less powerful this attack becomes.",
+        bp: '150'
+    },
+    'psycho boost': {
+        name: 'Psycho Boost',
+        hit: '90',
+        type: 'Psychic',
+        category: 'Special',
+        pp: '5',
+        desc: 'The user attacks the target at full power. The attack\'s recoil harshly reduces the user\'s Sp. Atk stat."',
+        bp: '140'
+    },
+    'trick': {
+        name: 'Trick',
+        hit: '100',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user catches the target off guard and swaps its held item with its own.',
+        bp: '--'
+    },
+    'steel wing': {
+        name: 'Steel Wing',
+        hit: '90',
+        type: 'Steel',
+        category: 'Physical',
+        pp: '25',
+        desc: 'The target is hit with wings of steel. It may also raise the user\'s Defense stat."',
+        bp: '70'
+    },
+    'withdraw': {
+        name: 'Withdraw',
+        hit: '--',
+        type: 'Water',
+        category: 'Other',
+        pp: '40',
+        desc: 'The user withdraws its body into its hard shell, raising its Defense stat.',
+        bp: '--'
+    },
+    'secret power': {
+        name: 'Secret Power',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '20',
+        desc: "The user attacks the target with a secret power. Its added effects vary depending on the user's environment.",
+        bp: '70'
+    },
+    'dark pulse': {
+        name: 'Dark Pulse',
+        hit: '100',
+        type: 'Dark',
+        category: 'Special',
+        pp: '15',
+        desc: 'The user releases a horrible aura imbued with dark thoughts. It may also make the target flinch."',
+        bp: '80'
+    },
+    'ice punch': {
+        name: 'Ice Punch',
+        hit: '100',
+        type: 'Ice',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The target is punched with an icy fist. It may also leave the target frozen.',
+        bp: '75'
+    },
+    'rock slide': {
+        name: 'Rock Slide',
+        hit: '90',
+        type: 'Rock',
+        category: 'Physical',
+        pp: '10',
+        desc: 'Large boulders are hurled at the opposing team to inflict damage. It may also make the targets flinch."',
+        bp: '75'
+    },
+    'extrasensory': {
+        name: 'Extrasensory',
+        hit: '100',
+        type: 'Psychic',
+        category: 'Special',
+        pp: '20',
+        desc: 'The user attacks with an odd, unseeable power. It may also make the target flinch.',
+        bp: '80'
+    },
+    'whirlwind': {
+        name: 'Whirlwind',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: 'The target is blown away, to be replaced by another Pok&eacute;mon in its party. In the wild, the battle ends.',
+        bp: '--'
+    },
+    'sunny day': {
+        name: 'Sunny Day',
+        hit: '--',
+        type: 'Fire',
+        category: 'Other',
+        pp: '5',
+        desc: 'The user intensifies the sun for five turns',
+        bp: '--'
+    },
+    'flame wheel': {
+        name: 'Flame Wheel',
+        hit: '100',
+        type: 'Fire',
+        category: 'Physical',
+        pp: '25',
+        desc: 'The user cloaks itself in fire and charges at the target. It may also leave the target with a burn.',
+        bp: '60'
+    },
+    'thunder shock': {
+        name: 'Thunder Shock',
+        hit: '100',
+        type: 'Electric',
+        category: 'Special',
+        pp: '30',
+        desc: 'A jolt of electricity is hurled at the target to inflict damage. It may also leave the target with paralysis."',
+        bp: '40'
+    },
+    'spike cannon': {
+        name: 'Spike Cannon',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '15',
+        desc: 'Sharp spikes are shot at the target in rapid succession. They hit two to five times in a row."',
+        bp: '20'
+    },
+    'payback': {
+        name: 'Payback',
+        hit: '100',
+        type: 'Dark',
+        category: 'Physical',
+        pp: '10',
+        desc: "If the user moves after the target, this attack's power will be doubled.",
+        bp: '50'
+    },
+    'flatter': {
+        name: 'Flatter',
+        hit: '100',
+        type: 'Dark',
+        category: 'Other',
+        pp: '15',
+        desc: "Flattery is used to confuse the target. However, it also raises the target's Sp. Atk stat.",
+        bp: '--'
+    },
+    'calm mind': {
+        name: 'Calm Mind',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user quietly focuses its mind and calms its spirit to raise its Sp. Atk and Sp. Def stats.',
+        bp: '--'
+    },
+    'sticky web': {
+        name: 'Sticky Web',
+        hit: '--',
+        type: 'Bug',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user weaves a sticky net around the opposing team, which lowers their Speed stat upon switching into battle.',
+        bp: '--'
+    },
+    'powder snow': {
+        name: 'Powder Snow',
+        hit: '100',
+        type: 'Ice',
+        category: 'Special',
+        pp: '25',
+        desc: 'The user attacks with a chilling gust of powdery snow. It may also freeze the targets."',
+        bp: '40'
+    },
+    'me first': {
+        name: 'Me First',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: "The user tries to cut ahead of the target to steal and use the target's intended move with greater power.",
+        bp: '--'
+    },
+    'swallow': {
+        name: 'Swallow',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '10',
+        desc: 'The power stored using the move Stockpile is absorbed by the user to heal its HP. Storing more power heals more HP.',
+        bp: '--'
+    },
+    'dragon rage': {
+        name: 'Dragon Rage',
+        hit: '100',
+        type: 'Dragon',
+        category: 'Special',
+        pp: '10',
+        desc: 'This attack hits the target with a shock wave of pure rage. This attack always inflicts 40 HP damage."',
+        bp: '--'
+    },
+    'bide': {
+        name: 'Bide',
+        hit: '--',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user endures attacks for two turns, then strikes back to cause double the damage taken.',
+        bp: '--'
+    },
+    'signal beam': {
+        name: 'Signal Beam',
+        hit: '100',
+        type: 'Bug',
+        category: 'Special',
+        pp: '15',
+        desc: 'The user attacks with a sinister beam of light. It may also confuse the target."',
+        bp: '75'
+    },
+    'egg bomb': {
+        name: 'Egg Bomb',
+        hit: '75',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '10',
+        desc: 'A large egg is hurled at the target with maximum force to inflict damage."',
+        bp: '100'
+    },
+    'rapid spin': {
+        name: 'Rapid Spin',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '40',
+        desc: 'A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.',
+        bp: '20'
+    },
+    'ingrain': {
+        name: 'Ingrain',
+        hit: '--',
+        type: 'Grass',
+        category: 'Other',
+        pp: '20',
+        desc: "The user lays roots that restore its HP on every turn. Because it is rooted, it can't switch out.",
+        bp: '--'
+    },
+    'scald': {
+        name: 'Scald',
+        hit: '100',
+        type: 'Water',
+        category: 'Special',
+        pp: '15',
+        desc: 'The user shoots boiling hot water at its target. It may also leave the target with a burn.',
+        bp: '80'
+    },
+    'double slap': {
+        name: 'Double Slap',
+        hit: '85',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The target is slapped repeatedly',
+        bp: '15'
+    },
+    'hold hands': {
+        name: 'Hold Hands',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '40',
+        desc: 'Ally Pok&eacute;mon hold hands. This makes them very happy.',
+        bp: '--'
+    },
+    'rock tomb': {
+        name: 'Rock Tomb',
+        hit: '95',
+        type: 'Rock',
+        category: 'Physical',
+        pp: '15',
+        desc: "Boulders are hurled at the target. It also lowers the target's Speed by preventing its movement.",
+        bp: '60'
+    },
+    'night slash': {
+        name: 'Night Slash',
+        hit: '100',
+        type: 'Dark',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user slashes the target the instant an opportunity arises. Critical hits land more easily."',
+        bp: '70'
+    },
+    'refresh': {
+        name: 'Refresh',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user rests to cure itself of a poisoning, burn, or paralysis.',
+        bp: '--'
+    },
+    'thief': {
+        name: 'Thief',
+        hit: '100',
+        type: 'Dark',
+        category: 'Physical',
+        pp: '25',
+        desc: "The user attacks and steals the target's held item simultaneously. It can't steal if the user holds an item.",
+        bp: '60'
+    },
+    'swords dance': {
+        name: 'Swords Dance',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: 'A frenetic dance to uplift the fighting spirit. It sharply raises the user\'s Attack stat."',
+        bp: '--'
+    },
+    'disarming voice': {
+        name: 'Disarming Voice',
+        hit: '--',
+        type: 'Fairy',
+        category: 'Special',
+        pp: '15',
+        desc: 'Letting out a charming cry',
+        bp: '40'
+    },
+    'switcheroo': {
+        name: 'Switcheroo',
+        hit: '100',
+        type: 'Dark',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user trades held items with the target faster than the eye can follow.',
+        bp: '--'
+    },
+    'diamond storm': {
+        name: 'Diamond Storm',
+        hit: '95',
+        type: 'Rock',
+        category: 'Physical',
+        pp: '5',
+        desc: 'The user whips up a storm of diamonds to damage opposing Pok&eacute;mon. This may also raise the user\'s Defense stat."',
+        bp: '100'
+    },
+    'dark void': {
+        name: 'Dark Void',
+        hit: '80',
+        type: 'Dark',
+        category: 'Other',
+        pp: '10',
+        desc: 'Opposing Pok&eacute;mon are dragged into a world of total darkness that makes them sleep."',
+        bp: '--'
+    },
+    'twister': {
+        name: 'Twister',
+        hit: '100',
+        type: 'Dragon',
+        category: 'Special',
+        pp: '20',
+        desc: 'The user whips up a vicious tornado to tear at the opposing team. It may also make targets flinch.',
+        bp: '40'
+    },
+    'bolt strike': {
+        name: 'Bolt Strike',
+        hit: '85',
+        type: 'Electric',
+        category: 'Physical',
+        pp: '5',
+        desc: 'The user charges its target',
+        bp: '130'
+    },
+    'origin pulse': {
+        name: 'Origin Pulse',
+        hit: '85',
+        type: 'Water',
+        category: 'Special',
+        pp: '10',
+        desc: 'The user attacks opposing Pok&eacute;mon with countless beams of light that glow a deep and brilliant blue.',
+        bp: '110'
+    },
+    'seed flare': {
+        name: 'Seed Flare',
+        hit: '85',
+        type: 'Grass',
+        category: 'Special',
+        pp: '5',
+        desc: 'The user emits a shock wave from its body to attack its target. It may harshly lower the target\'s Sp. Def."',
+        bp: '120'
+    },
+    'infestation': {
+        name: 'Infestation',
+        hit: '100',
+        type: 'Bug',
+        category: 'Special',
+        pp: '20',
+        desc: "The target is infested and attacked for four to five turns. The target can't flee during this time.",
+        bp: '20'
+    },
+    'lava plume': {
+        name: 'Lava Plume',
+        hit: '100',
+        type: 'Fire',
+        category: 'Special',
+        pp: '15',
+        desc: 'An inferno of scarlet flames torches everything around the user. It may leave targets with a burn."',
+        bp: '80'
+    },
+    'aromatherapy': {
+        name: 'Aromatherapy',
+        hit: '--',
+        type: 'Grass',
+        category: 'Other',
+        pp: '5',
+        desc: "The user releases a soothing scent that heals all status problems affecting the user's party.",
+        bp: '--'
+    },
+    'wild charge': {
+        name: 'Wild Charge',
+        hit: '100',
+        type: 'Electric',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user shrouds itself in electricity and smashes into its target. It also damages the user a little."',
+        bp: '90'
+    },
+    'struggle bug': {
+        name: 'Struggle Bug',
+        hit: '100',
+        type: 'Bug',
+        category: 'Special',
+        pp: '20',
+        desc: "While resisting, the user attacks the opposing Pok&eacute;mon. The targets' Sp. Atk stat is reduced.",
+        bp: '50'
+    },
+    'encore': {
+        name: 'Encore',
+        hit: '100',
+        type: 'Normal',
+        category: 'Other',
+        pp: '5',
+        desc: 'The user compels the target to keep using only the move it last used for three turns.',
+        bp: '--'
+    },
+    'reflect type': {
+        name: 'Reflect Type',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '15',
+        desc: "The user reflects the target's type",
+        bp: '--'
+    },
+    'role play': {
+        name: 'Role Play',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user mimics the target completely',
+        bp: '--'
+    },
+    'minimize': {
+        name: 'Minimize',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user compresses its body to make itself look smaller, which sharply raises its evasiveness.',
+        bp: '--'
+    },
+    'assurance': {
+        name: 'Assurance',
+        hit: '100',
+        type: 'Dark',
+        category: 'Physical',
+        pp: '10',
+        desc: "If the target has already taken some damage in the same turn, this attack's power is doubled.",
+        bp: '60'
+    },
+    'lucky chant': {
+        name: 'Lucky Chant',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '30',
+        desc: 'The user chants an incantation toward the sky, preventing opposing Pok&eacute;mon from landing critical hits.',
+        bp: '--'
+    },
+    'sharpen': {
+        name: 'Sharpen',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '30',
+        desc: 'The user reduces its polygon count to make itself more jagged, raising the Attack stat.',
+        bp: '--'
+    },
+    'fly': {
+        name: 'Fly',
+        hit: '95',
+        type: 'Flying',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user soars, then strikes its target on the second turn. It can also be used for flying to any familiar town.',
+        bp: '90'
+    },
+    'sacred sword': {
+        name: 'Sacred Sword',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '15',
+        desc: "The user attacks by slicing with its long horns. The target's stat changes don't affect this attack's damage.",
+        bp: '90'
+    },
+    'mega punch': {
+        name: 'Mega Punch',
+        hit: '85',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The target is slugged by a punch thrown with muscle-packed power.',
+        bp: '80'
+    },
+    'earthquake': {
+        name: 'Earthquake',
+        hit: '100',
+        type: 'Ground',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user sets off an earthquake that strikes those around it.',
+        bp: '100'
+    },
+    'mat block': {
+        name: 'Mat Block',
+        hit: '--',
+        type: 'Fighting',
+        category: 'Other',
+        pp: '15',
+        desc: 'Using a pulled-up mat as a shield, the user protects itself and its allies from damaging moves. This does not stop status moves.',
+        bp: '--'
+    },
+    'rollout': {
+        name: 'Rollout',
+        hit: '90',
+        type: 'Rock',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The user continually rolls into the target over five turns. It becomes stronger each time it hits.',
+        bp: '30'
+    },
+    'sucker punch': {
+        name: 'Sucker Punch',
+        hit: '100',
+        type: 'Dark',
+        category: 'Physical',
+        pp: '5',
+        desc: 'This move enables the user to attack first. It fails if the target is not readying an attack',
+        bp: '80'
+    },
+    'poison powder': {
+        name: 'Poison Powder',
+        hit: '75',
+        type: 'Poison',
+        category: 'Other',
+        pp: '35',
+        desc: 'The user scatters a cloud of poisonous dust on the target. It may poison the target."',
+        bp: '--'
+    },
+    'steam eruption': {
+        name: 'Steam Eruption',
+        hit: '95',
+        type: 'Water',
+        category: 'Special',
+        pp: '5',
+        desc: 'The user immerses the target in superheated steam. This may also leave the target with a burn.',
+        bp: '110'
+    },
+    'magnetic flux': {
+        name: 'Magnetic Flux',
+        hit: '--',
+        type: 'Electric',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user manipulates magnetic fields which raises the Defense and Sp. Def stats of ally Pok&eacute;mon with the Plus or Minus Ability."',
+        bp: '--'
+    },
+    'uproar': {
+        name: 'Uproar',
+        hit: '100',
+        type: 'Normal',
+        category: 'Special',
+        pp: '10',
+        desc: 'The user attacks in an uproar for three turns. Over that time, no one can fall asleep.',
+        bp: '90'
+    },
+    'nature power': {
+        name: 'Nature Power',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: "An attack that makes use of nature's power. Its effects vary depending on the user's environment.",
+        bp: '--'
+    },
+    'mind reader': {
+        name: 'Mind Reader',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '5',
+        desc: 'The user senses the target\'s movements with its mind to ensure its next attack does not miss the target."',
+        bp: '--'
+    },
+    'confusion': {
+        name: 'Confusion',
+        hit: '100',
+        type: 'Psychic',
+        category: 'Special',
+        pp: '25',
+        desc: 'The target is hit by a weak telekinetic force. It may also leave the target confused.',
+        bp: '50'
+    },
+    'fire punch': {
+        name: 'Fire Punch',
+        hit: '100',
+        type: 'Fire',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The target is punched with a fiery fist. It may also leave the target with a burn."',
+        bp: '75'
+    },
+    'thrash': {
+        name: 'Thrash',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user rampages and attacks for two to three turns. It then becomes confused, however.',
+        bp: '120'
+    },
+    'rock blast': {
+        name: 'Rock Blast',
+        hit: '90',
+        type: 'Rock',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user hurls hard rocks at the target. Two to five rocks are launched in quick succession."',
+        bp: '25'
+    },
+    'overheat': {
+        name: 'Overheat',
+        hit: '90',
+        type: 'Fire',
+        category: 'Special',
+        pp: '5',
+        desc: "The user attacks the target at full power. The attack's recoil harshly reduces the user's Sp. Atk stat.",
+        bp: '130'
+    },
+    'bullet punch': {
+        name: 'Bullet Punch',
+        hit: '100',
+        type: 'Steel',
+        category: 'Physical',
+        pp: '30',
+        desc: 'The user strikes the target with tough punches as fast as bullets. This move always goes first."',
+        bp: '40'
+    },
+    'dragon rush': {
+        name: 'Dragon Rush',
+        hit: '75',
+        type: 'Dragon',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user tackles the target while exhibiting overwhelming menace. It may also make the target flinch.',
+        bp: '100'
+    },
+    'charge beam': {
+        name: 'Charge Beam',
+        hit: '90',
+        type: 'Electric',
+        category: 'Special',
+        pp: '10',
+        desc: 'The user attacks with an electric charge. The user may use any remaining electricity to raise its Sp. Atk stat."',
+        bp: '50'
+    },
+    'last resort': {
+        name: 'Last Resort',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '5',
+        desc: 'This move can be used only after the user has used all the other moves it knows in the battle."',
+        bp: '140'
+    },
+    'slam': {
+        name: 'Slam',
+        hit: '75',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The target is slammed with a long tail, vines, etc., to inflict damage.',
+        bp: '80'
+    },
+    'happy hour': {
+        name: 'Happy Hour',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '30',
+        desc: 'Using Happy Hour doubles the amount of Prize Money received after battle."',
+        bp: '--'
+    },
+    'foul play': {
+        name: 'Foul Play',
+        hit: '100',
+        type: 'Dark',
+        category: 'Physical',
+        pp: '15',
+        desc: "The user turns the target's power against it. The higher the target's Attack stat",
+        bp: '95'}, "king's shield": {
+        name: "King's Shield",
+        hit: '--',
+        type: 'Steel',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user takes a defensive stance while it protects itself from damage. It also harshly lowers the Attack stat of any attacker who makes direct contact."',
+        bp: '--'
+    },
+    'grass knot': {
+        name: 'Grass Knot',
+        hit: '100',
+        type: 'Grass',
+        category: 'Special',
+        pp: '20',
+        desc: 'The user snares the target with grass and trips it. The heavier the target',
+        bp: '--'
+    },
+    'hex': {
+        name: 'Hex',
+        hit: '100',
+        type: 'Ghost',
+        category: 'Special',
+        pp: '10',
+        desc: 'This relentless attack does massive damage to a target affected by status problems.',
+        bp: '65'
+    },
+    'aqua jet': {
+        name: 'Aqua Jet',
+        hit: '100',
+        type: 'Water',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The user lunges at the target at a speed that makes it almost invisible. It is sure to strike first.',
+        bp: '40'
+    },
+    'iron head': {
+        name: 'Iron Head',
+        hit: '100',
+        type: 'Steel',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user slams the target with its steel-hard head. It may also make the target flinch.',
+        bp: '80'
+    },
+    'arm thrust': {
+        name: 'Arm Thrust',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The user looses a flurry of open-palmed arm thrusts that hit two to five times in a row.',
+        bp: '15'
+    },
+    'skill swap': {
+        name: 'Skill Swap',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user employs its psychic power to exchange Abilities with the target.',
+        bp: '--'
+    },
+    'torment': {
+        name: 'Torment',
+        hit: '100',
+        type: 'Dark',
+        category: 'Other',
+        pp: '15',
+        desc: 'The user torments and enrages the target, making it incapable of using the same move twice in a row.',
+        bp: '--'
+    },
+    'lick': {
+        name: 'Lick',
+        hit: '100',
+        type: 'Ghost',
+        category: 'Physical',
+        pp: '30',
+        desc: 'The target is licked with a long tongue, causing damage. It may also leave the target with paralysis.',
+        bp: '30'
+    },
+    'ominous wind': {
+        name: 'Ominous Wind',
+        hit: '100',
+        type: 'Ghost',
+        category: 'Special',
+        pp: '5',
+        desc: 'The user blasts the target with a gust of repulsive wind. It may also raise all the user\'s stats at once."',
+        bp: '60'
+    },
+    'draining kiss': {
+        name: 'Draining Kiss',
+        hit: '100',
+        type: 'Fairy',
+        category: 'Special',
+        pp: '10',
+        desc: "The user steals the target's energy with a kiss. The user's HP is restored by over half of the damage taken by the target.",
+        bp: '50'
+    },
+    'swagger': {
+        name: 'Swagger',
+        hit: '90',
+        type: 'Normal',
+        category: 'Other',
+        pp: '15',
+        desc: "The user enrages and confuses the target. However, it also sharply raises the target's Attack stat.",
+        bp: '--'
+    },
+    'brave bird': {
+        name: 'Brave Bird',
+        hit: '100',
+        type: 'Flying',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user tucks in its wings and charges from a low altitude. The user also takes serious damage.',
+        bp: '120'
+    },
+    'ice fang': {
+        name: 'Ice Fang',
+        hit: '95',
+        type: 'Ice',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user bites with cold-infused fangs. It may also make the target flinch or leave it frozen."',
+        bp: '65'
+    },
+    'dynamic punch': {
+        name: 'Dynamic Punch',
+        hit: '50',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '5',
+        desc: 'The user punches the target with full, concentrated power. It confuses the target if it hits.',
+        bp: '100'
+    },
+    'bug bite': {
+        name: 'Bug Bite',
+        hit: '100',
+        type: 'Bug',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The user bites the target. If the target is holding a Berry, the user eats it and gains its effect.',
+        bp: '60'
+    },
+    'luster purge': {
+        name: 'Luster Purge',
+        hit: '100',
+        type: 'Psychic',
+        category: 'Special',
+        pp: '5',
+        desc: "The user lets loose a damaging burst of light. It may also reduce the target's Sp. Def stat.",
+        bp: '70'
+    },
+    'needle arm': {
+        name: 'Needle Arm',
+        hit: '100',
+        type: 'Grass',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user attacks by wildly swinging its thorny arms. It may also make the target flinch.',
+        bp: '60'
+    },
+    'waterfall': {
+        name: 'Waterfall',
+        hit: '100',
+        type: 'Water',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user charges at the target and may make it flinch. It can also be used to climb a waterfall.',
+        bp: '80'
+    },
+    'confuse ray': {
+        name: 'Confuse Ray',
+        hit: '100',
+        type: 'Ghost',
+        category: 'Other',
+        pp: '10',
+        desc: 'The target is exposed to a sinister ray that triggers confusion.',
+        bp: '--'
+    },
+    'blaze kick': {
+        name: 'Blaze Kick',
+        hit: '90',
+        type: 'Fire',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user launches a kick that lands a critical hit more easily. It may also leave the target with a burn."',
+        bp: '85'
+    },
+    'aqua tail': {
+        name: 'Aqua Tail',
+        hit: '90',
+        type: 'Water',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user attacks by swinging its tail as if it were a vicious wave in a raging storm."',
+        bp: '90'
+    },
+    'poison gas': {
+        name: 'Poison Gas',
+        hit: '90',
+        type: 'Poison',
+        category: 'Other',
+        pp: '40',
+        desc: 'A cloud of poison gas is sprayed in the face of opposing Pok&eacute;mon. It may poison those hit.',
+        bp: '--'
+    },
+    'hammer arm': {
+        name: 'Hammer Arm',
+        hit: '90',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '10',
+        desc: "The user swings and hits with its strong and heavy fist. It lowers the user's Speed, however.",
+        bp: '100'
+    },
+    'sky uppercut': {
+        name: 'Sky Uppercut',
+        hit: '90',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user attacks the target with an uppercut thrown skyward with force.',
+        bp: '85'
+    },
+    'acupressure': {
+        name: 'Acupressure',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '30',
+        desc: 'The user applies pressure to stress points, sharply boosting one of its stats.',
+        bp: '--'
+    },
+    'water pledge': {
+        name: 'Water Pledge',
+        hit: '100',
+        type: 'Water',
+        category: 'Special',
+        pp: '10',
+        desc: 'A column of water strikes the target. When combined with its fire equivalent',
+        bp: '80'
+    },
+    'healing wish': {
+        name: 'Healing Wish',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user faints. In return, the Pok&eacute;mon taking its place will have its HP restored and status cured.',
+        bp: '--'
+    },
+    'snatch': {
+        name: 'Snatch',
+        hit: '--',
+        type: 'Dark',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user steals the effects of any healing or stat-changing move the opponent attempts to use.',
+        bp: '--'
+    },
+    'heat wave': {
+        name: 'Heat Wave',
+        hit: '90',
+        type: 'Fire',
+        category: 'Special',
+        pp: '10',
+        desc: 'The user attacks by exhaling hot breath on the opposing team. It may also leave targets with a burn."',
+        bp: '95'
+    },
+    'metal sound': {
+        name: 'Metal Sound',
+        hit: '85',
+        type: 'Steel',
+        category: 'Other',
+        pp: '40',
+        desc: "A horrible sound like scraping metal harshly reduces the target's Sp. Def stat.",
+        bp: '--'
+    },
+    'heat crash': {
+        name: 'Heat Crash',
+        hit: '100',
+        type: 'Fire',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user slams its target with its flame- covered body. The more the user outweighs the target, the greater the damage.',
+        bp: '--'
+    },
+    'reflect': {
+        name: 'Reflect',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '20',
+        desc: 'A wondrous wall of light is put up to suppress damage from physical attacks for five turns.',
+        bp: '--'
+    },
+    'hail': {
+        name: 'Hail',
+        hit: '--',
+        type: 'Ice',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user summons a hailstorm lasting five turns. It damages all Pok&eacute;mon except the Ice type.',
+        bp: '--'
+    },
+    'skull bash': {
+        name: 'Skull Bash',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user tucks in its head to raise its Defense in the first turn, then rams the target on the next turn.',
+        bp: '130'
+    },
+    'sonic boom': {
+        name: 'Sonic Boom',
+        hit: '90',
+        type: 'Normal',
+        category: 'Special',
+        pp: '20',
+        desc: 'The target is hit with a destructive shock wave that always inflicts 20 HP damage.',
+        bp: '--'
+    },
+    'morning sun': {
+        name: 'Morning Sun',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '5',
+        desc: 'The user restores its own HP. The amount of HP regained varies with the weather."',
+        bp: '--'
+    },
+    'nightmare': {
+        name: 'Nightmare',
+        hit: '100',
+        type: 'Ghost',
+        category: 'Other',
+        pp: '15',
+        desc: 'A sleeping target sees a nightmare that inflicts some damage every turn.',
+        bp: '--'
+    },
+    'natural gift': {
+        name: 'Natural Gift',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user draws power to attack by using its held Berry. The Berry determines its type and power."',
+        bp: '--'
+    },
+    'body slam': {
+        name: 'Body Slam',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user drops onto the target with its full body weight. It may also leave the target with paralysis.',
+        bp: '85'
+    },
+    'rage powder': {
+        name: 'Rage Powder',
+        hit: '--',
+        type: 'Bug',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user scatters a cloud of irritating powder to draw attention to itself. Opponents aim only at the user.',
+        bp: '--'
+    },
+    'rock climb': {
+        name: 'Rock Climb',
+        hit: '85',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The user attacks the target by smashing into it with incredible force. It may also confuse the target.',
+        bp: '90'
+    },
+    'power swap': {
+        name: 'Power Swap',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user employs its psychic power to switch changes to its Attack and Sp. Atk with the target.',
+        bp: '--'
+    },
+    'night shade': {
+        name: 'Night Shade',
+        hit: '100',
+        type: 'Ghost',
+        category: 'Special',
+        pp: '15',
+        desc: 'The user makes the target see a frightening mirage. It inflicts damage matching the user\'s level."',
+        bp: '--'
+    },
+    'bone rush': {
+        name: 'Bone Rush',
+        hit: '90',
+        type: 'Ground',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user strikes the target with a hard bone two to five times in a row."',
+        bp: '25'
+    },
+    'karate chop': {
+        name: 'Karate Chop',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '25',
+        desc: 'The target is attacked with a sharp chop. Critical hits land more easily.',
+        bp: '50'
+    },
+    'outrage': {
+        name: 'Outrage',
+        hit: '100',
+        type: 'Dragon',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user rampages and attacks for two to three turns. It then becomes confused, however.',
+        bp: '120'
+    },
+    'spit up': {
+        name: 'Spit Up',
+        hit: '100',
+        type: 'Normal',
+        category: 'Special',
+        pp: '10',
+        desc: 'The power stored using the move Stockpile is released at once in an attack. The more power is stored, the greater the damage.',
+        bp: '--'}, "forest's curse": {
+        name: "Forest's Curse",
+        hit: '100',
+        type: 'Grass',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user puts a forest curse on the target. Afflicted targets are now Grass type as well."',
+        bp: '--'
+    },
+    'spikes': {
+        name: 'Spikes',
+        hit: '--',
+        type: 'Ground',
+        category: 'Other',
+        pp: '20',
+        desc: "The user lays a trap of spikes at the opposing team's feet. The trap hurts Pok&eacute;mon that switch into battle.",
+        bp: '--'
+    },
+    'take down': {
+        name: 'Take Down',
+        hit: '85',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '20',
+        desc: 'A reckless, full-body charge attack for slamming into the target. It also damages the user a little.',
+        bp: '90'
+    },
+    'defog': {
+        name: 'Defog',
+        hit: '--',
+        type: 'Flying',
+        category: 'Other',
+        pp: '15',
+        desc: "A strong wind blows away the target's obstacles such as Reflect or Light Screen. It also lowers the target's evasiveness.",
+        bp: '--'
+    },
+    'blast burn': {
+        name: 'Blast Burn',
+        hit: '90',
+        type: 'Fire',
+        category: 'Special',
+        pp: '5',
+        desc: 'The target is razed by a fiery explosion. The user must rest on the next turn',
+        bp: '150'
+    },
+    'judgment': {
+        name: 'Judgment',
+        hit: '100',
+        type: 'Normal',
+        category: 'Special',
+        pp: '10',
+        desc: 'The user releases countless shots of light at the target. Its type varies with the kind of Plate the user is holding.',
+        bp: '100'
+    },
+    'harden': {
+        name: 'Harden',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '30',
+        desc: 'The user stiffens all the muscles in its body to raise its Defense stat.',
+        bp: '--'
+    },
+    'razor shell': {
+        name: 'Razor Shell',
+        hit: '95',
+        type: 'Water',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user cuts its target with sharp shells. This attack may also lower the target\'s Defense stat."',
+        bp: '75'
+    },
+    'teleport': {
+        name: 'Teleport',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '20',
+        desc: 'Use it to flee from any wild Pok&eacute;mon. It can also warp to the last Pok&eacute;mon Center visited.',
+        bp: '--'
+    },
+    'iron defense': {
+        name: 'Iron Defense',
+        hit: '--',
+        type: 'Steel',
+        category: 'Other',
+        pp: '15',
+        desc: "The user hardens its body's surface like iron, sharply raising its Defense stat.",
+        bp: '--'
+    },
+    'fairy lock': {
+        name: 'Fairy Lock',
+        hit: '--',
+        type: 'Fairy',
+        category: 'Other',
+        pp: '10',
+        desc: 'By locking down the battlefield, the user keeps all Pok&eacute;mon from fleeing during the next turn.',
+        bp: '--'
+    },
+    'extreme speed': {
+        name: 'Extreme Speed',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '5',
+        desc: 'The user charges the target at blinding speed. This attack always goes before any other move."',
+        bp: '80'
+    },
+    'focus blast': {
+        name: 'Focus Blast',
+        hit: '70',
+        type: 'Fighting',
+        category: 'Special',
+        pp: '5',
+        desc: "The user heightens its mental focus and unleashes its power. It may also lower the target's Sp. Def.",
+        bp: '120'
+    },
+    'rototiller': {
+        name: 'Rototiller',
+        hit: '--',
+        type: 'Ground',
+        category: 'Other',
+        pp: '10',
+        desc: 'Tilling the soil, the user makes it easier for plants to grow. This raises the Attack and Sp. Atk stats of Grass-type Pok&eacute;mon.',
+        bp: '--'
+    },
+    'haze': {
+        name: 'Haze',
+        hit: '--',
+        type: 'Ice',
+        category: 'Other',
+        pp: '30',
+        desc: 'The user creates a haze that eliminates every stat change among all the Pok&eacute;mon engaged in battle.',
+        bp: '--'
+    },
+    'transform': {
+        name: 'Transform',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user transforms into a copy of the target right down to having the same move set.',
+        bp: '--'
+    },
+    'pin missile': {
+        name: 'Pin Missile',
+        hit: '95',
+        type: 'Bug',
+        category: 'Physical',
+        pp: '20',
+        desc: 'Sharp spikes are shot at the target in rapid succession. They hit two to five times in a row.',
+        bp: '25'
+    },
+    'embargo': {
+        name: 'Embargo',
+        hit: '100',
+        type: 'Dark',
+        category: 'Other',
+        pp: '15',
+        desc: 'It prevents the target from using its held item. Its Trainer is also prevented from using items on it.',
+        bp: '--'
+    },
+    'magnet bomb': {
+        name: 'Magnet Bomb',
+        hit: '--',
+        type: 'Steel',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The user launches steel bombs that stick to the target. This attack will not miss."',
+        bp: '60'
+    },
+    'destiny bond': {
+        name: 'Destiny Bond',
+        hit: '--',
+        type: 'Ghost',
+        category: 'Other',
+        pp: '5',
+        desc: 'When this move is used',
+        bp: '--'
+    },
+    'follow me': {
+        name: 'Follow Me',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user draws attention to itself, making all targets take aim only at the user.',
+        bp: '--'
+    },
+    'bounce': {
+        name: 'Bounce',
+        hit: '85',
+        type: 'Flying',
+        category: 'Physical',
+        pp: '5',
+        desc: 'The user bounces up high, then drops on the target on the second turn. It may also leave the target with paralysis.',
+        bp: '85'
+    },
+    'precipice blades': {
+        name: 'Precipice Blades',
+        hit: '85',
+        type: 'Ground',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user attacks opposing Pok&eacute;mon by manifesting the power of the land in fearsome blades of stone.',
+        bp: '120'
+    },
+    'hyper fang': {
+        name: 'Hyper Fang',
+        hit: '90',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user bites hard on the target with its sharp front fangs. It may also make the target flinch."',
+        bp: '80'
+    },
+    'quash': {
+        name: 'Quash',
+        hit: '100',
+        type: 'Dark',
+        category: 'Other',
+        pp: '15',
+        desc: 'The user suppresses the target and makes its move go last.',
+        bp: '--'
+    },
+    'v-create': {
+        name: 'V-create',
+        hit: '95',
+        type: 'Fire',
+        category: 'Physical',
+        pp: '5',
+        desc: "With a hot flame on its forehead, the user hurls itself at its target. It lowers the user's Defense, Sp. Def, and Speed stats.",
+        bp: '180'
+    },
+    'solar beam': {
+        name: 'Solar Beam',
+        hit: '100',
+        type: 'Grass',
+        category: 'Special',
+        pp: '10',
+        desc: 'A two-turn attack. The user gathers light',
+        bp: '120'
+    },
+    'chatter': {
+        name: 'Chatter',
+        hit: '100',
+        type: 'Flying',
+        category: 'Special',
+        pp: '20',
+        desc: 'The user attacks using a sound wave based on words it has learned. It may also confuse the target.',
+        bp: '65'
+    },
+    'crush claw': {
+        name: 'Crush Claw',
+        hit: '95',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user slashes the target with hard and sharp claws. It may also lower the target\'s Defense."',
+        bp: '75'
+    },
+    'fury attack': {
+        name: 'Fury Attack',
+        hit: '85',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The target is jabbed repeatedly with a horn or beak two to five times in a row."',
+        bp: '15'
+    },
+    'perish song': {
+        name: 'Perish Song',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '5',
+        desc: 'Any Pok&eacute;mon that hears this song faints in three turns, unless it switches out of battle.',
+        bp: '--'
+    },
+    'roar': {
+        name: 'Roar',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: 'The target is scared off and replaced by another Pok&eacute;mon in its party. In the wild, the battle ends.',
+        bp: '--'
+    },
+    'flare blitz': {
+        name: 'Flare Blitz',
+        hit: '100',
+        type: 'Fire',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user cloaks itself in fire and charges at the target. The user sustains serious damage and may leave the target burned."',
+        bp: '120'
+    },
+    'hypnosis': {
+        name: 'Hypnosis',
+        hit: '60',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user employs hypnotic suggestion to make the target fall into a deep sleep.',
+        bp: '--'
+    },
+    'fire blast': {
+        name: 'Fire Blast',
+        hit: '85',
+        type: 'Fire',
+        category: 'Special',
+        pp: '5',
+        desc: 'The target is attacked with an intense blast of all-consuming fire. It may also leave the target with a burn."',
+        bp: '110'
+    },
+    'grass pledge': {
+        name: 'Grass Pledge',
+        hit: '100',
+        type: 'Grass',
+        category: 'Special',
+        pp: '10',
+        desc: 'A column of grass hits opposing Pok&eacute;mon. When used with its water equivalent, its damage increases into a vast swamp.',
+        bp: '80'
+    },
+    'hurricane': {
+        name: 'Hurricane',
+        hit: '70',
+        type: 'Flying',
+        category: 'Special',
+        pp: '10',
+        desc: 'The user attacks by wrapping its opponent in a fierce wind that flies up into the sky. It may also confuse the target.',
+        bp: '110'
+    },
+    'aromatic mist': {
+        name: 'Aromatic Mist',
+        hit: '100',
+        type: 'Fairy',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user raises the Sp. Def stat of ally Pok&eacute;mon with a mysterious aroma."',
+        bp: '--'
+    },
+    'mirror coat': {
+        name: 'Mirror Coat',
+        hit: '100',
+        type: 'Psychic',
+        category: 'Special',
+        pp: '20',
+        desc: 'A retaliation move that counters any special attack, inflicting double the damage taken.',
+        bp: '--'
+    },
+    'false swipe': {
+        name: 'False Swipe',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '40',
+        desc: 'A restrained attack that prevents the target from fainting. The target is left with at least 1 HP."',
+        bp: '40'
+    },
+    'quick guard': {
+        name: 'Quick Guard',
+        hit: '--',
+        type: 'Fighting',
+        category: 'Other',
+        pp: '15',
+        desc: 'The user protects itself and its allies from priority moves. If used in succession',
+        bp: '--'
+    },
+    'synchronoise': {
+        name: 'Synchronoise',
+        hit: '100',
+        type: 'Psychic',
+        category: 'Special',
+        pp: '10',
+        desc: 'Using an odd shock wave, the user inflicts damage on any Pok&eacute;mon of the same type in the area around it.',
+        bp: '120'
+    },
+    'giga drain': {
+        name: 'Giga Drain',
+        hit: '100',
+        type: 'Grass',
+        category: 'Special',
+        pp: '10',
+        desc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+        bp: '75'
+    },
+    'leech seed': {
+        name: 'Leech Seed',
+        hit: '90',
+        type: 'Grass',
+        category: 'Other',
+        pp: '10',
+        desc: 'A seed is planted on the target. It steals some HP from the target every turn.',
+        bp: '--'
+    },
+    'trick-or-treat': {
+        name: 'Trick-or-Treat',
+        hit: '100',
+        type: 'Ghost',
+        category: 'Other',
+        pp: '20',
+        desc: "The user takes the target trick-or-treating. This adds Ghost type to the target's type.",
+        bp: '--'
+    },
+    'heal bell': {
+        name: 'Heal Bell',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '5',
+        desc: 'The user makes a soothing bell chime to heal the status problems of all the party Pok&eacute;mon."',
+        bp: '--'
+    },
+    'poison jab': {
+        name: 'Poison Jab',
+        hit: '100',
+        type: 'Poison',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The target is stabbed with a tentacle or arm steeped in poison. It may also poison the target."',
+        bp: '80'
+    },
+    'topsy-turvy': {
+        name: 'Topsy-Turvy',
+        hit: '100',
+        type: 'Dark',
+        category: 'Other',
+        pp: '20',
+        desc: 'All stat changes affecting the target turn topsy-turvy and become the opposite of what they were.',
+        bp: '--'
+    },
+    'seed bomb': {
+        name: 'Seed Bomb',
+        hit: '100',
+        type: 'Grass',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user slams a barrage of hard-shelled seeds down on the target from above."',
+        bp: '80'
+    },
+    'stockpile': {
+        name: 'Stockpile',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user charges up power and raises both its Defense and Sp. Def. The move can be used three times.',
+        bp: '--'
+    },
+    'smog': {
+        name: 'Smog',
+        hit: '70',
+        type: 'Poison',
+        category: 'Special',
+        pp: '20',
+        desc: 'The target is attacked with a discharge of filthy gases. It may also poison the target.',
+        bp: '30'
+    },
+    'electro ball': {
+        name: 'Electro Ball',
+        hit: '100',
+        type: 'Electric',
+        category: 'Special',
+        pp: '10',
+        desc: 'The user hurls an electric orb at the target. The faster the user is than the target, the greater the damage.',
+        bp: '--'
+    },
+    'ice burn': {
+        name: 'Ice Burn',
+        hit: '90',
+        type: 'Ice',
+        category: 'Special',
+        pp: '5',
+        desc: 'On the second turn',
+        bp: '140'
+    },
+    'magnet rise': {
+        name: 'Magnet Rise',
+        hit: '--',
+        type: 'Electric',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user levitates using electrically generated magnetism for five turns.',
+        bp: '--'
+    },
+    'dragon dance': {
+        name: 'Dragon Dance',
+        hit: '--',
+        type: 'Dragon',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user vigorously performs a mystic, powerful dance that boosts its Attack and Speed stats.',
+        bp: '--'
+    },
+    'ice ball': {
+        name: 'Ice Ball',
+        hit: '90',
+        type: 'Ice',
+        category: 'Physical',
+        pp: '20',
+        desc: 'The user continually rolls into the target over five turns. It becomes stronger each time it hits.',
+        bp: '30'
+    },
+    'pursuit': {
+        name: 'Pursuit',
+        hit: '100',
+        type: 'Dark',
+        category: 'Physical',
+        pp: '20',
+        desc: 'An attack move that inflicts double damage if used on a target that is switching out of battle.',
+        bp: '40'
+    },
+    'entrainment': {
+        name: 'Entrainment',
+        hit: '100',
+        type: 'Normal',
+        category: 'Other',
+        pp: '15',
+        desc: "The user dances with an odd rhythm that compels the target to mimic it, making the target's Ability the same as the user's.",
+        bp: '--'
+    },
+    'incinerate': {
+        name: 'Incinerate',
+        hit: '100',
+        type: 'Fire',
+        category: 'Special',
+        pp: '15',
+        desc: 'The user attacks opposing Pokemon with fire. If a Pokemon is holding a certain item, such as a berry, the item becomes burned up and unusable',
+        bp: '60'
+    },
+    'sacred fire': {
+        name: 'Sacred Fire',
+        hit: '95',
+        type: 'Fire',
+        category: 'Physical',
+        pp: '5',
+        desc: 'The target is razed with a mystical fire of great intensity. It may also leave the target with a burn."',
+        bp: '100'
+    },
+    'moonlight': {
+        name: 'Moonlight',
+        hit: '--',
+        type: 'Fairy',
+        category: 'Other',
+        pp: '5',
+        desc: 'The user restores its own HP. The amount of HP regained varies with the weather.',
+        bp: '--'
+    },
+    'worry seed': {
+        name: 'Worry Seed',
+        hit: '100',
+        type: 'Grass',
+        category: 'Other',
+        pp: '10',
+        desc: 'A seed that causes worry is planted on the target. It prevents sleep by making its Ability Insomnia.',
+        bp: '--'
+    },
+    'wide guard': {
+        name: 'Wide Guard',
+        hit: '--',
+        type: 'Rock',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user and its allies are protected from wide-ranging attacks for one turn. If used in succession, its chance of failing rises.',
+        bp: '--'
+    },
+    'dazzling gleam': {
+        name: 'Dazzling Gleam',
+        hit: '100',
+        type: 'Fairy',
+        category: 'Special',
+        pp: '10',
+        desc: 'The user damages opposing Pok&eacute;mon by emitting a powerful flash.',
+        bp: '80'
+    },
+    'play nice': {
+        name: 'Play Nice',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: "The user and the target become friends, and the target loses its will to fight. This lowers the target's Attack stat.",
+        bp: '--'
+    },
+    'moonblast': {
+        name: 'Moonblast',
+        hit: '100',
+        type: 'Fairy',
+        category: 'Special',
+        pp: '15',
+        desc: "Borrowing the power of the moon, the user attacks the target. This may also lower the target's Sp. Atk stat.",
+        bp: '95'
+    },
+    'defense curl': {
+        name: 'Defense Curl',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '40',
+        desc: 'The user curls up to conceal weak spots and raise its Defense stat.',
+        bp: '--'
+    },
+    'trump card': {
+        name: 'Trump Card',
+        hit: '--',
+        type: 'Normal',
+        category: 'Special',
+        pp: '5',
+        desc: 'The fewer PP this move has, the greater its attack power.',
+        bp: '--'
+    },
+    'poison tail': {
+        name: 'Poison Tail',
+        hit: '100',
+        type: 'Poison',
+        category: 'Physical',
+        pp: '25',
+        desc: 'The user hits the target with its tail. It may also poison the target. Critical hits land more easily."',
+        bp: '50'
+    },
+    'teeter dance': {
+        name: 'Teeter Dance',
+        hit: '100',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user performs a wobbly dance that confuses the Pok&eacute;mon around it."',
+        bp: '--'
+    },
+    'amnesia': {
+        name: 'Amnesia',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '20',
+        desc: "The user temporarily empties its mind to forget its concerns. It sharply raises the user's Sp. Def stat.",
+        bp: '--'
+    },
+    'pain split': {
+        name: 'Pain Split',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: "The user adds its HP to the target's HP",
+        bp: '--'
+    },
+    'fusion bolt': {
+        name: 'Fusion Bolt',
+        hit: '100',
+        type: 'Electric',
+        category: 'Physical',
+        pp: '5',
+        desc: 'The user throws down a giant thunderbolt. This attack does greater damage when influenced by an enormous flame.',
+        bp: '100'
+    },
+    'heal pulse': {
+        name: 'Heal Pulse',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user emits a healing pulse which restores the target\'s HP by up to half of its max HP."',
+        bp: '--'
+    },
+    'lunar dance': {
+        name: 'Lunar Dance',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user faints. In return, the Pok&eacute;mon taking its place will have its status and HP fully restored.',
+        bp: '--'
+    },
+    'electroweb': {
+        name: 'Electroweb',
+        hit: '95',
+        type: 'Electric',
+        category: 'Special',
+        pp: '15',
+        desc: "The user captures and attacks opposing Pok&eacute;mon by using an electric net. It reduces the targets' Speed stat.",
+        bp: '55'
+    },
+    'ancient power': {
+        name: 'Ancient Power',
+        hit: '100',
+        type: 'Rock',
+        category: 'Special',
+        pp: '5',
+        desc: 'The user attacks with a prehistoric power. It may also raise all the user\'s stats at once."',
+        bp: '60'
+    },
+    'cross poison': {
+        name: 'Cross Poison',
+        hit: '100',
+        type: 'Poison',
+        category: 'Physical',
+        pp: '20',
+        desc: 'A slashing attack with a poisonous blade that may also leave the target poisoned. Critical hits land more easily.',
+        bp: '70'
+    },
+    'imprison': {
+        name: 'Imprison',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '10',
+        desc: 'If the opponents know any move also known by the user, the opponents are prevented from using it.',
+        bp: '--'
+    },
+    'mirror shot': {
+        name: 'Mirror Shot',
+        hit: '85',
+        type: 'Steel',
+        category: 'Special',
+        pp: '10',
+        desc: "The user looses a flash of energy at the target from its polished body. It may also lower the target's accuracy.",
+        bp: '65'
+    },
+    'mist': {
+        name: 'Mist',
+        hit: '--',
+        type: 'Ice',
+        category: 'Other',
+        pp: '30',
+        desc: 'The user cloaks its body with a white mist that prevents any of its stats from being cut for five turns.',
+        bp: '--'
+    },
+    'hyper voice': {
+        name: 'Hyper Voice',
+        hit: '100',
+        type: 'Normal',
+        category: 'Special',
+        pp: '10',
+        desc: 'The user lets loose a horribly echoing shout with the power to inflict damage.',
+        bp: '90'
+    },
+    'metal burst': {
+        name: 'Metal Burst',
+        hit: '100',
+        type: 'Steel',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user retaliates with much greater power against the target that last inflicted damage on it.',
+        bp: '--'
+    },
+    'miracle eye': {
+        name: 'Miracle Eye',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '40',
+        desc: 'Enables a Dark-type target to be hit by Psychic-type attacks. It also enables an evasive target to be hit.',
+        bp: '--'
+    },
+    'mystical fire': {
+        name: 'Mystical Fire',
+        hit: '100',
+        type: 'Fire',
+        category: 'Special',
+        pp: '10',
+        desc: "The user attacks by breathing a special, hot fire. This also lowers the target's Sp. Atk stat.",
+        bp: '65'
+    },
+    'superpower': {
+        name: 'Superpower',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '5',
+        desc: "The user attacks the target with great power. However, it also lowers the user's Attack and Defense.",
+        bp: '120'
+    },
+    'soak': {
+        name: 'Soak',
+        hit: '100',
+        type: 'Water',
+        category: 'Other',
+        pp: '20',
+        desc: "The user shoots a torrent of water at the target and changes the target's type to Water.",
+        bp: '--'
+    },
+    'water sport': {
+        name: 'Water Sport',
+        hit: '--',
+        type: 'Water',
+        category: 'Other',
+        pp: '15',
+        desc: 'The user soaks itself with water. The move weakens Fire-type moves for five turns.',
+        bp: '--'
+    },
+    'bestow': {
+        name: 'Bestow',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '15',
+        desc: "The user passes its held item to the target when the target isn't holding an item.",
+        bp: '--'
+    },
+    'force palm': {
+        name: 'Force Palm',
+        hit: '100',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The target is attacked with a shock wave. It may also leave the target with paralysis.',
+        bp: '60'
+    },
+    'clear smog': {
+        name: 'Clear Smog',
+        hit: '--',
+        type: 'Poison',
+        category: 'Special',
+        pp: '15',
+        desc: 'The user attacks by throwing a clump of special mud. All status changes are returned to normal."',
+        bp: '50'
+    },
+    'strength': {
+        name: 'Strength',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The target is slugged with a punch thrown at maximum power. It can also be used to move heavy boulders.',
+        bp: '80'
+    },
+    'gear grind': {
+        name: 'Gear Grind',
+        hit: '85',
+        type: 'Steel',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user attacks by throwing two steel gears at its target."',
+        bp: '50'
+    },
+    'glare': {
+        name: 'Glare',
+        hit: '100',
+        type: 'Normal',
+        category: 'Other',
+        pp: '30',
+        desc: 'The user intimidates the target with the pattern on its belly to cause paralysis.',
+        bp: '--'
+    },
+    'glaciate': {
+        name: 'Glaciate',
+        hit: '95',
+        type: 'Ice',
+        category: 'Special',
+        pp: '10',
+        desc: "The user attacks by blowing freezing cold air at opposing Pok&eacute;mon. This attack reduces the targets' Speed stat.",
+        bp: '65'
+    },
+    'metronome': {
+        name: 'Metronome',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user waggles a finger and stimulates its brain into randomly using nearly any move.',
+        bp: '--'
+    },
+    'bite': {
+        name: 'Bite',
+        hit: '100',
+        type: 'Dark',
+        category: 'Physical',
+        pp: '25',
+        desc: 'The target is bitten with viciously sharp fangs. It may make the target flinch.',
+        bp: '60'
+    },
+    'captivate': {
+        name: 'Captivate',
+        hit: '100',
+        type: 'Normal',
+        category: 'Other',
+        pp: '20',
+        desc: 'If it is the opposite gender of the user, the target is charmed into harshly lowering its Sp. Atk stat.',
+        bp: '--'
+    },
+    'scary face': {
+        name: 'Scary Face',
+        hit: '100',
+        type: 'Normal',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user frightens the target with a scary face to harshly reduce its Speed stat.',
+        bp: '--'
+    },
+    'gust': {
+        name: 'Gust',
+        hit: '100',
+        type: 'Flying',
+        category: 'Special',
+        pp: '35',
+        desc: 'A gust of wind is whipped up by wings and launched at the target to inflict damage.',
+        bp: '40'
+    },
+    'rest': {
+        name: 'Rest',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '10',
+        desc: "The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem.",
+        bp: '--'
+    },
+    'thunder wave': {
+        name: 'Thunder Wave',
+        hit: '100',
+        type: 'Electric',
+        category: 'Other',
+        pp: '20',
+        desc: 'A weak electric charge is launched at the target. It causes paralysis if it hits."',
+        bp: '--'
+    },
+    'ember': {
+        name: 'Ember',
+        hit: '100',
+        type: 'Fire',
+        category: 'Special',
+        pp: '25',
+        desc: 'The target is attacked with small flames. It may also leave the target with a burn.',
+        bp: '40'
+    },
+    'thunder fang': {
+        name: 'Thunder Fang',
+        hit: '95',
+        type: 'Electric',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user bites with electrified fangs. It may also make the target flinch or leave it with paralysis.',
+        bp: '65'
+    },
+    'quick attack': {
+        name: 'Quick Attack',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '30',
+        desc: 'The user lunges at the target at a speed that makes it almost invisible. It is sure to strike first."',
+        bp: '40'
+    },
+    'wish': {
+        name: 'Wish',
+        hit: '--',
+        type: 'Normal',
+        category: 'Other',
+        pp: '10',
+        desc: "One turn after this move is used, the target's HP is restored by half the user's maximum HP.",
+        bp: '--'
+    },
+    'shadow force': {
+        name: 'Shadow Force',
+        hit: '100',
+        type: 'Ghost',
+        category: 'Physical',
+        pp: '5',
+        desc: 'The user disappears, then strikes the target on the second turn. It hits even if the target protects itself.',
+        bp: '120'
+    },
+    'light screen': {
+        name: 'Light Screen',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '30',
+        desc: 'A wondrous wall of light is put up to suppress damage from special attacks for five turns."',
+        bp: '--'
+    },
+    'volt tackle': {
+        name: 'Volt Tackle',
+        hit: '100',
+        type: 'Electric',
+        category: 'Physical',
+        pp: '15',
+        desc: 'The user electrifies itself, then charges.  It causes considerable damage to the user and may leave the target with paralysis.',
+        bp: '120'
+    },
+    'sky attack': {
+        name: 'Sky Attack',
+        hit: '90',
+        type: 'Flying',
+        category: 'Physical',
+        pp: '5',
+        desc: 'A second-turn attack move where critical hits land more easily. It may also make the target flinch.',
+        bp: '140'
+    },
+    'psybeam': {
+        name: 'Psybeam',
+        hit: '100',
+        type: 'Psychic',
+        category: 'Special',
+        pp: '20',
+        desc: 'The target is attacked with a peculiar ray. It may also cause confusion.',
+        bp: '65'
+    },
+    'flower shield': {
+        name: 'Flower Shield',
+        hit: '--',
+        type: 'Fairy',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user raises the Defense stat of all Grass-type Pok&eacute;mon in battle with a mysterious power.',
+        bp: '--'
+    },
+    'electric terrain': {
+        name: 'Electric Terrain',
+        hit: '--',
+        type: 'Electric',
+        category: 'Other',
+        pp: '10',
+        desc: 'The user electrifies the ground under everyone\'s feet for five turns.  Pok&eacute;mon on the ground no longer fall asleep."',
+        bp: '--'
+    },
+    'facade': {
+        name: 'Facade',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '20',
+        desc: 'An attack move that doubles its power if the user is poisoned, burned, or has paralysis.',
+        bp: '70'
+    },
+    'aqua ring': {
+        name: 'Aqua Ring',
+        hit: '--',
+        type: 'Water',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user envelops itself in a veil made of water. It regains some HP on every turn."',
+        bp: '--'
+    },
+    'parting shot': {
+        name: 'Parting Shot',
+        hit: '100',
+        type: 'Dark',
+        category: 'Other',
+        pp: '20',
+        desc: "With a parting threat, the user lowers the target's Attack and Sp. Atk stats. Then it switches with a party Pok&eacute;mon.",
+        bp: '--'
+    },
+    'roar of time': {
+        name: 'Roar of Time',
+        hit: '90',
+        type: 'Dragon',
+        category: 'Special',
+        pp: '5',
+        desc: 'The user blasts the target with power that distorts even time. The user must rest on the next turn."',
+        bp: '150'
+    },
+    'inferno': {
+        name: 'Inferno',
+        hit: '50',
+        type: 'Fire',
+        category: 'Special',
+        pp: '5',
+        desc: 'The user attacks by engulfing the target in an intense fire. It leaves the target with a burn.',
+        bp: '100'
+    },
+    'ally switch': {
+        name: 'Ally Switch',
+        hit: '--',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '15',
+        desc: 'The user teleports using a strange power and switches its place with one of its allies."',
+        bp: '--'
+    },
+    'coil': {
+        name: 'Coil',
+        hit: '--',
+        type: 'Poison',
+        category: 'Other',
+        pp: '20',
+        desc: 'The user coils up and concentrates. This raises its Attack and Defense stats as well as its accuracy.',
+        bp: '--'
+    },
+    'circle throw': {
+        name: 'Circle Throw',
+        hit: '90',
+        type: 'Fighting',
+        category: 'Physical',
+        pp: '10',
+        desc: 'The user throws the target and drags out another Pok&eacute;mon in its party. In the wild, the battle ends.',
+        bp: '60'
+    },
+    'water gun': {
+        name: 'Water Gun',
+        hit: '100',
+        type: 'Water',
+        category: 'Special',
+        pp: '25',
+        desc: 'The target is blasted with a forceful shot of water.',
+        bp: '40'
+    },
+    'horn attack': {
+        name: 'Horn Attack',
+        hit: '100',
+        type: 'Normal',
+        category: 'Physical',
+        pp: '25',
+        desc: 'The target is jabbed with a sharply pointed horn to inflict damage."',
+        bp: '65'
+    },
+    'heal block': {
+        name: 'Heal Block',
+        hit: '100',
+        type: 'Psychic',
+        category: 'Other',
+        pp: '15',
+        desc: 'For five turns, the user prevents the opposing team from using any moves, Abilities, or held items that recover HP.',
+        bp: '--'
+    }
+};
 moves_autocomplete = [];
-for (key in moves) {
-    moves_autocomplete[moves_autocomplete.length] = moves[key]['Name'];
+for (var m in moves) {
+    moves_autocomplete[moves_autocomplete.length] = moves[m].name;
 }
 moves_autocomplete.sort();
+
+function getMoveByName(name) {
+    for (var m in moves) {
+        if (moves[m].name == name) {
+            return moves[m];
+        }
+    }
+    return null;
+}
